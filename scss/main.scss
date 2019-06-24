@@ -1,0 +1,23 @@
+// $primary-color: #59253A;
+// $secondary-color: #78244C;
+$primary-color: #331521;
+$secondary-color: #78244C;
+$tertiary-color: #895061;
+$text-color: #FFF;
+
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    // background: $primary-color;
+//    background-image: linear-gradient($primary-color 0%, $primary-color 15%, $secondary-color 15%,
+//    $secondary-color 50%, $tertiary-color 50%);
+    background-image: linear-gradient($primary-color 0%, $secondary-color 15%, $tertiary-color 50%);
+    color: $text-color;
+}

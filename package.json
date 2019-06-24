@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "sampletest": "echo \"Hello.\"",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Chad Fraser",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  }
+}
