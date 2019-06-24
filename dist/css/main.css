@@ -13,10 +13,10 @@ body {
 h1, h2 {
   font-weight: 400; }
   h1.name-title, h2.name-title {
-    font-size: 5rem; }
+    font-size: 8rem; }
   h1.sub-title, h2.sub-title {
     line-height: 1.25;
-    font-size: 2rem; }
+    font-size: 4rem; }
 
 h1 {
   margin: 0; }
@@ -31,18 +31,24 @@ header {
 main {
   padding: 4rem;
   height: 100%; }
+  main .self-image {
+    max-width: 385px; }
   main .link-icons {
     margin-top: 1rem; }
     main .link-icons .link-image {
       padding: 0.5rem;
-      max-width: 40px; }
-  main#home-main {
-    overflow: hidden; }
-    main#home-main .flex-wrap {
-      display: flex; }
-      main#home-main .flex-wrap .left-half {
-        flex: 1; }
-      main#home-main .flex-wrap .right-half {
-        flex: 1; }
-    main#home-main h1 {
-      margin-top: 20vh; }
+      max-width: 85px; }
+  main#home-main .flex-wrap {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    margin-top: 20vh; }
+    main#home-main .flex-wrap .left-half {
+      flex: 1;
+      text-align: center;
+      background: #331521; }
+    main#home-main .flex-wrap .right-half {
+      flex: 1;
+      text-align: center;
+      background: #000; }

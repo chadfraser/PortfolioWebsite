@@ -28,12 +28,12 @@ h1, h2 {
     font-weight: 400;
 
     &.name-title {
-        font-size: 5rem;
+        font-size: 8rem;
     }
 
     &.sub-title {
         line-height: 1.25;
-        font-size: 2rem;
+        font-size: 4rem;
     }
 }
 
@@ -55,12 +55,16 @@ main {
     padding: 4rem;
     height: 100%;
 
+    .self-image {
+        max-width: 385px;
+    }
+
     .link-icons {
         margin-top: 1rem;
 
         .link-image {
             padding: 0.5rem;
-            max-width: 40px;
+            max-width: 85px;
             
             // &:hover {
             //     color: $primary-color;
@@ -71,17 +75,23 @@ main {
     &#home-main {
         .flex-wrap {
             display: flex;
+            // align-items: center;
+            justify-content: center;
+            align-content: center;
 
             .left-half {
                 flex: 1;
+                text-align: center;
+                background: #331521;
             }
             .right-half {
                 flex: 1;
+                text-align: center;
+                background: #000;
             }
-        }
 
-        overflow: hidden;
-        h1 {
+            
+            overflow: hidden;
             margin-top: 20vh;
         }
     }
