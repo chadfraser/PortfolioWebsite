@@ -1,9 +1,13 @@
 // $primary-color: #59253A;
 // $secondary-color: #78244C;
+// $text-color: #2D4159;
+$text-color: rgb(65, 35, 50);
 $primary-color: #331521;
 $secondary-color: #78244C;
 $tertiary-color: #895061;
-$text-color: #FFF;
+// $text-color: #FFF;
+// $text-color: #00FA9A;
+$text-color: #4ECDC4;
 
 
 html {
@@ -24,25 +28,32 @@ body {
 }
 
 h1, h2 {
-    // margin: 0;
+    margin: 0;
     font-weight: 400;
 
     &.name-title {
-        font-size: 8rem;
+        font-size: 6rem;
     }
 
     &.sub-title {
         line-height: 1.25;
-        font-size: 4rem;
+        font-size: 3rem;
+        padding: 0 5rem;
     }
 }
 
-h1 {
-    margin: 0;
-}
+// h1 {
+//     margin: 0;
+// }
 
 a {
     color: $text-color;
+    text-decoration: none;
+
+    .icon-anchor {
+        display: inline;
+        margin: 0;
+    }
 }
 
 header {
@@ -57,13 +68,18 @@ main {
 
     .self-image {
         max-width: 385px;
+        border-radius: 50%;
     }
 
     .link-icons {
         margin-top: 1rem;
 
         .link-image {
-            padding: 0.5rem;
+            display: inline-block;
+            vertical-align: bottom;
+            text-decoration: none;
+            margin: 2rem;
+            padding: 0rem;
             max-width: 85px;
             
             // &:hover {
@@ -78,21 +94,22 @@ main {
             // align-items: center;
             justify-content: center;
             align-content: center;
+            // height: 80vh;
 
             .left-half {
                 flex: 1;
                 text-align: center;
-                background: #331521;
+                // background: #331521;
             }
             .right-half {
                 flex: 1;
-                text-align: center;
-                background: #000;
+                // text-align: center;
+                // background: #000;
             }
 
-            
-            overflow: hidden;
-            margin-top: 20vh;
+            margin-top: 25vh;
         }
+            
+        overflow: hidden;
     }
 }
