@@ -15,9 +15,74 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     // background: $primary-color;
-//    background-image: linear-gradient($primary-color 0%, $primary-color 15%, $secondary-color 15%,
-//    $secondary-color 50%, $tertiary-color 50%);
+    // background-image: linear-gradient($primary-color 0%, $primary-color 15%, $secondary-color 15%,
+    // $secondary-color 50%, $tertiary-color 50%);
     background-image: linear-gradient($primary-color 0%, $secondary-color 15%, $tertiary-color 50%);
     color: $text-color;
+}
+
+h1, h2 {
+    // margin: 0;
+    font-weight: 400;
+
+    &.name-title {
+        font-size: 5rem;
+    }
+
+    &.sub-title {
+        line-height: 1.25;
+        font-size: 2rem;
+    }
+}
+
+h1 {
+    margin: 0;
+}
+
+a {
+    color: $text-color;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+}
+
+
+main {
+    padding: 4rem;
+    height: 100%;
+
+    .link-icons {
+        margin-top: 1rem;
+
+        .link-image {
+            padding: 0.5rem;
+            max-width: 40px;
+            
+            // &:hover {
+            //     color: $primary-color;
+            // }
+        }
+    }
+
+    &#home-main {
+        .flex-wrap {
+            display: flex;
+
+            .left-half {
+                flex: 1;
+            }
+            .right-half {
+                flex: 1;
+            }
+        }
+
+        overflow: hidden;
+        h1 {
+            margin-top: 20vh;
+        }
+    }
 }
