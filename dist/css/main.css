@@ -10,81 +10,73 @@
   .menu-tab.close {
     transform: translateX(-50vw); }
     .menu-tab.close .button-line:nth-child(1) {
-      animation: xAxis 1.5s 0.35s; }
+      animation: translateXAndSkew 1.5s 0.35s;
+      animation-fill-mode: forwards; }
       .menu-tab.close .button-line:nth-child(1)::after {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 3px;
-        margin: 0 0 5px 0;
-        background-color: #4ECDC4;
-        animation: yAxis 1.5s 0.35s; }
+        animation: translateYForButtonIndex1 1.5s 0.35s;
+        animation-fill-mode: forwards; }
 
-@keyframes yAxis {
+@keyframes translateYForButtonIndex1 {
   0% {
     animation-timing-function: ease-out;
-    transform: translateY(0vh) rotate(0deg); }
+    transform: translateY(0vh) rotate(0deg);
+    opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     transform: translateY(-10vh) rotate(-40deg); }
   100% {
-    transform: translateY(0vh) rotate(0deg); } }
+    transform: translate(5px, 8px) rotate(45deg); } }
 
-@keyframes xAxis {
+@keyframes translateXAndSkew {
   50% {
     animation-timing-function: cubic-bezier(0, 1.33, 1, 1.13);
     transform: translateX(90vw) skew(15deg); }
   100% {
     transform: translateX(0vw) skew(0deg); } }
     .menu-tab.close .button-line:nth-child(2) {
-      animation: xAxis 1.5s 0.45s; }
+      animation: translateXAndSkew 1.5s 0.45s;
+      animation-fill-mode: forwards; }
       .menu-tab.close .button-line:nth-child(2)::after {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 3px;
-        margin: 0 0 5px 0;
-        background-color: #4ECDC4;
-        animation: yAxis 1.5s 0.45s; }
+        animation: translateYForButtonIndex2 1.5s 0.45s;
+        animation-fill-mode: forwards; }
 
-@keyframes yAxis {
+@keyframes translateYForButtonIndex2 {
   0% {
     animation-timing-function: ease-out;
-    transform: translateY(0vh) rotate(0deg); }
+    transform: translateY(0vh) rotate(0deg);
+    opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
-    transform: translateY(-10vh) rotate(-40deg); }
+    transform: translateY(-10vh) rotate(-40deg);
+    opacity: 0; }
   100% {
-    transform: translateY(0vh) rotate(0deg); } }
+    opacity: 0; } }
 
-@keyframes xAxis {
+@keyframes translateXAndSkew {
   50% {
     animation-timing-function: cubic-bezier(0, 1.33, 1, 1.13);
     transform: translateX(90vw) skew(15deg); }
   100% {
     transform: translateX(0vw) skew(0deg); } }
     .menu-tab.close .button-line:nth-child(3) {
-      animation: xAxis 1.5s 0.55s; }
+      animation: translateXAndSkew 1.5s 0.55s;
+      animation-fill-mode: forwards; }
       .menu-tab.close .button-line:nth-child(3)::after {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 3px;
-        margin: 0 0 5px 0;
-        background-color: #4ECDC4;
-        animation: yAxis 1.5s 0.55s; }
+        animation: translateYForButtonIndex3 1.5s 0.55s;
+        animation-fill-mode: forwards; }
 
-@keyframes yAxis {
+@keyframes translateYForButtonIndex3 {
   0% {
     animation-timing-function: ease-out;
-    transform: translateY(0vh) rotate(0deg); }
+    transform: translateY(0vh) rotate(0deg);
+    opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     transform: translateY(-10vh) rotate(-40deg); }
   100% {
-    transform: translateY(0vh) rotate(0deg); } }
+    transform: translate(5px, -8px) rotate(-45deg); } }
 
-@keyframes xAxis {
+@keyframes translateXAndSkew {
   50% {
     animation-timing-function: cubic-bezier(0, 1.33, 1, 1.13);
     transform: translateX(90vw) skew(15deg); }
