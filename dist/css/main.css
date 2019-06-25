@@ -1,19 +1,20 @@
 .menu-tab {
-  background-color: green;
+  background-color: #210e15;
   position: absolute;
   z-index: 3;
   width: 90px;
   height: 45px;
-  right: -30px;
+  right: -40px;
   border-radius: 15px;
   cursor: pointer; }
   .menu-tab.close {
-    transform: translateX(-50vw); }
+    transform: translateX(-55vw);
+    transition: all 0.25s ease-out; }
     .menu-tab.close .button-line:nth-child(1) {
-      animation: translateXAndSkew 1.5s 0.35s;
+      animation: translateXAndSkew 1s 0.35s;
       animation-fill-mode: forwards; }
       .menu-tab.close .button-line:nth-child(1)::after {
-        animation: translateYForButtonIndex1 1.5s 0.35s;
+        animation: translateYForButtonIndex1 1s 0.35s;
         animation-fill-mode: forwards; }
 
 @keyframes translateYForButtonIndex1 {
@@ -34,10 +35,10 @@
   100% {
     transform: translateX(0vw) skew(0deg); } }
     .menu-tab.close .button-line:nth-child(2) {
-      animation: translateXAndSkew 1.5s 0.45s;
+      animation: translateXAndSkew 1s 0.45s;
       animation-fill-mode: forwards; }
       .menu-tab.close .button-line:nth-child(2)::after {
-        animation: translateYForButtonIndex2 1.5s 0.45s;
+        animation: translateYForButtonIndex2 1s 0.45s;
         animation-fill-mode: forwards; }
 
 @keyframes translateYForButtonIndex2 {
@@ -59,10 +60,10 @@
   100% {
     transform: translateX(0vw) skew(0deg); } }
     .menu-tab.close .button-line:nth-child(3) {
-      animation: translateXAndSkew 1.5s 0.55s;
+      animation: translateXAndSkew 1s 0.55s;
       animation-fill-mode: forwards; }
       .menu-tab.close .button-line:nth-child(3)::after {
-        animation: translateYForButtonIndex3 1.5s 0.55s;
+        animation: translateYForButtonIndex3 1s 0.55s;
         animation-fill-mode: forwards; }
 
 @keyframes translateYForButtonIndex3 {
@@ -83,19 +84,64 @@
   100% {
     transform: translateX(0vw) skew(0deg); } }
   .menu-tab:hover {
-    background-color: black;
+    background-color: #210e15;
     transition: all 0.25s ease-out; }
   .menu-tab .menu-button {
     position: absolute;
     right: 56px;
     top: 12px; }
-    .menu-tab .menu-button .button-line::after {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 3px;
-      margin: 0 0 5px 0;
-      background-color: #4ECDC4; }
+    .menu-tab .menu-button .button-line {
+      overflow: visible; }
+      .menu-tab .menu-button .button-line::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background-color: #4ECDC4; }
+
+.nav-menu {
+  position: fixed;
+  width: 55%;
+  height: 100vh;
+  top: 0;
+  left: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #210e15;
+  visibility: hidden; }
+  .nav-menu.visible {
+    transform: translateX(-100%);
+    transition: all 0.25s ease-out;
+    visibility: visible; }
+  .nav-menu .menu-list {
+    list-style: none;
+    text-align: center;
+    font-size: 3rem; }
+    .nav-menu .menu-list .menu-item {
+      position: relative;
+      margin: 3rem; }
+      .nav-menu .menu-list .menu-item:nth-child(even) {
+        transform: translate3d(0, 800px, 0); }
+      .nav-menu .menu-list .menu-item:nth-child(odd) {
+        transform: translate3d(0, -800px, 0); }
+      .nav-menu .menu-list .menu-item.visible {
+        transform: translate3d(0, 0, 0);
+        transition-duration: 0.25s; }
+
+.menu-item:nth-child(1) {
+  transition-delay: 0.5s; }
+
+.menu-item:nth-child(2) {
+  transition-delay: 0.75s; }
+
+.menu-item:nth-child(3) {
+  transition-delay: 1s; }
+
+.menu-item:nth-child(4) {
+  transition-delay: 1.25s; }
 
 html {
   height: 100%; }

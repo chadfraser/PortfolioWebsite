@@ -3,11 +3,11 @@
 @mixin animate_button_line($line-index) {
     $base-delay: 0.25s;
 
-    animation: translateXAndSkew 1.5s #{$base-delay + 0.1 * $line-index};
+    animation: translateXAndSkew 1s #{$base-delay + 0.1 * $line-index};
     animation-fill-mode: forwards;
 
     &::after {
-        animation: translateYForButtonIndex#{$line-index} 1.5s #{$base-delay + 0.1 * $line-index} ;
+        animation: translateYForButtonIndex#{$line-index} 1s #{$base-delay + 0.1 * $line-index};
         animation-fill-mode: forwards;
     }
 
@@ -47,36 +47,31 @@
 }
 
 .menu-tab {
-    background-color: green;
+    background-color: darken($primary-color, 5);
     position: absolute;
     z-index: 3;
     width: 90px;
     height: 45px;
-    right: -30px;
+    right: -40px;
     border-radius: 15px;
+    // opacity: 0.9;
     cursor: pointer;
 
     &.close {
-        transform: translateX(-50vw);
+        transform: translateX(-55vw);
+        transition: all 0.25s ease-out;
 
-        // .menu-button {
-        //     transform: translateX(50vw);
-        //     // left: 100vw;
-        //     transition: all 0.5s ease-out 0.25s;
-        // }
         .button-line {
             @for $i from 1 through 3 {
-                $line-index: $i;
-
                 &:nth-child(#{$i}) {
-                    @include animate_button_line($line-index);
+                    @include animate_button_line($i);
                 }
             }
         }
     }
 
     &:hover {
-        background-color: black;
+        background-color: darken($primary-color, 5);
         transition: all 0.25s ease-out;
     }
 
@@ -86,6 +81,8 @@
         top: 12px;
 
         .button-line {
+            overflow: visible;
+
             &::after {
                 content: '';
                 display: block;
@@ -94,11 +91,66 @@
                 margin: 0 0 5px 0;
                 background-color: $text-color;
             }
-
-            // width: 20px;
-            // height: 3px;
-            // margin: 0 0 5px 0;
-            // background: $text-color;
         }
     }
 }
+
+.nav-menu {
+    position: fixed;
+    width: 55%;
+    height: 100vh;
+    top: 0;
+    left: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: darken($primary-color, 5);
+    // opacity: 0.9;
+    // overflow: hidden;
+    visibility: hidden;
+
+    &.visible {
+        transform: translateX(-100%);
+        transition: all 0.25s ease-out;
+        visibility: visible;
+    }
+
+    .menu-list {
+        // z-index: 5;
+        list-style: none;
+        text-align: center;
+        font-size: 3rem;
+        // transform: translate3d(0, 100%, 0);
+        // transition: all 0.25s ease-out 0.25s;
+
+        // &.visible {
+        //     transform: translate3d(0, 0, 0);
+        // }
+
+        .menu-item {
+            &:nth-child(even) {
+                transform: translate3d(0, 800px, 0);
+            }
+            &:nth-child(odd) {
+                transform: translate3d(0, -800px, 0);
+            }
+            position: relative;
+            margin: 3rem;
+
+            &.visible {
+                transform: translate3d(0, 0, 0);
+                transition-duration: 0.25s
+            }
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+    .menu-item:nth-child(#{$i}) {
+        transition-delay: $i * 0.25s + 0.25;
+    }
+}
+
+// Last two links not resetting position
+// Opacity of menu-tab makes button-line invisible
