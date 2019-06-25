@@ -26,7 +26,19 @@ function toggleMenuVisible() {
         navMenu.classList.remove("visible");
         menuList.classList.remove("visible");
         menuItems.forEach(item => item.classList.remove("visible"));
+        // resetMenuItemPositions();
 
         menuVisible = false;
+    }
+}
+
+function resetMenuItemPositions() {
+    var i = 0;
+    for (var [index, item] in menuItems.entries()) {
+        if (item % 2 == 0) {
+            item.style.transform = "translate3d(0, 800px, 0)";
+        } else {
+            item.style.transform = "translate3d(0, -800px, 0)";
+        }
     }
 }

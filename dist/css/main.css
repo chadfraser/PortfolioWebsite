@@ -119,10 +119,14 @@
   .nav-menu .menu-list {
     list-style: none;
     text-align: center;
-    font-size: 3rem; }
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+    width: 100%; }
     .nav-menu .menu-list .menu-item {
       position: relative;
-      margin: 3rem; }
+      padding: 0;
+      margin: 0; }
       .nav-menu .menu-list .menu-item:nth-child(even) {
         transform: translate3d(0, 800px, 0); }
       .nav-menu .menu-list .menu-item:nth-child(odd) {
@@ -130,6 +134,14 @@
       .nav-menu .menu-list .menu-item.visible {
         transform: translate3d(0, 0, 0);
         transition-duration: 0.25s; }
+      .nav-menu .menu-list .menu-item .menu-link {
+        display: block;
+        position: relative;
+        z-index: 1;
+        padding: 2rem;
+        margin: 0;
+        width: 100%;
+        height: 100%; }
 
 .menu-item:nth-child(1) {
   transition-delay: 0.5s; }
