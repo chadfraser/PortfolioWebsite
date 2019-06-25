@@ -1,11 +1,11 @@
 .menu-tab {
-  background-color: #210e15;
+  background-color: rgba(33, 14, 21, 0.75);
   position: absolute;
   z-index: 3;
-  width: 90px;
+  width: 60px;
   height: 45px;
-  right: -40px;
-  border-radius: 15px;
+  right: -9px;
+  border-radius: 15px 0 0 15px;
   cursor: pointer; }
   .menu-tab.close {
     transform: translateX(-55vw);
@@ -86,9 +86,11 @@
   .menu-tab:hover {
     background-color: #210e15;
     transition: all 0.25s ease-out; }
+    .menu-tab:hover .nav-menu {
+      background-color: #210e15; }
   .menu-tab .menu-button {
     position: absolute;
-    right: 56px;
+    right: 25px;
     top: 12px; }
     .menu-tab .menu-button .button-line {
       overflow: visible; }
@@ -110,7 +112,7 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  background-color: #210e15;
+  background-color: rgba(33, 14, 21, 0.75);
   visibility: hidden; }
   .nav-menu.visible {
     transform: translateX(-100%);

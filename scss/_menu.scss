@@ -47,13 +47,14 @@
 }
 
 .menu-tab {
-    background-color: darken($primary-color, 5);
+    background-color: darken(rgba($primary-color, 0.75), 5);
     position: absolute;
     z-index: 3;
-    width: 90px;
+    width: 60px;
     height: 45px;
-    right: -40px;
-    border-radius: 15px;
+    right: -9px;
+    border-radius: 15px 0 0 15px;
+    // opacity: 1;
     // opacity: 0.9;
     cursor: pointer;
 
@@ -72,12 +73,15 @@
 
     &:hover {
         background-color: darken($primary-color, 5);
+        .nav-menu {
+            background-color: darken($primary-color, 5);
+        }
         transition: all 0.25s ease-out;
     }
 
     .menu-button {
         position: absolute;
-        right: 56px;
+        right: 25px;
         top: 12px;
 
         .button-line {
@@ -105,7 +109,7 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    background-color: darken($primary-color, 5);
+    background-color: darken(rgba($primary-color, 0.75), 5);
     // opacity: 0.9;
     // overflow: hidden;
     visibility: hidden;
@@ -169,4 +173,3 @@
 }
 
 // Last two links not resetting position
-// Opacity of menu-tab makes button-line invisible
