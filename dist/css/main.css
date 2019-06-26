@@ -245,12 +245,19 @@ main {
       top: 52vh;
       white-space: nowrap; }
   .menu-tab {
+    background-color: #210e15;
     z-index: 3;
     top: calc(100vh - 15vh);
     left: calc(100% - 15vh);
     height: 15vh;
     width: 15vh;
     border-radius: 0; }
+    .menu-tab ~ .nav-menu {
+      background-color: #331521; }
+    .menu-tab:hover {
+      background-color: #210e15; }
+      .menu-tab:hover ~ .nav-menu {
+        background-color: #331521; }
     .menu-tab.close {
       background-color: #210e15;
       width: 100%;
@@ -281,7 +288,7 @@ main {
   .menu-icons {
     z-index: 3;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     width: 85vw;
@@ -291,7 +298,8 @@ main {
     .menu-icons .menu-link-icon {
       transform: translate3d(0, 50vh, 0); }
       .menu-icons .menu-link-icon .menu-link-image {
-        max-height: 12vh; }
+        max-height: 12vh;
+        max-width: 15vw; }
       .menu-icons .menu-link-icon.visible {
         transform: translate3d(0, 0, 0); }
         .menu-icons .menu-link-icon.visible:nth-child(1) {
@@ -299,4 +307,23 @@ main {
         .menu-icons .menu-link-icon.visible:nth-child(2) {
           transition: all 1s cubic-bezier(0.53, -0.6, 0.36, 1.7) 0.75s; }
         .menu-icons .menu-link-icon.visible:nth-child(3) {
-          transition: all 1s cubic-bezier(0.53, -0.6, 0.36, 1.7) 1s; } }
+          transition: all 1s cubic-bezier(0.53, -0.6, 0.36, 1.7) 1s; }
+  .nav-menu {
+    width: 100%;
+    height: 85vh;
+    top: 100vh;
+    left: 0;
+    transform: translateY(0);
+    transition: all 0.25s ease-out; }
+    .nav-menu.visible {
+      transform: translateY(-100vh);
+      transition: all 0.25s ease-out; }
+    .nav-menu .menu-list {
+      list-style: none;
+      text-align: center;
+      font-size: 8vh;
+      width: 100%; }
+      .nav-menu .menu-list .menu-item {
+        transform: translate3d(500px, 0, 0) !important; }
+        .nav-menu .menu-list .menu-item.visible {
+          transform: translate3d(0, 0, 0) !important; } }

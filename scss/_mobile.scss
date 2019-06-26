@@ -1,0 +1,181 @@
+@include mediaMediumScreen {
+    header {
+        top: 85vh;
+        height: 15vh;
+    }
+
+    main {
+        margin: 0;
+        align-items: center;
+
+        .left-half, .sub-title {
+            position: absolute; 
+            left: 0; 
+            right: 0; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .left-half {
+            z-index: -1;
+            top: 15vh;
+
+            .self-image {
+                max-width: 40vw;
+                max-height: 40vh;
+            }
+
+            .link-icons {
+                display: none;
+            }
+        }
+
+        .name-title {
+            order: -1;
+            text-align: center;
+            font-size: 15vh;
+            white-space: nowrap;
+        }
+
+        .sub-title {
+            text-align: center;
+            line-height: 1.2;
+            font-size: 8vh;
+            top: 52vh;
+            white-space: nowrap;
+        }
+    }
+
+    .menu-tab {
+        background-color: darken($primary-color, 5);
+        & ~ .nav-menu {
+            background-color: $primary-color;
+        }
+        z-index: 3;
+        top: calc(100vh - 15vh);
+        left: calc(100% - 15vh);
+        height: 15vh;
+        width: 15vh;
+        border-radius: 0;
+
+        &:hover {
+            background-color: darken($primary-color, 5);
+            & ~ .nav-menu {
+                background-color: $primary-color;
+            }
+        }
+        
+        &.close {
+            background-color: darken($primary-color, 5);
+            width: 100%;
+            left: 0;
+            transform: none;
+    
+            // .menu-button {
+            //     // position: relative;
+            //     // width: 15%;
+            //     // left: 42.5%;
+            // }
+    
+            .button-line {
+                animation: none !important;
+
+                &::after {
+                    animation: none !important;
+                    // position: relative;
+                }
+            }
+
+            .menu-link-icons {
+                position: fixed;
+                // top: 120vh;
+                top: 50vh;
+                right: 50vw;
+                height: 10vh;
+                left: 0;
+                // transform: translateY(-30vh);
+            }
+        }
+
+        .menu-button {
+            right: 0;
+            top: 0;
+            height: 15vh;
+            width: 15vh;
+    
+            .button-line::after {
+                    position: relative;
+                    width: 75%;
+                    top: 4vmin;
+                    left: 12.5%;
+                    height: 1vmin;
+                    margin: 0 0 1.5vmin 0;
+            }
+        }    
+    }
+
+    .menu-icons {
+        z-index: 3;
+        display: flex; 
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        width: 85vw;
+        height: 15vh;
+        top: 85vh;
+        left: 0;
+
+        .menu-link-icon {
+            transform: translate3d(0, 50vh, 0);
+
+            .menu-link-image {
+                max-height: 12vh;
+                max-width: 15vw;
+            }
+
+            &.visible {
+                transform: translate3d(0, 0, 0);
+        
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) {
+                        transition: all 1s cubic-bezier(0.53, -0.6, 0.36, 1.7) #{$i * 0.25s + 0.25};
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    .nav-menu {
+        width: 100%;
+        height: 85vh;
+        top: 100vh;
+        left: 0;
+        transform: translateY(0);
+        @include easeOut();
+    
+        &.visible {
+            transform: translateY(-100vh);
+            @include easeOut();
+        }
+    
+        .menu-list {
+            list-style: none;
+            text-align: center;
+            font-size: 8vh;
+            width: 100%;
+    
+            .menu-item {
+                transform: translate3d(500px, 0, 0) !important;
+    
+                &.visible {
+                    transform: translate3d(0, 0, 0) !important;
+                }
+            }
+        }
+    }
+}
