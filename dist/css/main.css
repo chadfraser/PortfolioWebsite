@@ -209,6 +209,9 @@ main {
     main#home-main .flex-wrap .right-half {
       flex: 1; }
 
+.menu-icons {
+  display: none; }
+
 @media screen and (max-width: 768px) {
   header {
     top: 85vh;
@@ -233,39 +236,67 @@ main {
     main .name-title {
       order: -1;
       text-align: center;
-      font-size: 15vh; }
+      font-size: 15vh;
+      white-space: nowrap; }
     main .sub-title {
       text-align: center;
       line-height: 1.2;
       font-size: 8vh;
-      top: 52vh; }
+      top: 52vh;
+      white-space: nowrap; }
   .menu-tab {
     z-index: 3;
-    top: calc(100vh - 15vmin);
-    left: calc(100% - 15vmin);
-    height: 15vmin;
-    width: 15vmin;
+    top: calc(100vh - 15vh);
+    left: calc(100% - 15vh);
+    height: 15vh;
+    width: 15vh;
     border-radius: 0; }
     .menu-tab.close {
+      background-color: #210e15;
       width: 100%;
       left: 0;
       transform: none; }
-      .menu-tab.close .menu-button {
-        position: relative; }
       .menu-tab.close .button-line {
         animation: none !important; }
         .menu-tab.close .button-line::after {
-          animation: none !important;
-          position: relative; }
+          animation: none !important; }
+      .menu-tab.close .menu-link-icons {
+        position: fixed;
+        top: 50vh;
+        right: 50vw;
+        height: 10vh;
+        left: 0; }
     .menu-tab .menu-button {
       right: 0;
       top: 0;
-      height: 15vmin;
-      width: 15vmin; }
+      height: 15vh;
+      width: 15vh; }
       .menu-tab .menu-button .button-line::after {
         position: relative;
         width: 75%;
         top: 4vmin;
         left: 12.5%;
         height: 1vmin;
-        margin: 0 0 1.5vmin 0; } }
+        margin: 0 0 1.5vmin 0; }
+  .menu-icons {
+    z-index: 3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 85vw;
+    height: 15vh;
+    top: 85vh;
+    left: 0; }
+    .menu-icons .menu-link-icon {
+      transform: translate3d(0, 50vh, 0); }
+      .menu-icons .menu-link-icon .menu-link-image {
+        max-height: 12vh; }
+      .menu-icons .menu-link-icon.visible {
+        transform: translate3d(0, 0, 0); }
+        .menu-icons .menu-link-icon.visible:nth-child(1) {
+          transition: all 1s cubic-bezier(0.53, -0.6, 0.36, 1.7) 0.5s; }
+        .menu-icons .menu-link-icon.visible:nth-child(2) {
+          transition: all 1s cubic-bezier(0.53, -0.6, 0.36, 1.7) 0.75s; }
+        .menu-icons .menu-link-icon.visible:nth-child(3) {
+          transition: all 1s cubic-bezier(0.53, -0.6, 0.36, 1.7) 1s; } }
