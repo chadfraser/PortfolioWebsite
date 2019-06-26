@@ -1,14 +1,17 @@
-// $primary-color: #59253A;
-// $secondary-color: #78244C;
-// $text-color: #2D4159;
 $text-color: rgb(65, 35, 50);
 $primary-color: #331521;
 $secondary-color: #78244C;
 $tertiary-color: #895061;
-// $text-color: #FFF;
-// $text-color: #00FA9A;
 $text-color: #4ECDC4;
 $text-secondary-color: rgb(40, 54, 119);
+
+
+@mixin easeOut($duration...) {
+    @if length($duration) == 0 or length($duration) > 1 {
+        $duration: 0.25s
+    }
+    transition: all $duration ease-out;
+}
 
 
 @mixin mediaSmallScreen {
