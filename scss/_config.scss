@@ -10,3 +10,27 @@ $tertiary-color: #895061;
 $text-color: #4ECDC4;
 $text-secondary-color: rgb(40, 54, 119);
 
+
+@mixin mediaSmallScreen {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMediumScreen {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLargeScreen {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaExtraLargeScreen {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}

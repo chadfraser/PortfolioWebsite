@@ -83,10 +83,10 @@
     transform: translateX(90vw) skew(15deg); }
   100% {
     transform: translateX(0vw) skew(0deg); } }
-  .menu-tab:hover {
+  .menu-tab:not:hover {
     background-color: #210e15;
     transition: all 0.25s ease-out; }
-    .menu-tab:hover .nav-menu {
+    .menu-tab:not:hover .nav-menu {
       background-color: #210e15; }
   .menu-tab .menu-button {
     position: absolute;
