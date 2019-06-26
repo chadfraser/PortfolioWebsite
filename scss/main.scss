@@ -94,18 +94,18 @@ main {
     }
 }
 
-.about-text {
-    margin-left: 50px;
-    margin-right: 50px;
-}
+// .about-text {
+//     margin-left: 50px;
+//     margin-right: 50px;
+// }
 
-p {
-    margin: 0;
+// p {
+//     margin: 0;
 
-    &.clear {
-        clear: both;
-    }
-}
+//     &.clear {
+//         clear: both;
+//     }
+// }
 
 
 @import 'mobile';
