@@ -8,7 +8,7 @@
         margin: 0;
         align-items: center;
 
-        .left-half, .sub-title {
+        .left-half, .sub-title, .name-title {
             position: absolute; 
             left: 0; 
             right: 0; 
@@ -18,11 +18,10 @@
 
         .left-half {
             z-index: -1;
-            top: 15vh;
+            top: calc(15vmin + (100vh - 100vmin) / 2);
 
             .self-image {
-                max-width: 40vw;
-                max-height: 40vh;
+                max-height: 40vmin;
             }
 
             .link-icons {
@@ -32,16 +31,18 @@
 
         .name-title {
             order: -1;
+            top: calc((100vh - 100vmin) / 2);
+            // top: 15vmin;
             text-align: center;
-            font-size: 15vh;
+            font-size: 15vmin;
             white-space: nowrap;
         }
 
         .sub-title {
             text-align: center;
             line-height: 1.2;
-            font-size: 8vh;
-            top: 52vh;
+            font-size: 8vmin;
+            top: calc(52vmin + (100vh - 100vmin) / 2);
             white-space: nowrap;
         }
     }

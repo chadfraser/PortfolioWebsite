@@ -171,11 +171,13 @@ body {
 h1, h2 {
   font-weight: 400; }
   h1.name-title, h2.name-title {
-    font-size: 5rem; }
+    font-size: 5rem;
+    white-space: nowrap; }
   h1.sub-title, h2.sub-title {
     line-height: 1.25;
     font-size: 2.5rem;
-    padding: 0 5rem; }
+    padding: 0 5rem;
+    white-space: nowrap; }
 
 a {
   color: #4ECDC4;
@@ -187,7 +189,8 @@ main {
     max-height: 50vh;
     border-radius: 50%; }
   main .link-icons {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    white-space: nowrap; }
     main .link-icons .link-image {
       margin: 0 5vh;
       max-height: 20vh;
@@ -199,15 +202,17 @@ main {
     margin: 0;
     padding: 0;
     margin: 0 1.5rem; }
-  main#home-main .flex-wrap {
-    display: flex;
-    justify-content: center;
-    align-content: center; }
-    main#home-main .flex-wrap .left-half {
-      flex: 1;
-      text-align: center; }
-    main#home-main .flex-wrap .right-half {
-      flex: 1; }
+  main#home-main {
+    overflow: hidden; }
+    main#home-main .flex-wrap {
+      display: flex;
+      justify-content: center;
+      align-content: center; }
+      main#home-main .flex-wrap .left-half {
+        flex: 1;
+        text-align: center; }
+      main#home-main .flex-wrap .right-half {
+        flex: 1; }
 
 .menu-icons {
   display: none; }
@@ -219,7 +224,7 @@ main {
   main {
     margin: 0;
     align-items: center; }
-    main .left-half, main .sub-title {
+    main .left-half, main .sub-title, main .name-title {
       position: absolute;
       left: 0;
       right: 0;
@@ -227,22 +232,22 @@ main {
       margin-right: auto; }
     main .left-half {
       z-index: -1;
-      top: 15vh; }
+      top: calc(15vmin + (100vh - 100vmin) / 2); }
       main .left-half .self-image {
-        max-width: 40vw;
-        max-height: 40vh; }
+        max-height: 40vmin; }
       main .left-half .link-icons {
         display: none; }
     main .name-title {
       order: -1;
+      top: calc((100vh - 100vmin) / 2);
       text-align: center;
-      font-size: 15vh;
+      font-size: 15vmin;
       white-space: nowrap; }
     main .sub-title {
       text-align: center;
       line-height: 1.2;
-      font-size: 8vh;
-      top: 52vh;
+      font-size: 8vmin;
+      top: calc(52vmin + (100vh - 100vmin) / 2);
       white-space: nowrap; }
   .menu-tab {
     background-color: #210e15;
