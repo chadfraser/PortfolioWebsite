@@ -70,15 +70,6 @@ main {
         }
     }
 
-    .identity-image {
-        display: inline-block;
-        max-height: 200px;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-        margin: 0 1.5rem;   
-    }
-
     &#home-main {
         overflow: hidden;
         .flex-wrap {
@@ -102,10 +93,84 @@ main {
     display: none;
 }
 
-// .about-text {
-//     margin-left: 50px;
-//     margin-right: 50px;
-// }
+.about-me {
+        margin: 0 50px;
+
+        .about-me-image-grid {
+            position: relative;
+            display: grid;
+            grid-gap: 5%;
+            background-color: black;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 40px 0;
+
+            .identity-image {
+                border: 5px $text-color solid;
+                box-shadow: 5px 5px 5px black;
+                border-radius: 20px;
+                max-width: 300px;
+
+                &:hover {
+                    opacity: 0.5;
+                    cursor: pointer;
+                }
+
+                &.open-image {
+                    opacity: 1;
+                    z-index: 2;
+                }
+            }
+
+            h1 {
+                margin: 0 0 5vh 0;
+            }
+        }
+
+    .about-popup {
+        z-index: 2;
+        background-color: darken(rgba($primary-color, 0.9), 5);
+        cursor: pointer;
+        display: none;
+        padding: 20px;
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%;
+        border-radius: 20px;
+
+        &.visible {
+            display: inline-block;
+        }
+    }
+    
+    // .identity-image {
+    //     display: inline-block;
+    //     // max-height: 200px;
+    //     max-width: 300px;
+    //     overflow: hidden;
+    //     margin: 0;
+    //     padding: 0;
+    //     margin: 0 1.5rem;
+    // }
+}
+    
+#copy-image {
+    z-index: 2;
+    display: none;
+    top: 10%;
+    left: 10%;
+    border-radius: 0;
+    max-width: 300px;
+    float: right;
+    margin-top: 8vh;
+
+    &.visible {
+        display: block;
+    }
+
+
+}
 
 // p {
 //     margin: 0;
