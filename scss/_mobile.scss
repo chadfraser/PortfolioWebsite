@@ -190,6 +190,7 @@
             // background-color: black;
             // grid-gap: 2%;
             grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
         // overflow: auto;
         // height: auto;
 
@@ -197,7 +198,15 @@
                 // border: 5px $text-color solid;
                 // box-shadow: 5px 5px 5px black;
                 // border-radius: 20px;
-                max-width: 30vw;
+                max-width: 35vw;
+
+                &:nth-child(odd) {
+                    justify-self: start;
+                }
+
+                &:nth-child(even) {
+                    justify-self: end;
+                }
             }
 
             h1 {
@@ -209,6 +218,7 @@
             &.visible {
                 text-align: center;
                 align-items: center;
+                min-height: calc(80% + 40px)
             }
 
             p {
@@ -228,7 +238,6 @@
     }
 }
 
-// z-index issues with menu in both versions
 // popup brushing bottom of screen
 // increase tablet menu icon link sizes
 // fix smartphone title size about

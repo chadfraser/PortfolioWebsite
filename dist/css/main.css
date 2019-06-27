@@ -220,10 +220,10 @@ main {
     position: relative;
     display: grid;
     grid-gap: 5%;
-    background-color: black;
     grid-template-columns: repeat(3, 1fr);
     margin: 40px 0;
-    justify-items: center; }
+    justify-items: center;
+    height: auto; }
     .about-me .about-me-image-grid .identity-image {
       border: 5px #4ECDC4 solid;
       box-shadow: 5px 5px 5px black;
@@ -236,16 +236,21 @@ main {
         opacity: 1; }
     .about-me .about-me-image-grid h1 {
       margin-bottom: -3vh; }
+  .about-me .relative-popup {
+    position: absolute;
+    display: none;
+    min-height: 90%;
+    width: 80%;
+    top: 5%; }
+    .about-me .relative-popup.visible {
+      display: flex; }
   .about-me .about-popup {
     background-color: rgba(33, 14, 21, 0.9);
     cursor: pointer;
     display: none;
     padding: 20px;
-    position: absolute;
-    overflow: hidden;
-    min-height: calc(80% - 40px);
-    width: 80%;
-    top: 5%;
+    position: relative;
+    min-height: 100%;
     border-radius: 20px; }
     .about-me .about-popup.visible {
       display: inline-block; }
@@ -390,14 +395,20 @@ main {
     .about-me .about-me-image-grid {
       margin: 0 5vw;
       margin-bottom: 10vh;
-      grid-template-columns: repeat(2, 1fr); }
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center; }
       .about-me .about-me-image-grid .identity-image {
-        max-width: 30vw; }
+        max-width: 35vw; }
+        .about-me .about-me-image-grid .identity-image:nth-child(odd) {
+          justify-self: start; }
+        .about-me .about-me-image-grid .identity-image:nth-child(even) {
+          justify-self: end; }
       .about-me .about-me-image-grid h1 {
         margin-bottom: 0; }
     .about-me .about-popup.visible {
       text-align: center;
-      align-items: center; }
+      align-items: center;
+      min-height: calc(80% + 40px); }
     .about-me .about-popup p {
       margin-top: 0; }
   #copy-image {

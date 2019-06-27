@@ -99,89 +99,79 @@ main {
 }
 
 .about-me {
-        margin: 0 50px;
+    margin: 0 50px;
 
-        .about-me-image-grid {
-            position: relative;
-            display: grid;
-            grid-gap: 5%;
-            background-color: black;
-            grid-template-columns: repeat(3, 1fr);
-            margin: 40px 0;
-            justify-items: center;
+    .about-me-image-grid {
+        position: relative;
+        display: grid;
+        grid-gap: 5%;
+        // background-color: black;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 40px 0;
+        justify-items: center;
+        height: auto;
 
-            .identity-image {
-                border: 5px $text-color solid;
-                box-shadow: 5px 5px 5px black;
-                border-radius: 20px;
-                max-width: 300px;
+        .identity-image {
+            border: 5px $text-color solid;
+            box-shadow: 5px 5px 5px black;
+            border-radius: 20px;
+            max-width: 300px;
 
-                &:hover {
-                    opacity: 0.5;
-                    cursor: pointer;
-                    // z-index: 0;
-                }
-
-                &.open-image {
-                    opacity: 1;
-                }
+            &:hover {
+                opacity: 0.5;
+                cursor: pointer;
             }
 
-            h1 {
-                margin-bottom: -3vh;
+            &.open-image {
+                opacity: 1;
             }
         }
 
+        h1 {
+            margin-bottom: -3vh;
+        }
+    }
+
+    .relative-popup {
+        position: absolute;
+        display: none;
+        // overflow: hidden;
+        min-height: 90%;
+        width: 80%;
+        top: 5%;
+
+        &.visible {
+            display: flex;
+        }
+    }
+        
     .about-popup {
-        // z-index: 2;
         background-color: darken(rgba($primary-color, 0.9), 5);
         cursor: pointer;
         display: none;
         padding: 20px;
-        position: absolute;
-        overflow: hidden;
-        min-height: calc(80% - 40px);
-        // height: 60%;
-        width: 80%;
-        top: 5%;
-        // margin-bottom: 2rem;
+        position: relative;
+        min-height: 100%;
         border-radius: 20px;
 
         &.visible {
             display: inline-block;
-            // padding-bottom: 10vh;
-            // padding-bottom: 10vh;
         }
 
         p {
             margin-top: 5vh;
-            // margin: 10vh;
-            // background-color: blue;
         }
     }
-    
-    // .identity-image {
-    //     display: inline-block;
-    //     // max-height: 200px;
-    //     max-width: 300px;
-    //     overflow: hidden;
-    //     margin: 0;
-    //     padding: 0;
-    //     margin: 0 1.5rem;
-    // }
 }
     
 #copy-image {
-    // z-index: 2;
     display: none;
     top: 10%;
     left: 10%;
     border-radius: 0;
     max-width: 300px;
     float: right;
-    // padding: 8vh 2vw;
     padding: 0 2vw;
-    // background-color: red;
 
     &.visible {
         display: block;
