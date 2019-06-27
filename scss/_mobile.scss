@@ -1,7 +1,8 @@
 @include mediaMediumScreen {
     header {
-        top: 85vh;
-        height: 15vh;
+        top: calc(100vh - 15vmin);
+        height: 15vmin;
+        width: 15vmin;
     }
 
     main {
@@ -52,7 +53,7 @@
         & ~ .nav-menu {
             background-color: $primary-color;
         }
-        z-index: 3;
+        z-index: 6;
         top: calc(100vh - 15vmin);
         left: calc(100% - 15vmin);
         height: 15vmin;
@@ -111,15 +112,15 @@
     }
 
     .menu-icons {
-        z-index: 3;
-        display: flex; 
+        z-index: 6;
+        display: flex;
         justify-content: space-around;
         align-items: center;
         position: fixed;
         width: 85vw;
         height: 15vmin;
-        // top: 85vh;
-        bottom: 0vh;
+        top: 100vh;
+        // bottom: 0vh;
         left: 0;
 
         .menu-link-icon {
@@ -131,7 +132,7 @@
             }
 
             &.visible {
-                transform: translate3d(0, 0, 0);
+                transform: translate3d(0, -15vmin, 0);
         
                 @for $i from 1 through 3 {
                     &:nth-child(#{$i}) {
@@ -141,11 +142,6 @@
             }
         }
     }
-
-
-
-
-
 
     .nav-menu {
         width: 100%;
@@ -167,7 +163,7 @@
             width: 100%;
     
             .menu-item {
-                transform: translate3d(500px, 0, 0) !important;
+                transform: translate3d(800px, 0, 0) !important;
     
                 &.visible {
                     transform: translate3d(0, 0, 0) !important;
@@ -175,4 +171,64 @@
             }
         }
     }
+    
+    .page-title {
+        font-size: 10vh;
+        white-space: normal;
+        margin-left: 5vw;
+    }
+
+    .about-intro-text {
+        margin: 0 5vw;
+    }
+
+    .about-me {
+        margin: 0;
+        .about-me-image-grid {
+            margin: 0 5vw;
+            margin-bottom: 10vh;
+            // background-color: black;
+            // grid-gap: 2%;
+            grid-template-columns: repeat(2, 1fr);
+        // overflow: auto;
+        // height: auto;
+
+            .identity-image {
+                // border: 5px $text-color solid;
+                // box-shadow: 5px 5px 5px black;
+                // border-radius: 20px;
+                max-width: 30vw;
+            }
+
+            h1 {
+                margin-bottom: 0;
+            }
+        }
+
+        .about-popup {
+            &.visible {
+                text-align: center;
+                align-items: center;
+            }
+
+            p {
+                margin-top: 0;
+            }
+        }
+    }
+        
+    #copy-image {
+        max-width: 50vmin;
+        float: none;
+        padding: 1rem 0 1.5rem 0;
+
+        &.visible {
+            display: inline;
+        }
+    }
 }
+
+// z-index issues with menu in both versions
+// popup brushing bottom of screen
+// increase tablet menu icon link sizes
+// fix smartphone title size about

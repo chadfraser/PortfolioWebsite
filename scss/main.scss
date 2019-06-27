@@ -93,6 +93,11 @@ main {
     display: none;
 }
 
+.page-title {
+    padding-top: 8vh;
+    font-size: 4rem;
+}
+
 .about-me {
         margin: 0 50px;
 
@@ -100,7 +105,7 @@ main {
             position: relative;
             display: grid;
             grid-gap: 5%;
-            // background-color: black;
+            background-color: black;
             grid-template-columns: repeat(3, 1fr);
             margin: 40px 0;
             justify-items: center;
@@ -114,40 +119,45 @@ main {
                 &:hover {
                     opacity: 0.5;
                     cursor: pointer;
+                    // z-index: 0;
                 }
 
                 &.open-image {
                     opacity: 1;
-                    z-index: 2;
                 }
             }
 
             h1 {
-                margin-bottom: 5vh;
+                margin-bottom: -3vh;
             }
         }
 
     .about-popup {
-        z-index: 2;
+        // z-index: 2;
         background-color: darken(rgba($primary-color, 0.9), 5);
         cursor: pointer;
         display: none;
         padding: 20px;
         position: absolute;
+        overflow: hidden;
+        min-height: calc(80% - 40px);
+        // height: 60%;
         width: 80%;
-        height: 80%;
         top: 5%;
-        left: 10%;
+        // margin-bottom: 2rem;
         border-radius: 20px;
 
         &.visible {
             display: inline-block;
+            // padding-bottom: 10vh;
+            // padding-bottom: 10vh;
         }
 
-        // p {
-        //     margin-right: 2vw;
-        //     background-color: blue;
-        // }
+        p {
+            margin-top: 5vh;
+            // margin: 10vh;
+            // background-color: blue;
+        }
     }
     
     // .identity-image {
@@ -162,14 +172,15 @@ main {
 }
     
 #copy-image {
-    z-index: 2;
+    // z-index: 2;
     display: none;
     top: 10%;
     left: 10%;
     border-radius: 0;
     max-width: 300px;
     float: right;
-    padding: 8vh 2vw;
+    // padding: 8vh 2vw;
+    padding: 0 2vw;
     // background-color: red;
 
     &.visible {

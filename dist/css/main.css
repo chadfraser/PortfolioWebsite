@@ -210,12 +210,17 @@ main {
 .menu-icons {
   display: none; }
 
+.page-title {
+  padding-top: 8vh;
+  font-size: 4rem; }
+
 .about-me {
   margin: 0 50px; }
   .about-me .about-me-image-grid {
     position: relative;
     display: grid;
     grid-gap: 5%;
+    background-color: black;
     grid-template-columns: repeat(3, 1fr);
     margin: 40px 0;
     justify-items: center; }
@@ -228,41 +233,41 @@ main {
         opacity: 0.5;
         cursor: pointer; }
       .about-me .about-me-image-grid .identity-image.open-image {
-        opacity: 1;
-        z-index: 2; }
+        opacity: 1; }
     .about-me .about-me-image-grid h1 {
-      margin-bottom: 5vh; }
+      margin-bottom: -3vh; }
   .about-me .about-popup {
-    z-index: 2;
     background-color: rgba(33, 14, 21, 0.9);
     cursor: pointer;
     display: none;
     padding: 20px;
     position: absolute;
+    overflow: hidden;
+    min-height: calc(80% - 40px);
     width: 80%;
-    height: 80%;
     top: 5%;
-    left: 10%;
     border-radius: 20px; }
     .about-me .about-popup.visible {
       display: inline-block; }
+    .about-me .about-popup p {
+      margin-top: 5vh; }
 
 #copy-image {
-  z-index: 2;
   display: none;
   top: 10%;
   left: 10%;
   border-radius: 0;
   max-width: 300px;
   float: right;
-  padding: 8vh 2vw; }
+  padding: 0 2vw; }
   #copy-image.visible {
     display: block; }
 
 @media screen and (max-width: 768px) {
   header {
-    top: 85vh;
-    height: 15vh; }
+    top: calc(100vh - 15vmin);
+    height: 15vmin;
+    width: 15vmin; }
   main {
     margin: 0;
     align-items: center; }
@@ -293,7 +298,7 @@ main {
       white-space: nowrap; }
   .menu-tab {
     background-color: #210e15;
-    z-index: 3;
+    z-index: 6;
     top: calc(100vh - 15vmin);
     left: calc(100% - 15vmin);
     height: 15vmin;
@@ -333,14 +338,14 @@ main {
         height: 1vmin;
         margin: 0 0 1.5vmin 0; }
   .menu-icons {
-    z-index: 3;
+    z-index: 6;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: fixed;
     width: 85vw;
     height: 15vmin;
-    bottom: 0vh;
+    top: 100vh;
     left: 0; }
     .menu-icons .menu-link-icon {
       transform: translate3d(0, 50vh, 0); }
@@ -348,7 +353,7 @@ main {
         max-height: 12vmin;
         max-width: 15vw; }
       .menu-icons .menu-link-icon.visible {
-        transform: translate3d(0, 0, 0); }
+        transform: translate3d(0, -15vmin, 0); }
         .menu-icons .menu-link-icon.visible:nth-child(1) {
           transition: all 1s cubic-bezier(0.53, -0.6, 0.36, 1.7) 0.5s; }
         .menu-icons .menu-link-icon.visible:nth-child(2) {
@@ -371,6 +376,33 @@ main {
       font-size: 8vh;
       width: 100%; }
       .nav-menu .menu-list .menu-item {
-        transform: translate3d(500px, 0, 0) !important; }
+        transform: translate3d(800px, 0, 0) !important; }
         .nav-menu .menu-list .menu-item.visible {
-          transform: translate3d(0, 0, 0) !important; } }
+          transform: translate3d(0, 0, 0) !important; }
+  .page-title {
+    font-size: 10vh;
+    white-space: normal;
+    margin-left: 5vw; }
+  .about-intro-text {
+    margin: 0 5vw; }
+  .about-me {
+    margin: 0; }
+    .about-me .about-me-image-grid {
+      margin: 0 5vw;
+      margin-bottom: 10vh;
+      grid-template-columns: repeat(2, 1fr); }
+      .about-me .about-me-image-grid .identity-image {
+        max-width: 30vw; }
+      .about-me .about-me-image-grid h1 {
+        margin-bottom: 0; }
+    .about-me .about-popup.visible {
+      text-align: center;
+      align-items: center; }
+    .about-me .about-popup p {
+      margin-top: 0; }
+  #copy-image {
+    max-width: 50vmin;
+    float: none;
+    padding: 1rem 0 1.5rem 0; }
+    #copy-image.visible {
+      display: inline; } }
