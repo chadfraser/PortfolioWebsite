@@ -100,9 +100,10 @@ main {
             position: relative;
             display: grid;
             grid-gap: 5%;
-            background-color: black;
+            // background-color: black;
             grid-template-columns: repeat(3, 1fr);
             margin: 40px 0;
+            justify-items: center;
 
             .identity-image {
                 border: 5px $text-color solid;
@@ -122,7 +123,7 @@ main {
             }
 
             h1 {
-                margin: 0 0 5vh 0;
+                margin-bottom: 5vh;
             }
         }
 
@@ -135,13 +136,18 @@ main {
         position: absolute;
         width: 80%;
         height: 80%;
-        top: 10%;
+        top: 5%;
         left: 10%;
         border-radius: 20px;
 
         &.visible {
             display: inline-block;
         }
+
+        // p {
+        //     margin-right: 2vw;
+        //     background-color: blue;
+        // }
     }
     
     // .identity-image {
@@ -163,13 +169,12 @@ main {
     border-radius: 0;
     max-width: 300px;
     float: right;
-    margin-top: 8vh;
+    padding: 8vh 2vw;
+    // background-color: red;
 
     &.visible {
         display: block;
     }
-
-
 }
 
 // p {

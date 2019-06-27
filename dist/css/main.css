@@ -216,9 +216,9 @@ main {
     position: relative;
     display: grid;
     grid-gap: 5%;
-    background-color: black;
     grid-template-columns: repeat(3, 1fr);
-    margin: 40px 0; }
+    margin: 40px 0;
+    justify-items: center; }
     .about-me .about-me-image-grid .identity-image {
       border: 5px #4ECDC4 solid;
       box-shadow: 5px 5px 5px black;
@@ -231,7 +231,7 @@ main {
         opacity: 1;
         z-index: 2; }
     .about-me .about-me-image-grid h1 {
-      margin: 0 0 5vh 0; }
+      margin-bottom: 5vh; }
   .about-me .about-popup {
     z-index: 2;
     background-color: rgba(33, 14, 21, 0.9);
@@ -241,7 +241,7 @@ main {
     position: absolute;
     width: 80%;
     height: 80%;
-    top: 10%;
+    top: 5%;
     left: 10%;
     border-radius: 20px; }
     .about-me .about-popup.visible {
@@ -255,7 +255,7 @@ main {
   border-radius: 0;
   max-width: 300px;
   float: right;
-  margin-top: 8vh; }
+  padding: 8vh 2vw; }
   #copy-image.visible {
     display: block; }
 
