@@ -228,7 +228,7 @@ main {
       border: 5px #4ECDC4 solid;
       box-shadow: 5px 5px 5px black;
       border-radius: 20px;
-      max-width: 300px; }
+      max-width: 25vw; }
       .about-me .about-me-image-grid .identity-image:hover {
         opacity: 0.5;
         cursor: pointer; }
@@ -393,7 +393,7 @@ main {
   .about-me {
     margin: 0; }
     .about-me .about-me-image-grid {
-      margin: 0 5vw;
+      margin: 5vh 5vw;
       margin-bottom: 10vh;
       grid-template-columns: repeat(2, 1fr);
       justify-items: center; }
