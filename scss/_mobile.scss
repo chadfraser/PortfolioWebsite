@@ -218,7 +218,7 @@
             &.visible {
                 text-align: center;
                 align-items: center;
-                min-height: calc(80% + 40px)
+                min-height: calc(80% + 40px);
             }
 
             p {
@@ -238,5 +238,42 @@
     }
 }
 
+
+@include mediaSmallScreen {
+    .page-title {
+        line-height: 1;
+        margin-bottom: 5vh;
+        text-align: center;
+    }
+
+    .about-intro-text {
+        text-align: center;
+    }
+
+    .about-me {
+        // margin: 0;
+        .about-me-image-grid {
+            grid-gap: 5vh;
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+
+            .identity-image {
+                justify-self: center !important;
+                max-width: 80vw;
+            }
+
+            h1 {
+                margin-bottom: 0;
+            }
+        }
+
+        .relative-popup {
+            width: 90vw;
+            height: auto;
+            min-height: auto;
+        }
+    }
+}
+
 // increase tablet menu icon link sizes
-// fix smartphone title size about
+// copyimage moving into title as screen shrinks

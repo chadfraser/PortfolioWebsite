@@ -115,7 +115,7 @@ main {
             border: 5px $text-color solid;
             box-shadow: 5px 5px 5px black;
             border-radius: 20px;
-            max-width: 25vw;
+            max-width: 20vw;
 
             &:hover {
                 opacity: 0.5;
@@ -146,7 +146,7 @@ main {
     }
         
     .about-popup {
-        background-color: darken(rgba($primary-color, 0.9), 5);
+        background-color: darken(rgba($primary-color, 0.95), 5);
         cursor: pointer;
         display: none;
         padding: 20px;

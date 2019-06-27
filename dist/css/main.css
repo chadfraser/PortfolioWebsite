@@ -228,7 +228,7 @@ main {
       border: 5px #4ECDC4 solid;
       box-shadow: 5px 5px 5px black;
       border-radius: 20px;
-      max-width: 25vw; }
+      max-width: 20vw; }
       .about-me .about-me-image-grid .identity-image:hover {
         opacity: 0.5;
         cursor: pointer; }
@@ -245,7 +245,7 @@ main {
     .about-me .relative-popup.visible {
       display: flex; }
   .about-me .about-popup {
-    background-color: rgba(33, 14, 21, 0.9);
+    background-color: rgba(33, 14, 21, 0.95);
     cursor: pointer;
     display: none;
     padding: 20px;
@@ -417,3 +417,24 @@ main {
     padding: 1rem 0 1.5rem 0; }
     #copy-image.visible {
       display: inline; } }
+
+@media screen and (max-width: 500px) {
+  .page-title {
+    line-height: 1;
+    margin-bottom: 5vh;
+    text-align: center; }
+  .about-intro-text {
+    text-align: center; }
+  .about-me .about-me-image-grid {
+    grid-gap: 5vh;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center; }
+    .about-me .about-me-image-grid .identity-image {
+      justify-self: center !important;
+      max-width: 80vw; }
+    .about-me .about-me-image-grid h1 {
+      margin-bottom: 0; }
+  .about-me .relative-popup {
+    width: 90vw;
+    height: auto;
+    min-height: auto; } }
