@@ -34,18 +34,18 @@ var menuHtml = `
         
     <div class="menu-icons">
         <div class="menu-link-icon">
-            <a href="./" class="icon-anchor">
-                <img src="img/temp-a.png" alt="" class="link-image menu-link-image github-image">
+            <a href="https://github.com/chadfraser/" class="icon-anchor">
+                <img src="img/iconmonstr-github-opaque.png" alt="" class="link-image menu-link-image github-image">
             </a>
         </div>
         <div class="menu-link-icon">
-            <a href="./" class="icon-anchor">
-                <img src="img/temp-a.png" alt="" class="link-image menu-link-image linked-in-image">
+            <a href="https://www.linkedin.com/in/chad-fraser" class="icon-anchor">
+                <img src="img/iconmonstr-linkedin-opaque.png" alt="" class="link-image menu-link-image linked-in-image">
             </a>
         </div>
         <div class="menu-link-icon">
-            <a href="./" class="icon-anchor">
-                <img src="img/temp-a.png" alt="" class="link-image menu-link-image kattis-image">
+            <a href="https://www.facebook.com/1up20x6" class="icon-anchor">
+                <img src="img/iconmonstr-facebook-opaque.png" alt="" class="link-image menu-link-image facebook-image">
             </a>
         </div>
     </div>

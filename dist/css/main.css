@@ -381,6 +381,7 @@ main {
       main .left-half .self-image {
         max-height: 40vmin; }
       main .left-half .link-icons {
+        opacity: 1;
         display: none; }
     main .name-title {
       order: -1;
