@@ -286,9 +286,10 @@ main {
         img {
             max-width: 300px;
             margin: 0 20px -5px;
+            display: none;
     
-            &.project-animation {
-                display: none;
+            &.visible {
+                display: inline;
             }
         }
 
