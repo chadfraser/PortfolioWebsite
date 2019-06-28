@@ -160,7 +160,7 @@ header {
   position: fixed;
   z-index: 2;
   top: 0px;
-  height: 10vh;
+  height: 0vh;
   width: 100%; }
 
 body {
@@ -268,7 +268,8 @@ main {
   border-radius: 0;
   max-width: 300px;
   float: right;
-  padding: -5px 2vw 0; }
+  padding: -5px 2vw 0;
+  margin-left: 10px; }
   #copy-image.visible {
     display: block; }
 
