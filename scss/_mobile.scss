@@ -152,7 +152,7 @@
     
         .menu-list {
             list-style: none;
-            font-size: 10vmin;
+            font-size: 8vmin;
             left: 0;
     
             .menu-item {
@@ -160,7 +160,7 @@
                 transform: translate3d(800px, 0, 0) !important;
     
                 &.visible {
-                    transform: translate3d(-10%, 0, 0) !important;
+                    transform: translate3d(-5vh, 0, 0) !important;
                 }
             }
         }
@@ -346,5 +346,3 @@
         width: 100% !important;
     }
 }
-
-// tablet menu link center bug

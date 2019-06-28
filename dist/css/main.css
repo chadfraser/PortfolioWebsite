@@ -470,13 +470,13 @@ main {
       transition: all 0.25s ease-out; }
     .nav-menu .menu-list {
       list-style: none;
-      font-size: 10vmin;
+      font-size: 8vmin;
       left: 0; }
       .nav-menu .menu-list .menu-item {
         margin: auto;
         transform: translate3d(800px, 0, 0) !important; }
         .nav-menu .menu-list .menu-item.visible {
-          transform: translate3d(-10%, 0, 0) !important; }
+          transform: translate3d(-5vh, 0, 0) !important; }
   .page-title {
     font-size: 10vh;
     white-space: normal;
