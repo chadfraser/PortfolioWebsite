@@ -236,6 +236,40 @@
             display: inline;
         }
     }
+    
+    .contact-me {
+        h1 {
+            font-size: 8vmin;
+            text-align: center;
+            margin: 0;
+        }
+
+        img {
+            // transform: translateY(-2vh);
+            max-width: 15vmin !important;
+        }
+
+        p {
+            font-size: 4vmin !important;
+        }
+
+        h6 {
+            // br {
+            //     display: none;
+            // }
+            // float: left;
+            // position: absolute;
+            // left: calc(19vmin + 12vw);
+            // left: 0;
+            // bottom: 0;
+            // margin: 0 !important;
+            // margin-top: auto !important;
+            // margin-right: auto !important;
+            // text-align: left;
+            font-size: 2vmin !important;
+            white-space: nowrap;
+        }
+    }
 }
 
 
@@ -277,3 +311,4 @@
 
 // increase tablet menu icon link sizes
 // copyimage moving into title as screen shrinks
+// fix vertical align of contact boxes
