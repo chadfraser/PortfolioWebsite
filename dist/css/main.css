@@ -238,6 +238,8 @@ main {
         opacity: 1; }
     .about-me .about-me-image-grid h1 {
       margin-bottom: -3vh; }
+      .about-me .about-me-image-grid h1 br {
+        display: none; }
   .about-me .relative-popup {
     position: absolute;
     display: none;
@@ -499,7 +501,9 @@ main {
         .about-me .about-me-image-grid .identity-image:nth-child(even) {
           justify-self: end; }
       .about-me .about-me-image-grid h1 {
-        margin-bottom: 0; }
+        margin-bottom: 1rem; }
+        .about-me .about-me-image-grid h1 br {
+          display: inline; }
     .about-me .about-popup.visible {
       text-align: center;
       align-items: center;
@@ -570,8 +574,6 @@ main {
     .about-me .about-me-image-grid .identity-image {
       justify-self: center !important;
       max-width: 80vw; }
-    .about-me .about-me-image-grid h1 {
-      margin-bottom: 0; }
   .about-me .relative-popup {
     width: 90vw;
     height: auto;
