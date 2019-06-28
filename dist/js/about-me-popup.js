@@ -35,5 +35,5 @@ function closeAllTextPopups() {
 
 function moveCopyImage(divToMoveTo) {
     var outerDiv = copyImage.parentElement;
-    divToMoveTo.insertBefore(outerDiv.removeChild(copyImage), divToMoveTo.firstChild.nextSibling.nextSibling);
+    divToMoveTo.insertBefore(outerDiv.removeChild(copyImage), divToMoveTo.firstChild.nextSibling);
 }

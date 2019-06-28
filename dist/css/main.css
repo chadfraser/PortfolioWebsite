@@ -264,7 +264,7 @@ main {
   border-radius: 0;
   max-width: 300px;
   float: right;
-  padding: 0 2vw; }
+  padding: -5px 2vw 0; }
   #copy-image.visible {
     display: block; }
 
