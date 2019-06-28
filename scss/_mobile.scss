@@ -33,7 +33,6 @@
         .name-title {
             order: -1;
             top: calc((100vh - 100vmin) / 2);
-            // top: 15vmin;
             text-align: center;
             font-size: 15vmin;
             white-space: nowrap;
@@ -72,25 +71,21 @@
             width: 100%;
             left: 0;
             transform: none;
-            // border-top: $text-color;
     
             .button-line {
                 animation: none !important;
 
                 &::after {
                     animation: none !important;
-                    // position: relative;
                 }
             }
 
             .menu-link-icons {
                 position: fixed;
-                // top: 120vh;
                 top: 50vh;
                 right: 50vw;
                 height: 10vh;
                 left: 0;
-                // transform: translateY(-30vh);
             }
         }
 
@@ -120,7 +115,6 @@
         width: 85vw;
         height: 15vmin;
         top: 100vh;
-        // bottom: 0vh;
         left: 0;
 
         .menu-link-icon {
@@ -158,15 +152,15 @@
     
         .menu-list {
             list-style: none;
-            text-align: center;
-            font-size: 8vh;
-            width: 100%;
+            font-size: 10vmin;
+            left: 0;
     
             .menu-item {
+                margin: auto;
                 transform: translate3d(800px, 0, 0) !important;
     
                 &.visible {
-                    transform: translate3d(0, 0, 0) !important;
+                    transform: translate3d(-10%, 0, 0) !important;
                 }
             }
         }
@@ -187,17 +181,10 @@
         .about-me-image-grid {
             margin: 5vh 5vw;
             margin-bottom: 10vh;
-            // background-color: black;
-            // grid-gap: 2%;
             grid-template-columns: repeat(2, 1fr);
             justify-items: center;
-        // overflow: auto;
-        // height: auto;
 
             .identity-image {
-                // border: 5px $text-color solid;
-                // box-shadow: 5px 5px 5px black;
-                // border-radius: 20px;
                 max-width: 35vw;
 
                 &:nth-child(odd) {
@@ -254,20 +241,64 @@
         }
 
         h6 {
-            // br {
-            //     display: none;
-            // }
-            // float: left;
-            // position: absolute;
-            // left: calc(19vmin + 12vw);
-            // left: 0;
-            // bottom: 0;
-            // margin: 0 !important;
-            // margin-top: auto !important;
-            // margin-right: auto !important;
-            // text-align: left;
             font-size: 2vmin !important;
             white-space: nowrap;
+        }
+    }
+
+    .projects {
+        margin: 0 2vw;
+    
+        h1, h2 {
+            margin: 0 0 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 10vw;
+        }
+
+        h2 {
+            font-size: 8vw !important;
+        }
+    
+        .project-sample {
+            display: block;
+
+            &:not(:last-child)::after {
+                display: none;
+            }
+        }
+    
+        .project-visual {
+            align-items: center;
+            width: 100%;
+
+            img {
+                display: block;
+                margin: 5px auto;
+                max-height: 50vh;
+                max-width: 50vw;
+        
+                &.project-animation {
+                    display: none;
+                }
+            }
+    
+            .link-button, .download-button {
+                background-color: darken($primary-color, 10);
+                float: left;
+                margin: 10px 5px;
+                width: 45%;
+            }
+
+            .download-button {
+                float: right;
+            }
+        }
+    
+        .project-text {
+            margin-bottom: 5vh;
         }
     }
 }
@@ -307,8 +338,15 @@
             min-height: auto;
         }
     }
+    
+    .link-button, .download-button {
+        background-color: darken($primary-color, 10);
+        float: none;
+        margin: 5px 0px !important;
+        width: 100% !important;
+    }
 }
 
 // increase tablet menu icon link sizes
+// tablet menu link center bug
 // copyimage moving into title as screen shrinks
-// fix vertical align of contact boxes
