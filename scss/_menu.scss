@@ -150,6 +150,10 @@
                 padding: 5vh;
                 width: 100%;
                 height: 100%;
+
+                &:hover {
+                    background-color: lighten($primary-color, 5);
+                }
             }
         }
     }
