@@ -342,6 +342,8 @@ main {
       height: 3px;
       background-color: #4ECDC4;
       border-radius: 5px; }
+    .projects .project-sample.in-progress .download-button {
+      display: none !important; }
   .projects .project-visual {
     float: left; }
     .projects .project-visual img {
