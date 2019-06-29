@@ -1,13 +1,22 @@
-// $text-color: rgb(65, 35, 50);
-// $primary-color: #331521;
-// $secondary-color: #78244C;
-// $tertiary-color: #895061;
-// $text-color: #4ECDC4;
-// $text-secondary-color: rgb(40, 54, 119);
+@import "themes/theme-bold";
+
+
+$bg: 'bg';
+$card-bg: 'card-bg';
+$text: 'text';
+$text-secondary: 'text-secondary';
+$link: 'link';
+$hover: 'hover';
+$logo: 'logo';
+$brand-blue: 'brand-blue';
+$brand-red: 'brand-red';
+$border: 'border';
+$popup: 'popup';
 
 $themes: (
         bold: (
-            bg: $bg--bold,
+            // bg: $bg--bold,
+            bg: #000,
             menu: $menu--bold,
             menu-footer: $menu-footer--bold,
             menu-hover: $menu-hover--bold,
@@ -29,23 +38,23 @@ $themes: (
             button-tertiary: $button-tertiary--bold,
             button-quarternary: $button-quarternary--bold
         ),
-        dark: (
-                logo: url("../images/brand/logo_vertical--invert.svg"),
-                bg: linear-gradient($bg--dark--top, $bg--dark--bottom),
-                card-bg: $bg--card--dark,
-                text: $text--dark,
-                text-secondary: $text--2--dark,
-                link: $brand--blue--dark,
-                hover: $hover--dark,
-                border: $border--dark
-        ),
+        // dark: (
+        //         logo: url("../images/brand/logo_vertical--invert.svg"),
+        //         bg: linear-gradient($bg--dark--top, $bg--dark--bottom),
+        //         card-bg: $bg--card--dark,
+        //         text: $text--dark,
+        //         text-secondary: $text--2--dark,
+        //         link: $brand--blue--dark,
+        //         hover: $hover--dark,
+        //         border: $border--dark
+        // ),
 );
 
 
 
 @mixin themed() {
     @each $theme, $map in $themes {
-        .theme-#{$theme} & {
+        &.theme--#{$theme} {
             $theme-map: () !global;
             @each $key, $submap in $map {
                 $value: map-get(map-get($themes, $theme), '#{$key}');
@@ -54,9 +63,10 @@ $themes: (
             @content;
             $theme-map: null !global;
         }
+        // @content;
     }
 }
 
-@function t($key) {
+@function get-color($key) {
     @return map-get($theme-map, $key);
 }

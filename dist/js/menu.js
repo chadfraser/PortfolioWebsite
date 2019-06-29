@@ -6,19 +6,19 @@ var menuHtml = `
 
     <div class="settings-menu">
         <ul class="settings-list">
-            <li class="settings-item" id="bright-theme">
+            <li class="settings-item" id="theme--bright">
                 BRIGHT
             </li>
-            <li class="settings-item" id="calm-theme">
+            <li class="settings-item" id="theme--calm">
                 CALM
             </li>
-            <li class="settings-item" id="bold-theme">
+            <li class="settings-item" id="theme--bold">
                 BOLD
             </li>
-            <li class="settings-item" id="somber-theme">
+            <li class="settings-item" id="theme--somber">
                 SOMBER
             </li>
-            <li class="settings-item" id="dark-theme">
+            <li class="settings-item" id="theme--dark">
                 DARK
             </li>
         </ul>

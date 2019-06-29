@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'themes';
 
 * {
     margin: 0;
@@ -20,11 +21,13 @@ header {
 }
 
 body {
-    background: linear-gradient($primary-color 0%, $secondary-color 50%, $tertiary-color 80%);
+    @include themed() {
+        background: get-color($bg);
+        color: get-color($text);
+    }
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: $text-color;
 }
 
 h1, h2 {
@@ -44,7 +47,9 @@ h1, h2 {
 }
 
 a {
-    color: $text-color;
+    @include themed() {
+        color: get-color($text);
+    }
     text-decoration: none;
 }
 
@@ -102,13 +107,13 @@ main {
         position: relative;
         display: grid;
         grid-gap: 5%;
-        // background-color: black;
         grid-template-columns: repeat(3, 1fr);
         margin: 40px 0;
         justify-items: center;
         height: auto;
 
         .identity-image {
+            // TODO: BORDER, BOX-SHADOW
             border: 5px $text-color solid;
             box-shadow: 5px 5px 5px black;
             border-radius: 20px;
@@ -133,10 +138,9 @@ main {
         }
     }
 
-    .relative-popup {
+    .popup-absolute-container {
         position: absolute;
         display: none;
-        // overflow: hidden;
         min-height: 90%;
         width: 80%;
         top: 5%;
@@ -147,7 +151,9 @@ main {
     }
         
     .about-popup {
-        background-color: darken(rgba($primary-color, 0.95), 5);
+        @include themed() {
+            background-color: get-color($popup);
+        }
         cursor: pointer;
         display: none;
         padding: 20px;
@@ -174,7 +180,7 @@ main {
     top: 10%;
     left: 10%;
     border-radius: 0;
-    max-width: 300px;
+    max-width: 30vw;
     float: right;
     padding: -5px 2vw 0;
     margin-left: 10px;
@@ -191,9 +197,7 @@ main {
     .contact-links {
         display: flex;
         flex-direction: column;
-        // justify-content: center;
         align-items: center;
-        // align-content: center;
     }
 
     .contact-element {
@@ -211,7 +215,10 @@ main {
         }
 
         &:hover {
-            background-color: $primary-color;
+            @include themed() {
+                background-color: get-color($bg);
+                color: get-color($text);
+            }
             @include easeOut;
 
             p, h6 {

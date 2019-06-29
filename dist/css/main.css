@@ -246,11 +246,12 @@ header {
   width: 100%; }
 
 body {
-  background: linear-gradient(#331521 0%, #78244C 50%, #895061 80%);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #4ECDC4; }
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  body.theme--bold {
+    background: #000;
+    color: #4ECDC4; }
 
 h1, h2 {
   font-weight: 400; }
@@ -264,8 +265,9 @@ h1, h2 {
     white-space: nowrap; }
 
 a {
-  color: #4ECDC4;
   text-decoration: none; }
+  a.theme--bold {
+    color: #4ECDC4; }
 
 main {
   margin-top: 15vh; }
@@ -322,22 +324,23 @@ main {
       margin-bottom: -3vh; }
       .about-me .about-me-image-grid h1 br {
         display: none; }
-  .about-me .relative-popup {
+  .about-me .popup-absolute-container {
     position: absolute;
     display: none;
     min-height: 90%;
     width: 80%;
     top: 5%; }
-    .about-me .relative-popup.visible {
+    .about-me .popup-absolute-container.visible {
       display: flex; }
   .about-me .about-popup {
-    background-color: rgba(33, 14, 21, 0.95);
     cursor: pointer;
     display: none;
     padding: 20px;
     position: relative;
     min-height: 100%;
     border-radius: 20px; }
+    .about-me .about-popup.theme--bold {
+      background-color: rgba(33, 14, 21, 0.95); }
     .about-me .about-popup.visible {
       display: inline-block; }
     .about-me .about-popup ul {
@@ -350,7 +353,7 @@ main {
   top: 10%;
   left: 10%;
   border-radius: 0;
-  max-width: 300px;
+  max-width: 30vw;
   float: right;
   padding: -5px 2vw 0;
   margin-left: 10px; }
@@ -376,8 +379,10 @@ main {
     .contact-me .contact-element:nth-child(3) {
       margin-bottom: 20px; }
     .contact-me .contact-element:hover {
-      background-color: #331521;
       transition: all 0.25s ease-out; }
+      .contact-me .contact-element:hover.theme--bold {
+        background-color: #000;
+        color: #4ECDC4; }
       .contact-me .contact-element:hover p, .contact-me .contact-element:hover h6 {
         color: white;
         transition: all 0.25s ease-out; }
@@ -703,7 +708,7 @@ main {
     .about-me .about-me-image-grid .identity-image {
       justify-self: center !important;
       max-width: 80vw; }
-  .about-me .relative-popup {
+  .about-me .popup-absolute-container {
     width: 90vw;
     height: auto;
     min-height: auto; }
