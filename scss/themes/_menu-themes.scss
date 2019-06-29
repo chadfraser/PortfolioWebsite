@@ -1,0 +1,32 @@
+@mixin bright_theme_menu_decorate() {
+    background: linear-gradient(to right, #8E8D8A, #EAE7DC, #8E8D8A);
+    color: #E98074;
+    color: #E85A4F;
+}
+
+@mixin calm_theme_menu_decorate() {
+    background: radial-gradient(#C1C8E4, #84CEEB);
+    color: linear-gradient(#5680E9, #5AB9EA);
+    color: #8860D0;
+}
+
+@mixin bold_theme_menu_decorate() {
+    background: linear-gradient(to top right, darken(#331521, 5), #895061);
+    color: #4ECDC4;
+}
+
+@mixin somber_theme_menu_decorate() {
+    background: linear-gradient(#222629 50%, #6B6370);
+    color: linear-gradient(#61892F, #86C232);
+    color: darken(#61892F, 10);
+    color: #86C232;
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // color: transparent;
+}
+
+@mixin dark_theme_menu_decorate() {
+    background: rgba(#19181A, 1);
+    text-shadow: 0 0 2px #479761;
+    color: #CEBC81;
+}

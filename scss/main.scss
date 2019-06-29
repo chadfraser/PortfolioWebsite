@@ -1,5 +1,6 @@
 @import 'config';
-@import 'menu';
+@import 'menus/nav-menu';
+@import 'menus/theme-menu';
 @import 'themes';
 
 * {
@@ -16,7 +17,7 @@ header {
     position: fixed;
     z-index: 2;
     top: 0px;
-    height: 0vh;
+    height: 0;
     width: 100%;
 }
 
@@ -25,6 +26,8 @@ body {
         background: get-color($bg);
         color: get-color($text);
     }
+    // top: 0;
+    // position: absolute;
     height: 100%;
     font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -38,7 +41,8 @@ h1 {
     }
     
     &.page-title {
-        margin: 20px 0;
+        // margin: 20px 0;
+        padding: 20px 0;
         padding-top: 8vh;
         font-size: 4rem;
 
@@ -112,7 +116,7 @@ main {
 
 
 
-
+// center about title on small screen
 // js to average size of project-visual
 
 @import 'pages/about';

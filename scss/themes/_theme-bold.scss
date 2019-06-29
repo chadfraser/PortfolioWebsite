@@ -30,4 +30,16 @@ $button-quarternary--bold: darken($primary-color, 10);
 $button-tertiary-hover--bold: darken($primary-color, 10);
 $button-quarternary-hover--bold: darken($primary-color, 10);
 
+$theme-menu-hover--bold: linear-gradient(to right, $primary-color, $tertiary-color);
+$theme-menu-text--bold: $text-color;
+
+$theme-menu-hover--somber: linear-gradient(to right, #222629, #6B6370);
+$theme-menu-text-bg--somber: linear-gradient(#61892F, #86C232);
+$theme-menu-text-bg--somber: linear-gradient(#61892F, #86C232);
+
+$theme-menu-hover--bold: linear-gradient(to right, $primary-color, $tertiary-color);
+$theme-menu-text--bold: $text-color;
+
+$theme-menu-hover--bold: linear-gradient(to right, $primary-color, $tertiary-color);
+$theme-menu-text--bold: $text-color;
 // contact-text-hover, contact-text, contact-border?

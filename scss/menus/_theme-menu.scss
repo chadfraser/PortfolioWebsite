@@ -1,0 +1,145 @@
+@import '../config';
+@import '../themes/menu-themes';
+
+.settings-tab {
+    background-color: darken(rgba($primary-color, 0.75), 5);
+    // @include darken_menu(1);
+    position: fixed;
+    z-index: 3;
+    // width: 60px;
+    height: 60px;
+    width: 25%;
+    left: calc(60px - 25%);
+    // height: 60px;
+    border-radius: 0 0 15px 0;
+    cursor: pointer;
+    // text-align: center;
+    transform: translateX(0);
+    @include easeOut();
+
+    p {
+        position: relative;
+        font-size: 30px;
+        top: 10px;
+        right: calc(150px - 20vw);
+        display: inline;
+    }
+
+    img {
+        float: right;
+        position: fixed;
+        // max-width: 80%;
+        max-width: 48px;
+        top: 10%;
+        right: 8px;
+    }
+
+    &.close {
+        border-radius: 0;
+        transform: translateX(calc(100% - 60px));
+        background-color: darken(rgba($primary-color, 1), 5);
+        @include easeOut();
+
+        // .button-line {
+        //     @for $i from 1 through 3 {
+        //         &:nth-child(#{$i}) {
+        //             @include animate_button_line($i);
+        //         }
+        //     }
+        // }
+    }
+}
+
+.settings-menu {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    position: fixed;
+    width: 25%;
+    top: 60px;
+    background-color: darken(rgba($primary-color, 1), 5);
+    // left: calc(100% + 12px);
+    left: -25%;
+    transform: translateX(0);
+    @include easeOut();
+
+    &.visible {
+        transform: translateX(100%);
+        @include easeOut();
+    }
+
+    .settings-list {
+        list-style: none;
+        text-align: center;
+        font-size: 3vh;
+        width: 100%;
+
+        .settings-item {
+            transform: translate3d(-800px, 0, 0);
+            cursor: pointer;
+            padding: 10px 0;
+            transition: color 0s 0s !important;
+            border: 5px black solid;
+            border-top: none;
+
+            &:hover {
+                font-weight: bold;
+            }
+
+            &#theme--bright:hover {
+                @include bright_theme_menu_decorate();
+            }
+
+            &#theme--calm:hover {
+                @include calm_theme_menu_decorate();
+            }
+
+            &#theme--bold:hover {
+                @include bold_theme_menu_decorate();
+                // background: $theme-menu-hover--bold;
+                // color: $theme-menu-text--bold;
+                // background-color: linear-gradient($primary-color 0%, $tertiary-color 100%) no-repeat fixed;
+                // background: linear-gradient(red, yellow);// no-repeat fixed;
+                // color: white;
+            }
+
+            &#theme--somber:hover {
+                @include somber_theme_menu_decorate();
+            }
+
+            &#theme--dark:hover {
+                @include dark_theme_menu_decorate();
+            }
+
+            &.visible {
+                transform: translate3d(0, 0, 0);
+                transition-duration: 0.25s;
+        
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        transition-delay: $i * 0.1s + 0.1;
+                    }
+                }
+
+                &:first-child::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $text-color;
+                }
+                // &:not(:last-child)::after {
+                //     content: "";
+                //     position: absolute;
+                //     bottom: 0;
+                //     left: 5%;
+                //     width: 90%;
+                //     height: 2px;
+                //     background-color: $text-color;
+                // }
+            }
+        }
+    }
+}
