@@ -29,14 +29,63 @@
                     </div>
                     <div class="project-text">
                         <h2>
-                            Lorem Ipsum
+                            Clu Clu Land Port
                         </h2>
                         <p class="project-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan ante nec justo gravida,
-                            at tempor eros ultrices. Curabitur pretium sollicitudin tellus, in viverra erat dignissim in.
-                            Sed magna turpis, sodales id suscipit non, ornare vel est. In nec metus quam. Aenean turpis ipsum,
-                            faucibus sit amet tellus a, feugiat sollicitudin massa. Quisque eget velit scelerisque, bibendum
-                            justo non, tempor nisi.
+                            Clu Clu Land is an arcade-style NES game, somewhat comparable to Pac-Man. Each level is
+                            set up like a geoboard, with evenly spaced pegs sticking up out of the ground, some of which
+                            are connected by rubber bands. On each stage, there is a hidden image made up of invisible
+                            gold bars between the pegs. Your goal is to uncover the hidden image by moving your character
+                            across each invisible gold bar.
+                            <br> <br>
+                            It's not that easy though! Sea urchins and black holes will kill your character with the
+                            slightest contact, and your life count is limited. Additionally, your character constantly
+                            moves forwards automatically, and you can't directly change her direction. All you can do is
+                            stick your character's left or right arm out to the side to make her swing around a peg as
+                            she passes it, and use the momentum of her swing to change her direction.
+                            <br>
+                            It's a lot harder than it sounds!
+                            <br> <br>
+                            This port I've made comes with a demo, remappable controls, new hidden images on each stage,
+                            new items, and up to four-player simultaneous co-op play!
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="project-sample">
+                    <div class="project-visual">
+                        <img src="img/temp-b.png" alt="" class="project-image visible" id="project-image-3">
+                        <img src="img/temp-c.png" alt="" class="project-animation" id="project-animation-3">
+                        <div class="buttons">
+                            <a href="" class="link-button">GITHUB</a>
+                            <a href="" class="download-button">DOWNLOAD</a>
+                        </div>
+                    </div>
+                    <div class="project-text">
+                        <h2>
+                            RetroAchievements* Site Scraping
+                        </h2>
+                        <p class="project-description">
+                            It can be tedious checking your favorite websites every morning, especially if you need to
+                            check for any updates across dozens of pages (<em>Especially</em> especially when those
+                            updates may be as small as a single number being changed).
+                            <br> <br>
+                            To run this program, just give it a list of user accounts from the RetroAchievements gaming
+                            website that you want to track, as well as your email. Every time the program starts
+                            tracking a new user (or game or game system), it scrapes the RetroAchievements website for
+                            that user, then saves a JSON file with all of that user's relevant data (as well as a JSON
+                            file for every game that user has saved in their history on the RetroAchievements website).
+                            <br> <br>
+                            Then, every future time the program is run, it compares the data in its stored JSON file
+                            with the data currently on the RetroAchievements website. It compiles all updates from
+                            every file it's tracking and emails you a formatted list of all of these updates.
+                            <br> <br>
+                            I found this very useful to make and use, since it allows me to know every time my friends
+                            have played something new, or my favorite games have new challenges added to them.
+                            <br> <br> <br>
+                            <h5>
+                                <i>* I have no affiliation with the RetroAchievements gaming website.</i>
+                            </h5>
                         </p>
                     </div>
                 </div>
@@ -80,17 +129,48 @@
                 </div>
                 <div class="project-text">
                     <h2>
-                        Lorem Ipsum
+                        Four Player Mahjong
                     </h2>
                     <p class="project-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan ante nec justo gravida,
-                        at tempor eros ultrices. Curabitur pretium sollicitudin tellus, in viverra erat dignissim in.
-                        Sed magna turpis, sodales id suscipit non, ornare vel est. In nec metus quam. Aenean turpis ipsum,
-                        faucibus sit amet tellus a, feugiat sollicitudin massa. Quisque eget velit scelerisque, bibendum
-                        justo non, tempor nisi.
+                        A program that allows the player to play a game of four-player mahjong. The program so far
+                        can play a full game in a console window against three computer AI opponents, handles scoring,
+                        features rudimentary computer AI, and can recognize winning hands or legal moves according to
+                        the Hong Kong Old Style Mahjong ruleset.
+                        <br> <br>
+                        In the future, I plan to give the program a graphical windowed mode, allow for the player to
+                        select rulesets other than Hong Kong Old Style, separate out its scoring and AI system to
+                        create mahjong calculator modes (e.g., showing the player how many points an arbitrary hand is
+                        worth, or how many more turns at minimum a hand needs to win), and a more complex AI that takes
+                        the scoring system into account.
                     </p>
                 </div>
             </div>
+
+            <div class="project-sample in-progress">
+                    <div class="project-visual">
+                        <img src="img/temp-b.png" alt="" class="project-image visible" id="project-image-3">
+                        <img src="img/temp-c.png" alt="" class="project-animation" id="project-animation-3">
+                        <div class="buttons">
+                            <a href="" class="link-button">GITHUB</a>
+                            <a href="" class="download-button">DOWNLOAD</a>
+                        </div>
+                    </div>
+                    <div class="project-text">
+                        <h2>
+                            Screenshot Stitcher Image Editor
+                        </h2>
+                        <p class="project-description">
+                            A simple image editor that piece screenshots together, cropping and pasting the user's
+                            current clipboard image. Designed to create maps of old screen-based video games such as 
+                            <i>The Legend of Zelda</i> or <i>Metal Gear</i>, this program excels at cropping out the 
+                            window borders of whatever gaming program is being run, and pasting each screen of the same
+                            size a set apart from one another.
+                            <br> <br>
+                            Some more work needs to be put in serializing/deserializing the image to save it, as well
+                            as undoing/redoing an action or resizing the window to make this a truly responsive program.
+                        </p>
+                    </div>
+                </div>    
         </main>
         
         <script src="js/menu.js"></script>

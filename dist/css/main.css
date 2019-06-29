@@ -345,8 +345,9 @@ main {
   .projects .project-visual {
     float: left; }
     .projects .project-visual img {
+      align-self: center;
       max-width: 300px;
-      margin: 0 20px -5px; }
+      margin: 0 50px -5px; }
       .projects .project-visual img.project-animation {
         display: none; }
     .projects .project-visual .link-button, .projects .project-visual .download-button {
