@@ -1,7 +1,7 @@
 const identityImages = document.querySelectorAll(".identity-image");
 const aboutPopups = document.querySelectorAll(".about-popup");
 var copyImage = document.querySelector("#copy-image");
-var relativePopup = document.querySelector(".relative-popup");
+var popupContainer = document.querySelector(".popup-absolute-container");
 
 identityImages.forEach(function (image, index) { 
     var text = aboutPopups[index];
@@ -16,15 +16,15 @@ function popupText(text, image) {
     closeAllTextPopups();
     image.classList.add("open-image");
     text.classList.add("visible");
-    relativePopup.classList.add("visible");
+    popupContainer.classList.add("visible");
     copyImage.src = image.src;
-    moveCopyImage(text);
+    positionCopyImage(text);
     copyImage.classList.add("visible");
 }
 
 function closeAllTextPopups() {
     copyImage.classList.remove("visible");
-    relativePopup.classList.remove("visible");
+    popupContainer.classList.remove("visible");
     aboutPopups.forEach(function (text) {
         text.classList.remove("visible");
     });
@@ -33,7 +33,7 @@ function closeAllTextPopups() {
     });
 }
 
-function moveCopyImage(divToMoveTo) {
+function positionCopyImage(divToMoveTo) {
     var outerDiv = copyImage.parentElement;
-    divToMoveTo.insertBefore(outerDiv.removeChild(copyImage), divToMoveTo.firstChild.nextSibling);
+    divToMoveTo.insertBefore(outerDiv.removeChild(copyImage), divToMoveTo.firstChild);
 }

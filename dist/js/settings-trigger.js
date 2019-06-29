@@ -9,18 +9,8 @@ let settingsVisible = false;
 settingsTab.addEventListener("click", toggleSettingsVisible);
 
 function toggleSettingsVisible() {
-    console.log(2);
     if (!settingsVisible) {
         settingsTab.classList.add("close");
-
-        // // This code forces the tab to briefly 'forget' that the cursor was hovering over it as it translates to the
-        // // left, ensuring that the hover effect does not continue despite the tab no longer being under the cursor
-        // // after its translation.
-        // menuTab.style["pointerEvents"] = "none";
-        // setTimeout(function(){
-        //     menuTab.style["pointerEvents"] = "auto";
-        // }, 100);
-
         settingsIcon.classList.add("visible");
         settingsMenu.classList.add("visible");
         settingsList.classList.add("visible");
