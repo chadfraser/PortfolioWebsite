@@ -1,4 +1,29 @@
 var menuHtml = `
+    <div class="settings-tab">
+        <p>THEME</p>
+        <img src="img/iconmonstr-gear-opaque.png" class="settings-icon">
+    </div>
+
+    <div class="settings-menu">
+        <ul class="settings-list">
+            <li class="settings-item" id="bright-theme">
+                BRIGHT
+            </li>
+            <li class="settings-item" id="calm-theme">
+                CALM
+            </li>
+            <li class="settings-item" id="bold-theme">
+                BOLD
+            </li>
+            <li class="settings-item" id="somber-theme">
+                SOMBER
+            </li>
+            <li class="settings-item" id="dark-theme">
+                DARK
+            </li>
+        </ul>
+    </div>
+
     <div class="menu-tab">
         <div class="menu-button">
             <div class="button-line"></div>

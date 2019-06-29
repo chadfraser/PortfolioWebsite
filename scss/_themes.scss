@@ -7,13 +7,27 @@
 
 $themes: (
         bold: (
-                bg: $bg--light,
-                card-bg: $bg--card--light,
-                text: $text--light,
-                text-secondary: $text--2--light,
-                link: $brand--blue--light,
-                hover: $hover--light,
-                border: $border--light
+            bg: $bg--bold,
+            menu: $menu--bold,
+            menu-footer: $menu-footer--bold,
+            menu-hover: $menu-hover--bold,
+            menu-link-hover: $menu-link-hover--bold,
+            menu-button: $menu-button--bold,
+            title: $title--bold,
+            subtitle: $subtitle--bold,
+            text: $text-primary--bold,
+            text-secondary: $text-secondary--bold,
+            image-border: $image-border--bold,
+            image-shadow: $image-shadow--bold,
+            popup: $popup--bold,
+            popup-secondary: $popup-secondary--bold,
+            contact-box: $contact-box--bold,
+            contact-box-hover: $contact-box-hover--bold,
+            divider: $divider--bold,
+            button: $button-primary--bold,
+            button-secondary: $button-secondary--bold,
+            button-tertiary: $button-tertiary--bold,
+            button-quarternary: $button-quarternary--bold
         ),
         dark: (
                 logo: url("../images/brand/logo_vertical--invert.svg"),
@@ -26,3 +40,23 @@ $themes: (
                 border: $border--dark
         ),
 );
+
+
+
+@mixin themed() {
+    @each $theme, $map in $themes {
+        .theme-#{$theme} & {
+            $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), '#{$key}');
+                $theme-map: map-merge($theme-map, ($key: $value)) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+
+@function t($key) {
+    @return map-get($theme-map, $key);
+}

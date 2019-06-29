@@ -48,6 +48,103 @@
         }
     }
 
+    
+
+    .settings-tab {
+        position: fixed;
+        z-index: -1;
+        height: 20vmin;
+        width: 50vmin;
+        top: calc(100vh - 20vmin);
+        left: -30vmin;
+        border-radius: 0;
+        
+        & ~ .settings-menu {
+            background-color: $primary-color;
+        }
+
+        p {
+            position: relative;
+            font-size: 9.5vmin;
+            top: 2.5vmin;
+            right: -0.5vmin;
+            display: none;
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+        }
+
+        img {
+            max-height: 15vmin;
+            max-width: 15vmin;
+            top: 2.5vmin;
+            right: 2.5vmin;
+        }
+
+        &.close {
+            transform: translateX(30vmin);
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+            ////////////////////////////////////
+
+            p {
+                display: inline;
+            }
+        }
+    }
+
+    .settings-menu {
+        width: 50vmin;
+        top: auto;
+        bottom: 20vmin !important;
+        left: -50vmin;
+        // border: 10% black solid;
+
+        .settings-list {
+            .settings-item {
+                border: 3px black solid;
+                border-bottom: none;
+
+                &.visible::before {
+                    // top: auto;
+                    // bottom: 0;
+                    display: none;
+                }
+
+                &:last-child::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 6px;
+                    background-color: $text-color;
+                }
+            }
+        }
+    }
+
     .menu-tab {
         background-color: darken($primary-color, 5);
         & ~ .nav-menu {
