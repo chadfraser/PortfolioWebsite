@@ -6,24 +6,42 @@ const settingsItems = document.querySelectorAll(".settings-item");
 
 let settingsVisible = false;
 
-settingsTab.addEventListener("click", toggleSettingsVisible);
+document.body.addEventListener("click", function() {
+    console.log("C");
+    closeSettings();
+});
+
+settingsTab.addEventListener("click", function(event) {
+    console.log("B");
+    toggleSettingsVisible();
+    event.stopPropagation();
+});
 
 function toggleSettingsVisible() {
     if (!settingsVisible) {
-        settingsTab.classList.add("close");
-        settingsIcon.classList.add("visible");
-        settingsMenu.classList.add("visible");
-        settingsList.classList.add("visible");
-        settingsItems.forEach(item => item.classList.add("visible"));
-
-        settingsVisible = true;
+        openSettings();
     } else {
-        settingsTab.classList.remove("close");
-        settingsIcon.classList.remove("visible");
-        settingsMenu.classList.remove("visible");
-        settingsList.classList.remove("visible");
-        settingsItems.forEach(item => item.classList.remove("visible"));
-
-        settingsVisible = false;
+        closeSettings();
     }
+}
+
+function openSettings() {
+    settingsTab.classList.add("close");
+    settingsIcon.classList.add("visible");
+    settingsMenu.classList.add("visible");
+    settingsList.classList.add("visible");
+    settingsItems.forEach(item => item.classList.add("visible"));
+
+    settingsVisible = true;
+}
+
+function closeSettings() {
+    console.log("A");
+    settingsTab.classList.remove("close");
+    settingsIcon.classList.remove("visible");
+    settingsMenu.classList.remove("visible");
+    settingsList.classList.remove("visible");
+    settingsItems.forEach(item => item.classList.remove("visible"));
+
+    settingsVisible = false;
 }
