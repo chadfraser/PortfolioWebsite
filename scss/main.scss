@@ -295,10 +295,10 @@ main {
         img {
             max-width: 300px;
             margin: 0 20px -5px;
-            display: none;
+            // display: none;
     
-            &.visible {
-                display: inline;
+            &.project-animation {
+                display: none;
             }
         }
 

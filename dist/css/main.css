@@ -346,10 +346,9 @@ main {
     float: left; }
     .projects .project-visual img {
       max-width: 300px;
-      margin: 0 20px -5px;
-      display: none; }
-      .projects .project-visual img.visible {
-        display: inline; }
+      margin: 0 20px -5px; }
+      .projects .project-visual img.project-animation {
+        display: none; }
     .projects .project-visual .link-button, .projects .project-visual .download-button {
       background-color: #210e15;
       margin: 10px 10px 0;
@@ -550,9 +549,8 @@ main {
         display: none;
         margin: 5px auto;
         max-height: 50vh;
-        max-width: 50vw; }
-        .projects .project-visual img.visible {
-          display: block; }
+        max-width: 50vw;
+        display: block; }
       .projects .project-visual .link-button, .projects .project-visual .download-button {
         background-color: #0f060a;
         float: left;

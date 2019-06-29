@@ -1,0 +1,129 @@
+@import 'config';
+// @import 'menu';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    height: 10vh;
+    width: 100%;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient($primary-color 0%, $secondary-color 50%, $tertiary-color 80%);
+    color: $text-color;
+}
+
+h1, h2 {
+    font-weight: 400;
+}
+
+main {
+    margin-top: 15vh;
+}
+
+.page-title {
+    padding-top: 8vh;
+    font-size: 4rem;
+}
+
+.about-me {
+    margin: 0 50px;
+
+    .about-me-image-grid {
+        position: relative;
+        display: grid;
+        grid-gap: 5%;
+        background-color: black;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 40px 0;
+        justify-items: center;
+        // height: auto;
+
+        .identity-image {
+            border: 5px $text-color solid;
+            box-shadow: 5px 5px 5px black;
+            border-radius: 20px;
+            max-width: 300px;
+
+            &:hover {
+                opacity: 0.5;
+                cursor: pointer;
+            }
+
+            &.open-image {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            margin-bottom: -3vh;
+        }
+    }
+
+    .relative-popup {
+        position: absolute;
+        display: none;
+        // padding-bottom: 20px;
+        // border-bottom: 20px solid red;
+        // overflow: hidden;
+        min-height: 90%;
+        width: 80%;
+        top: 5%;
+
+        &.visible {
+            // display: block;
+            display: flex;
+            // background-color: white;
+            // padding-bottom: 10vh;
+            // padding-bottom: 10vh;
+        }
+    }
+
+    .about-popup {
+        // opacity: 0.25;
+        background-color: darken(rgba($primary-color, 0.9), 5);
+        cursor: pointer;
+        display: none;
+        padding: 20px;
+        position: relative;
+        min-height: 100%;
+
+        &.visible {
+            display: inline-block;
+        }
+
+        p {
+            margin-top: 5vh;
+        }
+    }
+}
+    
+#copy-image {
+    display: none;
+    top: 10%;
+    // left: 10%;
+    border-radius: 0;
+    max-width: 300px;
+    float: right;
+    padding: 0 2vw;
+
+    &.visible {
+        display: block;
+    }
+}
+
+@import 'mobile';

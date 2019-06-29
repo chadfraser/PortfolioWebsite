@@ -1,0 +1,28 @@
+// $text-color: rgb(65, 35, 50);
+// $primary-color: #331521;
+// $secondary-color: #78244C;
+// $tertiary-color: #895061;
+// $text-color: #4ECDC4;
+// $text-secondary-color: rgb(40, 54, 119);
+
+$themes: (
+        bold: (
+                bg: $bg--light,
+                card-bg: $bg--card--light,
+                text: $text--light,
+                text-secondary: $text--2--light,
+                link: $brand--blue--light,
+                hover: $hover--light,
+                border: $border--light
+        ),
+        dark: (
+                logo: url("../images/brand/logo_vertical--invert.svg"),
+                bg: linear-gradient($bg--dark--top, $bg--dark--bottom),
+                card-bg: $bg--card--dark,
+                text: $text--dark,
+                text-secondary: $text--2--dark,
+                link: $brand--blue--dark,
+                hover: $hover--dark,
+                border: $border--dark
+        ),
+);

@@ -1,0 +1,299 @@
+.menu-tab {
+  background-color: rgba(33, 14, 21, 0.75);
+  position: fixed;
+  z-index: 3;
+  width: 60px;
+  height: 45px;
+  top: 15px;
+  left: calc(100% - 48px);
+  border-radius: 15px 0 0 15px;
+  cursor: pointer; }
+  .menu-tab ~ .nav-menu {
+    background-color: rgba(33, 14, 21, 0.75); }
+  .menu-tab.close {
+    background-color: rgba(33, 14, 21, 0.75);
+    transform: translateX(-55vw);
+    transition: all 0.25s ease-out; }
+    .menu-tab.close ~ .nav-menu {
+      background-color: rgba(33, 14, 21, 0.75); }
+    .menu-tab.close .button-line:nth-child(1) {
+      animation: translateXAndSkew 1s 0.35s;
+      animation-fill-mode: forwards; }
+      .menu-tab.close .button-line:nth-child(1)::after {
+        animation: translateYForButtonIndex1 1s 0.35s;
+        animation-fill-mode: forwards; }
+
+@keyframes translateYForButtonIndex1 {
+  0% {
+    animation-timing-function: ease-out;
+    transform: translateY(0vh) rotate(0deg);
+    opacity: 1; }
+  50% {
+    animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
+    transform: translateY(-10vh) rotate(-40deg); }
+  100% {
+    transform: translate(5px, 8px) rotate(45deg); } }
+
+@keyframes translateXAndSkew {
+  50% {
+    animation-timing-function: cubic-bezier(0, 1.33, 1, 1.13);
+    transform: translateX(90vw) skew(15deg); }
+  100% {
+    transform: translateX(0vw) skew(0deg); } }
+    .menu-tab.close .button-line:nth-child(2) {
+      animation: translateXAndSkew 1s 0.45s;
+      animation-fill-mode: forwards; }
+      .menu-tab.close .button-line:nth-child(2)::after {
+        animation: translateYForButtonIndex2 1s 0.45s;
+        animation-fill-mode: forwards; }
+
+@keyframes translateYForButtonIndex2 {
+  0% {
+    animation-timing-function: ease-out;
+    transform: translateY(0vh) rotate(0deg);
+    opacity: 1; }
+  50% {
+    animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
+    transform: translateY(-10vh) rotate(-40deg);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes translateXAndSkew {
+  50% {
+    animation-timing-function: cubic-bezier(0, 1.33, 1, 1.13);
+    transform: translateX(90vw) skew(15deg); }
+  100% {
+    transform: translateX(0vw) skew(0deg); } }
+    .menu-tab.close .button-line:nth-child(3) {
+      animation: translateXAndSkew 1s 0.55s;
+      animation-fill-mode: forwards; }
+      .menu-tab.close .button-line:nth-child(3)::after {
+        animation: translateYForButtonIndex3 1s 0.55s;
+        animation-fill-mode: forwards; }
+
+@keyframes translateYForButtonIndex3 {
+  0% {
+    animation-timing-function: ease-out;
+    transform: translateY(0vh) rotate(0deg);
+    opacity: 1; }
+  50% {
+    animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
+    transform: translateY(-10vh) rotate(-40deg); }
+  100% {
+    transform: translate(5px, -8px) rotate(-45deg); } }
+
+@keyframes translateXAndSkew {
+  50% {
+    animation-timing-function: cubic-bezier(0, 1.33, 1, 1.13);
+    transform: translateX(90vw) skew(15deg); }
+  100% {
+    transform: translateX(0vw) skew(0deg); } }
+  .menu-tab:hover {
+    background-color: #210e15;
+    transition: all 0.25s ease-out; }
+    .menu-tab:hover ~ .nav-menu {
+      background-color: #210e15; }
+  .menu-tab .menu-button {
+    position: absolute;
+    right: 25px;
+    top: 12px; }
+    .menu-tab .menu-button .button-line {
+      overflow: visible; }
+      .menu-tab .menu-button .button-line::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background-color: #4ECDC4; }
+
+.nav-menu {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 55%;
+  height: 100vh;
+  top: 0;
+  left: calc(100% + 12px);
+  transform: translateX(0vw);
+  transition: all 0.25s ease-out; }
+  .nav-menu.visible {
+    transform: translateX(-55vw);
+    transition: all 0.25s ease-out; }
+  .nav-menu .menu-list {
+    list-style: none;
+    text-align: center;
+    font-size: 8vh;
+    width: 100%; }
+    .nav-menu .menu-list .menu-item:nth-child(odd) {
+      transform: translate3d(0, -800px, 0); }
+    .nav-menu .menu-list .menu-item:nth-child(even) {
+      transform: translate3d(0, 800px, 0); }
+    .nav-menu .menu-list .menu-item.visible {
+      transform: translate3d(0, 0, 0);
+      transition-duration: 0.25s; }
+      .nav-menu .menu-list .menu-item.visible:nth-child(1) {
+        transition-delay: 0.5s; }
+      .nav-menu .menu-list .menu-item.visible:nth-child(2) {
+        transition-delay: 0.75s; }
+      .nav-menu .menu-list .menu-item.visible:nth-child(3) {
+        transition-delay: 1s; }
+      .nav-menu .menu-list .menu-item.visible:nth-child(4) {
+        transition-delay: 1.25s; }
+    .nav-menu .menu-list .menu-item .menu-link {
+      display: block;
+      padding: 5vh;
+      margin: 0;
+      width: 100%;
+      height: 100%; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  height: 100vh;
+  width: 100%; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  top: 0px;
+  height: 10vh;
+  width: 100%; }
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(#331521 0%, #78244C 50%, #895061 80%);
+  color: #4ECDC4; }
+
+h1, h2 {
+  font-weight: 400; }
+  h1.name-title, h2.name-title {
+    font-size: 5rem; }
+  h1.sub-title, h2.sub-title {
+    line-height: 1.25;
+    font-size: 2.5rem;
+    padding: 0 5rem; }
+
+a {
+  color: #4ECDC4;
+  text-decoration: none; }
+
+main {
+  margin-top: 15vh; }
+  main .self-image {
+    max-height: 50vh;
+    border-radius: 50%; }
+  main .link-icons {
+    margin-top: 1rem; }
+    main .link-icons .link-image {
+      margin: 0 5vh;
+      max-height: 20vh;
+      max-width: 80px; }
+  main#home-main .flex-wrap {
+    display: flex;
+    justify-content: center;
+    align-content: center; }
+    main#home-main .flex-wrap .left-half {
+      flex: 1;
+      text-align: center; }
+    main#home-main .flex-wrap .right-half {
+      flex: 1; }
+
+.menu-icons {
+  display: none; }
+
+@media screen and (max-width: 768px) {
+  header {
+    top: 85vh;
+    height: 15vh; }
+  main {
+    margin: 0;
+    align-items: center; }
+    main .left-half, main .sub-title {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto; }
+    main .left-half {
+      z-index: -1;
+      top: 15vh; }
+      main .left-half .self-image {
+        max-width: 40vw;
+        max-height: 40vh; }
+      main .left-half .link-icons {
+        display: none; }
+    main .name-title {
+      order: -1;
+      text-align: center;
+      font-size: 15vh;
+      white-space: nowrap; }
+    main .sub-title {
+      text-align: center;
+      line-height: 1.2;
+      font-size: 8vh;
+      top: 52vh;
+      white-space: nowrap; }
+  .menu-tab {
+    z-index: 3;
+    top: calc(100vh - 15vh);
+    left: calc(100% - 15vh);
+    height: 15vh;
+    width: 15vh;
+    border-radius: 0; }
+    .menu-tab.close {
+      background-color: #210e15;
+      width: 100%;
+      left: 0;
+      transform: none; }
+      .menu-tab.close .button-line {
+        animation: none !important; }
+        .menu-tab.close .button-line::after {
+          animation: none !important; }
+      .menu-tab.close .menu-link-icons {
+        position: fixed;
+        top: 50vh;
+        right: 50vw;
+        height: 10vh;
+        left: 0; }
+    .menu-tab .menu-button {
+      right: 0;
+      top: 0;
+      height: 15vh;
+      width: 15vh; }
+      .menu-tab .menu-button .button-line::after {
+        position: relative;
+        width: 75%;
+        top: 4vmin;
+        left: 12.5%;
+        height: 1vmin;
+        margin: 0 0 1.5vmin 0; }
+  .menu-icons {
+    z-index: 3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 85vw;
+    height: 15vh;
+    top: 85vh;
+    left: 0; }
+    .menu-icons .menu-link-icon {
+      transform: translate3d(0, 50vh, 0); }
+      .menu-icons .menu-link-icon .menu-link-image {
+        max-height: 12vh; }
+      .menu-icons .menu-link-icon.visible {
+        transform: translate3d(0, 0, 0); }
+        .menu-icons .menu-link-icon.visible:nth-child(1) {
+          transition: all 1s cubic-bezier(0.53, -0.6, 0.36, 1.7) 0.5s; }
+        .menu-icons .menu-link-icon.visible:nth-child(2) {
+          transition: all 1s cubic-bezier(0.53, -0.6, 0.36, 1.7) 0.75s; }
+        .menu-icons .menu-link-icon.visible:nth-child(3) {
+          transition: all 1s cubic-bezier(0.53, -0.6, 0.36, 1.7) 1s; } }
