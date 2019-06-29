@@ -1,0 +1,80 @@
+// @import 'config';
+// @import 'menu';
+// @import 'themes';
+
+.projects {
+    margin: 0 50px;
+
+    .project-title {
+        font-size: 3rem;
+        margin: 0 10px 15px;
+    }
+    
+    .project-sample {
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-row-gap: 40px;
+
+        &:not(:last-child)::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: -25px;
+            bottom: 20px;
+            width: calc(100% + 50px);
+            height: 3px;
+            @include themed() {
+                // background-color: get-color($divider);
+                background-color: get-color($text);
+            }
+            // background-color: $text-color;
+            border-radius: 5px;
+        }
+    
+        &.in-progress {
+            .download-button {
+                display: none !important;
+            }
+        }
+    }
+    
+    .project-visual {
+        float: left;
+
+        img {
+            align-self: center;
+            max-width: 300px;
+            margin: 0 50px -5px;
+    
+            &.project-animation {
+                display: none;
+            }
+        }
+
+        .link-button, .download-button {
+            @include themed() {
+                // background-color: get-color($button);
+            }
+            background-color: darken($primary-color, 5);
+            margin: 10px 10px 0;
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 20px;
+            display: block;
+
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+    }
+    
+    .project-text {
+        background-color: rgba($primary-color, 0.9);
+        border-radius: 20px;
+        padding: 10px;
+    }
+}
+
+@import '../mobile';

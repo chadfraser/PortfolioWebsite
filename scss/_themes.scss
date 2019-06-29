@@ -12,11 +12,12 @@ $brand-blue: 'brand-blue';
 $brand-red: 'brand-red';
 $border: 'border';
 $popup: 'popup';
+$contact-text-hover: 'contact-text-hover';
+$contact-box-hover: 'contact-box-hover';
 
 $themes: (
         bold: (
-            // bg: $bg--bold,
-            bg: #000,
+            bg: $bg--bold,
             menu: $menu--bold,
             menu-footer: $menu-footer--bold,
             menu-hover: $menu-hover--bold,
@@ -63,7 +64,6 @@ $themes: (
             @content;
             $theme-map: null !global;
         }
-        // @content;
     }
 }
 

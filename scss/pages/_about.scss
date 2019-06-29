@@ -1,0 +1,95 @@
+// @import 'config';
+// @import 'menu';
+// @import 'themes';
+
+.about-me {
+    margin: 0 50px;
+    
+    h1 {
+        margin-bottom: -3vh;
+    }
+
+    p {
+        margin-top: 5vh;
+    }
+
+    .about-me-image-grid {
+        position: relative;
+        display: grid;
+        grid-gap: 5%;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 40px 0;
+        justify-items: center;
+        height: auto;
+
+        .identity-image {
+            // TODO: BORDER, BOX-SHADOW
+            border: 5px $text-color solid;
+            box-shadow: 5px 5px 5px black;
+            border-radius: 20px;
+            max-width: 20vw;
+
+            &:hover {
+                opacity: 0.5;
+                cursor: pointer;
+            }
+
+            &.open-image {
+                opacity: 1;
+            }
+        }
+    }
+
+    .popup-absolute-container {
+        position: absolute;
+        display: none;
+        min-height: 90%;
+        width: 80%;
+        top: 5%;
+
+        &.visible {
+            display: flex;
+        }
+    }
+        
+    .about-popup {
+        @include themed() {
+            background-color: get-color($popup);
+        }
+        cursor: pointer;
+        display: none;
+        padding: 20px;
+        position: relative;
+        min-height: 100%;
+        border-radius: 20px;
+
+        &.visible {
+            display: inline-block;
+        }
+
+        ul {
+            margin: 10px 0 0 40px;
+        }
+
+        p {
+            margin-top: 5vh;
+        }
+    }
+    
+    #copy-image {
+        display: none;
+        top: 10%;
+        left: 10%;
+        border-radius: 0;
+        max-width: 30vw;
+        float: right;
+        padding: -5px 2vw 0;
+        margin-left: 10px;
+
+        &.visible {
+            display: block;
+        }
+    }
+}
+
+@import '../mobile';

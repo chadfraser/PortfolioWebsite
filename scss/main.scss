@@ -25,18 +25,31 @@ body {
         background: get-color($bg);
         color: get-color($text);
     }
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    height: 100%;
     font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1, h2 {
+h1 {
     font-weight: 400;
 
     &.name-title {
         font-size: 5rem;
         white-space: nowrap;
     }
+    
+    &.page-title {
+        margin: 20px 0;
+        padding-top: 8vh;
+        font-size: 4rem;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+h2 {
+    font-weight: 400;
 
     &.sub-title {
         line-height: 1.25;
@@ -49,6 +62,7 @@ h1, h2 {
 a {
     @include themed() {
         color: get-color($text);
+        // color: get-color($link);
     }
     text-decoration: none;
 }
@@ -95,240 +109,13 @@ main {
     display: none;
 }
 
-.page-title {
-    padding-top: 8vh;
-    font-size: 4rem;
-}
 
-.about-me {
-    margin: 0 50px;
 
-    .about-me-image-grid {
-        position: relative;
-        display: grid;
-        grid-gap: 5%;
-        grid-template-columns: repeat(3, 1fr);
-        margin: 40px 0;
-        justify-items: center;
-        height: auto;
 
-        .identity-image {
-            // TODO: BORDER, BOX-SHADOW
-            border: 5px $text-color solid;
-            box-shadow: 5px 5px 5px black;
-            border-radius: 20px;
-            max-width: 20vw;
 
-            &:hover {
-                opacity: 0.5;
-                cursor: pointer;
-            }
+// js to average size of project-visual
 
-            &.open-image {
-                opacity: 1;
-            }
-        }
-
-        h1 {
-            margin-bottom: -3vh;
-
-            br {
-                display: none;
-            }
-        }
-    }
-
-    .popup-absolute-container {
-        position: absolute;
-        display: none;
-        min-height: 90%;
-        width: 80%;
-        top: 5%;
-
-        &.visible {
-            display: flex;
-        }
-    }
-        
-    .about-popup {
-        @include themed() {
-            background-color: get-color($popup);
-        }
-        cursor: pointer;
-        display: none;
-        padding: 20px;
-        position: relative;
-        min-height: 100%;
-        border-radius: 20px;
-
-        &.visible {
-            display: inline-block;
-        }
-
-        ul {
-            margin: 10px 0 0 40px;
-        }
-
-        p {
-            margin-top: 5vh;
-        }
-    }
-}
-    
-#copy-image {
-    display: none;
-    top: 10%;
-    left: 10%;
-    border-radius: 0;
-    max-width: 30vw;
-    float: right;
-    padding: -5px 2vw 0;
-    margin-left: 10px;
-
-    &.visible {
-        display: block;
-    }
-}
-
-.contact-me {
-    margin: 0 12vw;
-    height: 100vh;
-
-    .contact-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-element {
-        border: 5px solid black;
-        display: flex;
-        position: relative;
-        margin: 5px;
-        height: 20vh;
-        width: 80vw;
-        align-items: center;
-        border-radius: 20px;
-
-        &:nth-child(3) {
-            margin-bottom: 20px;
-        }
-
-        &:hover {
-            @include themed() {
-                background-color: get-color($bg);
-                color: get-color($text);
-            }
-            @include easeOut;
-
-            p, h6 {
-                color: white;
-                @include easeOut;
-            }
-        }
-
-        img {
-            position: relative;
-            max-height: 15vh;
-            float: left;
-            border-radius: 20%;
-            padding: 0 2vw;
-        }
-
-        p {
-            white-space: nowrap;
-            color: $text-color;
-            position: relative;
-            font-size: 2rem;
-            float: left;
-
-            &.contact-secondary {
-                position: relative;
-                float: none;
-            }
-        }
-
-        h6 {
-            white-space: nowrap;
-            position: absolute;
-            right: 5px;
-            bottom: 5px;
-            font-style: italic;
-            text-align: right;
-        }
-    }
-}
-
-.projects {
-    margin: 0 50px;
-
-    h1 {
-        margin: 20px 0;
-    }
-
-    .project-sample {
-        display: grid;
-        position: relative;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(2, auto);
-        grid-row-gap: 40px;
-
-        &:not(:last-child)::after {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            left: -25px;
-            bottom: 20px;
-            width: calc(100% + 50px);
-            height: 3px;
-            background-color: $text-color;
-            border-radius: 5px;
-        }
-
-        &.in-progress {
-            .download-button {
-                display: none !important;
-            }
-        }
-    }
-
-    .project-visual {
-        float: left;
-
-        img {
-            align-self: center;
-            max-width: 300px;
-            margin: 0 50px -5px;
-    
-            &.project-animation {
-                display: none;
-            }
-        }
-
-        .link-button, .download-button {
-            background-color: darken($primary-color, 5);
-            margin: 10px 10px 0;
-            padding: 10px 0;
-            text-align: center;
-            border-radius: 20px;
-            display: block;
-
-            &:hover {
-                opacity: 0.75;
-            }
-        }
-    }
-
-    .project-text {
-        background-color: rgba($primary-color, 0.9);
-        border-radius: 20px;
-        padding: 10px;
-
-        h2 {
-            font-size: 3rem;
-            margin: 0 10px 15px;
-        }
-    }
-}
-
+@import 'pages/about';
+@import 'pages/projects';
+@import 'pages/contact';
 @import 'mobile';
