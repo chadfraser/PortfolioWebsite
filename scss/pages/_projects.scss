@@ -39,11 +39,13 @@
     
     .project-visual {
         float: left;
+        align-items: center;
+        width: 25vw;
 
         img {
-            align-self: center;
-            max-width: 300px;
-            margin: 0 50px -5px;
+            display: block;
+            margin: 0 auto -5px;
+            max-width: 20vw;
     
             &.project-animation {
                 display: none;
@@ -96,6 +98,8 @@
         }
         border-radius: 20px;
         padding: 10px;
+
+        width: calc(80vw - 100px);
     }
 }
 

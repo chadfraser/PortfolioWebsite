@@ -432,11 +432,13 @@ main {
     .projects .project-sample.in-progress .download-button {
       display: none !important; }
   .projects .project-visual {
-    float: left; }
+    float: left;
+    align-items: center;
+    width: 25vw; }
     .projects .project-visual img {
-      align-self: center;
-      max-width: 300px;
-      margin: 0 50px -5px; }
+      display: block;
+      margin: 0 auto -5px;
+      max-width: 20vw; }
       .projects .project-visual img.project-animation {
         display: none; }
     .projects .project-visual .button, .projects .project-visual .link-button, .projects .project-visual .download-button {
@@ -460,7 +462,8 @@ main {
       color: #4ECDC4; }
   .projects .project-text {
     border-radius: 20px;
-    padding: 10px; }
+    padding: 10px;
+    width: calc(80vw - 100px); }
     .projects .project-text.theme--bold {
       background-color: rgba(51, 21, 33, 0.9); }
 
@@ -750,7 +753,8 @@ main {
       .projects .project-visual .download-button {
         float: right; }
     .projects .project-text {
-      margin-bottom: 5vh; } }
+      margin-bottom: 5vh;
+      width: calc(100% - 20px); } }
 
 @media screen and (max-width: 500px) {
   .page-title {

@@ -314,7 +314,8 @@ main {
       .projects .project-visual .download-button {
         float: right; }
     .projects .project-text {
-      margin-bottom: 5vh; } }
+      margin-bottom: 5vh;
+      width: calc(100% - 20px); } }
 
 @media screen and (max-width: 500px) {
   .page-title {
