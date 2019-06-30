@@ -139,6 +139,9 @@ main {
       right: 2.5vmin; }
     .settings-tab.close {
       transform: translateX(30vmin); }
+      .settings-tab.close.theme--bold {
+        background-color: #210e15;
+        border-top: 2px #4ECDC4 solid; }
       .settings-tab.close p {
         display: inline; }
   .settings-menu {
@@ -146,19 +149,9 @@ main {
     top: auto;
     bottom: 20vmin !important;
     left: -50vmin; }
-    .settings-menu .settings-list .settings-item {
-      border: 3px black solid;
+    .settings-menu .settings-list .settings-item.theme--bold {
+      border: 5px black solid;
       border-bottom: none; }
-      .settings-menu .settings-list .settings-item.visible::before {
-        display: none; }
-      .settings-menu .settings-list .settings-item:last-child::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 6px;
-        background-color: #4ECDC4; }
   .menu-tab {
     background-color: #210e15;
     z-index: 6;
@@ -178,10 +171,8 @@ main {
       width: 100%;
       left: 0;
       transform: none; }
-      .menu-tab.close .button-line {
+      .menu-tab.close .button-line-container, .menu-tab.close .button-line {
         animation: none !important; }
-        .menu-tab.close .button-line::after {
-          animation: none !important; }
       .menu-tab.close .menu-link-icons {
         position: fixed;
         top: 50vh;
@@ -193,7 +184,7 @@ main {
       top: 0;
       height: 15vmin;
       width: 15vmin; }
-      .menu-tab .menu-button .button-line::after {
+      .menu-tab .menu-button .button-line {
         position: relative;
         width: 75%;
         top: 4vmin;
@@ -301,7 +292,7 @@ main {
       font-size: 8vw !important; }
     .projects .project-sample {
       display: block; }
-      .projects .project-sample:not(:last-child)::after {
+      .projects .project-sample .separator {
         display: none; }
       .projects .project-sample.in-progress .link-button {
         position: relative;

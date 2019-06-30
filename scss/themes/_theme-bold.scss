@@ -13,7 +13,9 @@ $menu-button--bold: $text-color;
 $link--bold: $text-color;
 $settings--bold: darken(rgba($primary-color, 0.75), 5);
 $settings-close--bold: darken($primary-color, 5);
+$settings-divider--bold: 2px $text-color solid;
 $settings-item--bold: darken($primary-color, 5);
+$settings-item-border--bold: 5px black solid;
 
 $title--bold: $text-color;
 $subtitle--bold: $text-color;

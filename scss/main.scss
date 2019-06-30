@@ -33,6 +33,7 @@ body {
 
     &.end-transition * {
         transition: none !important;
+        animation: none 0 0 !important;
     }
 }
 
@@ -148,9 +149,9 @@ main {
 
 
 // js to average size of project-visual
-// style pseudo elements in menu and between projects per theme
+// project-visual text spillover
 // user-select: none in menus
-// pseudoelement animations on resize
+// Consider stopping animations on resize between screen modes?
 
 @import "pages/about";
 @import "pages/projects";

@@ -6,7 +6,7 @@
     animation: translateXAndSkew 1s #{$base-delay + 0.1 * $line-index};
     animation-fill-mode: forwards;
 
-    &::after {
+    &.button-line {
         animation: translateYForButtonIndex#{$line-index} 1s #{$base-delay + 0.1 * $line-index};
         animation-fill-mode: forwards;
     }
@@ -94,14 +94,6 @@
         transform: translateX(calc(100% - 60px));
         background-color: darken(rgba($primary-color, 1), 5);
         @include easeOut();
-
-        // .button-line {
-        //     @for $i from 1 through 3 {
-        //         &:nth-child(#{$i}) {
-        //             @include animate_button_line($i);
-        //         }
-        //     }
-        // }
     }
 }
 
@@ -189,7 +181,7 @@
         transform: translateX(-55vw);
     @include easeOut();
 
-        .button-line {
+        .button-line-container {
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}) {
                     @include animate_button_line($i);
@@ -208,10 +200,10 @@
         right: 25px;
         top: 12px;
 
-        .button-line {
+        .button-line-container {
             overflow: visible;
 
-            &::after {
+            &.button-line {
                 content: "";
                 display: block;
                 width: 20px;

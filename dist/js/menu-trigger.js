@@ -1,6 +1,4 @@
 const menuTab = document.querySelector(".menu-tab");
-const menuButton = document.querySelector(".menu-button");
-const buttonLines = document.querySelectorAll(".button-line");
 const navMenu = document.querySelector(".nav-menu");
 const menuList = document.querySelector(".menu-list");
 const menuItems = document.querySelectorAll(".menu-item");

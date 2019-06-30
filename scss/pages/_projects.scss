@@ -16,8 +16,7 @@
         grid-template-rows: repeat(2, auto);
         grid-row-gap: 40px;
 
-        &:not(:last-child)::after {
-            content: "";
+        .separator {
             display: inline-block;
             position: absolute;
             left: -25px;
@@ -26,7 +25,6 @@
             height: 3px;
             @include themed() {
                 background-color: get-color($divider);
-                // background-color: get-color($text);
             }
             background-color: $text-color;
             border-radius: 5px;

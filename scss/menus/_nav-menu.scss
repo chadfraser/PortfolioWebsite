@@ -7,7 +7,7 @@
     animation: translateXAndSkew 1s #{$base-delay + 0.1 * $line-index};
     animation-fill-mode: forwards;
 
-    &::after {
+    .button-line {
         animation: translateYForButtonIndex#{$line-index} 1s #{$base-delay + 0.1 * $line-index};
         animation-fill-mode: forwards;
     }
@@ -47,18 +47,7 @@
     }
 }
 
-// @mixin darken_menu($alpha-value) {
-//     background-color: darken(rgba($primary-color, $alpha-value), 5);
-//     & ~ .nav-menu {
-//         background-color: darken(rgba($primary-color, $alpha-value), 5);
-//     }
-//     // & ~ .settings-menu {
-//     //     background-color: darken(rgba($primary-color, $alpha-value), 5);
-//     // }
-// }
-
 .menu-tab {
-    // @include darken_menu(0.75);
     @include themed() {
         background-color: get-color($menu);
         color: get-color($link);
@@ -76,7 +65,7 @@
         transform: translateX(-55vw);
         @include easeOut();
 
-        .button-line {
+        .button-line-container {
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}) {
                     @include animate_button_line($i);
@@ -100,17 +89,14 @@
         top: 12px;
 
         .button-line {
-            overflow: visible;
-
-            &::after {
-                content: "";
-                display: block;
-                width: 20px;
-                height: 3px;
-                margin: 0 0 5px 0;
-                // TODO
-                background-color: $text-color;
+            content: "";
+            @include themed() {
+                background-color: get-color($menu-button);
             }
+            display: block;
+            width: 20px;
+            height: 3px;
+            margin: 0 0 5px 0;
         }
     }
 }
@@ -129,7 +115,6 @@
     top: 0;
     left: calc(100% + 12px);
     transform: translateX(0vw);
-    // @include darken_menu(0.75);
     @include easeOut();
 
     &.visible {

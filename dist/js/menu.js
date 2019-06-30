@@ -26,9 +26,15 @@ var menuHtml = `
 
     <div class="menu-tab">
         <div class="menu-button">
-            <div class="button-line"></div>
-            <div class="button-line"></div>
-            <div class="button-line"></div>
+            <div class="button-line-container">
+                <div class="button-line"></div>
+            </div>
+            <div class="button-line-container">
+                <div class="button-line"></div>
+            </div>
+            <div class="button-line-container">
+                <div class="button-line"></div>
+            </div>
         </div>
     </div>
 

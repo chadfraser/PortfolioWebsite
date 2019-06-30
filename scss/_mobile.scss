@@ -1,3 +1,5 @@
+@import "themes";
+
 @include mediaMediumScreen {
     header {
         top: calc(100vh - 15vmin);
@@ -91,6 +93,10 @@
 
         &.close {
             transform: translateX(30vmin);
+            @include themed() {
+                background-color: get-color($settings-close);
+                border-top: get-color($settings-divider);
+            }
             ////////////////////////////////////
             ////////////////////////////////////
             ////////////////////////////////////
@@ -123,23 +129,10 @@
 
         .settings-list {
             .settings-item {
-                border: 3px black solid;
-                border-bottom: none;
-
-                &.visible::before {
-                    // top: auto;
-                    // bottom: 0;
-                    display: none;
-                }
-
-                &:last-child::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 6px;
-                    background-color: $text-color;
+                // border: 5x black solid;
+                @include themed() {
+                    border: get-color($settings-item-border);
+                    border-bottom: none;
                 }
             }
         }
@@ -170,12 +163,8 @@
             left: 0;
             transform: none;
     
-            .button-line {
+            .button-line-container, .button-line {
                 animation: none !important;
-
-                &::after {
-                    animation: none !important;
-                }
             }
 
             .menu-link-icons {
@@ -193,13 +182,13 @@
             height: 15vmin;
             width: 15vmin;
     
-            .button-line::after {
-                    position: relative;
-                    width: 75%;
-                    top: 4vmin;
-                    left: 12.5%;
-                    height: 1vmin;
-                    margin: 0 0 1.5vmin 0;
+            .button-line {
+                position: relative;
+                width: 75%;
+                top: 4vmin;
+                left: 12.5%;
+                height: 1vmin;
+                margin: 0 0 1.5vmin 0;
             }
         }    
     }
@@ -371,7 +360,7 @@
         .project-sample {
             display: block;
 
-            &:not(:last-child)::after {
+            .separator {
                 display: none;
             }
 

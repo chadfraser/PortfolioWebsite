@@ -10,7 +10,9 @@ $menu-button: "menu-button";
 $link: "link";
 $settings: "settings";
 $settings-close: "settings-close";
+$settings-divider: "settings-divider";
 $settings-item: "settings-item";
+$settings-item-border: "settings-item-border";
 
 $title: "title";
 $subtitle: "subtitle";
@@ -55,7 +57,9 @@ $themes: (
             link: $link--bold,
             settings: $settings--bold,
             settings-close: $settings-close--bold,
+            settings-divider: $settings-divider--bold,
             settings-item: $settings-item--bold,
+            settings-item-border: $settings-item-border--bold,
 
             title: $title--bold,
             subtitle: $subtitle--bold,
