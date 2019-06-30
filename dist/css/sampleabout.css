@@ -250,6 +250,8 @@ main {
     margin: 0 5vw; }
   .about-me {
     margin: 0; }
+    .about-me .page-title {
+      margin: 0; }
     .about-me .about-me-image-grid {
       margin: 5vh 5vw;
       margin-bottom: 10vh;
@@ -301,6 +303,9 @@ main {
       display: block; }
       .projects .project-sample:not(:last-child)::after {
         display: none; }
+      .projects .project-sample.in-progress .link-button {
+        position: relative;
+        left: 27.5%; }
     .projects .project-visual {
       align-items: center;
       width: 100%; }
@@ -339,6 +344,7 @@ main {
     height: auto;
     min-height: auto; }
   .link-button, .download-button {
+    left: 0% !important;
     background-color: #0f060a;
     float: none;
     margin: 5px 0px !important;

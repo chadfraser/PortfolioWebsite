@@ -158,7 +158,7 @@
         border-radius: 0;
 
         &:hover {
-            background-color: darken($primary-color, 5) !important  ;
+            background-color: darken($primary-color, 5) !important;
             & ~ .nav-menu {
                 background-color: $primary-color;
             }
@@ -276,6 +276,10 @@
 
     .about-me {
         margin: 0;
+        .page-title {
+            margin: 0;
+        }
+
         .about-me-image-grid {
             margin: 5vh 5vw;
             margin-bottom: 10vh;
@@ -370,6 +374,11 @@
             &:not(:last-child)::after {
                 display: none;
             }
+
+            &.in-progress .link-button {
+                position: relative;
+                left: 27.5%;
+            }
         }
     
         .project-visual {
@@ -435,6 +444,8 @@
     }
     
     .link-button, .download-button {
+        left: 0% !important;
+
         background-color: darken($primary-color, 10);
         float: none;
         margin: 5px 0px !important;

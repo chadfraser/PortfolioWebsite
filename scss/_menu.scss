@@ -1,4 +1,4 @@
-@import 'config';
+@import "config";
 
 @mixin animate_button_line($line-index) {
     $base-delay: 0.25s;
@@ -212,7 +212,7 @@
             overflow: visible;
 
             &::after {
-                content: '';
+                content: "";
                 display: block;
                 width: 20px;
                 height: 3px;

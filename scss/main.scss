@@ -29,7 +29,11 @@ body {
     // top: 0;
     // position: absolute;
     height: 100%;
-    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    &.end-transition * {
+        transition: none !important;
+    }
 }
 
 h1 {
@@ -143,14 +147,10 @@ main {
 
 
 
-// center about title on small screen
 // js to average size of project-visual
 // style pseudo elements in menu and between projects per theme
-// center github link button in tablet projects page undone
 // user-select: none in menus
-// animations on resize
-// gear to x on open
-// double quote imports
+// pseudoelement animations on resize
 
 @import "pages/about";
 @import "pages/projects";
