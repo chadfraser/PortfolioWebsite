@@ -24,6 +24,8 @@ function toggleSettingsVisible() {
 }
 
 function openSettings() {
+    settingsIcon.src = "img/iconmonstr-x-mark-opaque.png";
+
     settingsTab.classList.add("close");
     settingsIcon.classList.add("visible");
     settingsMenu.classList.add("visible");
@@ -34,6 +36,7 @@ function openSettings() {
 }
 
 function closeSettings() {
+    settingsIcon.src = "img/iconmonstr-gear-opaque.png";
     settingsTab.classList.remove("close");
     settingsIcon.classList.remove("visible");
     settingsMenu.classList.remove("visible");
