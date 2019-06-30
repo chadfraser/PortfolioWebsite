@@ -1,19 +1,48 @@
 @import "themes/theme-bold";
 
 
-$bg: 'bg';
-$card-bg: 'card-bg';
-$text: 'text';
-$text-secondary: 'text-secondary';
-$link: 'link';
-$hover: 'hover';
-$logo: 'logo';
-$brand-blue: 'brand-blue';
-$brand-red: 'brand-red';
-$border: 'border';
-$popup: 'popup';
-$contact-text-hover: 'contact-text-hover';
-$contact-box-hover: 'contact-box-hover';
+$bg: "bg";
+$menu: "menu";
+$menu-footer: "menu-footer";
+$menu-hover: "menu-hover";
+$menu-item-hover: "menu-item-hover";
+$menu-button: "menu-button";
+$link: "link";
+$settings: "settings";
+$settings-close: "settings-close";
+$settings-item: "settings-item";
+
+$title: "title";
+$subtitle: "subtitle";
+$text: "text";
+$text-secondary: "text-secondary";
+$self-image-border: "self-image-border";
+$link-icons-bg: "link-icons-bg";
+
+$image-grid: "image-grid";
+$image-border: "image-border";
+$image-shadow: "image-shadow";
+$popup: "popup";
+$popup-text: "popup-text";
+
+$divider: "divider";
+$button-primary: "button-primary";
+$button-secondary: "button-secondary";
+$button-primary-text: "button-primary-text";
+$button-secondary-text: "button-secondary-text";
+$button-primary-hover: "button-primary-hover";
+$button-secondary-hover: "button-secondary-hover";
+$button-primary-text-hover: "button-primary-text-hover";
+$button-secondary-text-hover: "button-secondary-text-hover";
+$project-bg: "project-bg";
+
+$border: "border";
+$contact-box: "contact-box";
+$contact-text: "contact-text";
+$contact-subtext: "contact-subtext";
+$contact-box-hover: "contact-box-hover";
+$contact-text-hover: "contact-text-hover";
+$contact-subtext-hover: "contact-subtext-hover";
 
 $themes: (
         bold: (
@@ -21,34 +50,46 @@ $themes: (
             menu: $menu--bold,
             menu-footer: $menu-footer--bold,
             menu-hover: $menu-hover--bold,
-            menu-link-hover: $menu-link-hover--bold,
+            menu-item-hover: $menu-item-hover--bold,
             menu-button: $menu-button--bold,
+            link: $link--bold,
+            settings: $settings--bold,
+            settings-close: $settings-close--bold,
+            settings-item: $settings-item--bold,
+
             title: $title--bold,
             subtitle: $subtitle--bold,
             text: $text-primary--bold,
             text-secondary: $text-secondary--bold,
+            self-image-border: $self-image-border--bold,
+            link-icons-bg: $link-icons-bg--bold,
+
+            image-grid: $image-grid--bold,
             image-border: $image-border--bold,
             image-shadow: $image-shadow--bold,
             popup: $popup--bold,
-            popup-secondary: $popup-secondary--bold,
-            contact-box: $contact-box--bold,
-            contact-box-hover: $contact-box-hover--bold,
+            popup-text: $popup-text--bold,
+            
             divider: $divider--bold,
-            button: $button-primary--bold,
+            button-primary: $button-primary--bold,
             button-secondary: $button-secondary--bold,
-            button-tertiary: $button-tertiary--bold,
-            button-quarternary: $button-quarternary--bold
+            // button-tertiary: $button-tertiary--bold,
+            // button-quarternary: $button-quarternary--bold,
+            button-primary-text: $button-primary-text--bold,
+            button-secondary-text: $button-secondary-text--bold,
+            button-primary-hover: $button-primary-hover--bold,
+            button-secondary-hover: $button-secondary-hover--bold,
+            button-primary-text-hover: $button-primary-text-hover--bold,
+            button-secondary-text-hover: $button-secondary-text-hover--bold,
+            project-bg: $project-bg--bold,
+            
+            contact-box: $contact-box--bold,
+            contact-text: $contact-text--bold,
+            contact-subtext: $contact-subtext--bold,
+            contact-box-hover: $contact-box-hover--bold,
+            contact-text-hover: $contact-text-hover--bold,
+            contact-subtext-hover: $contact-subtext-hover--bold
         ),
-        // dark: (
-        //         logo: url("../images/brand/logo_vertical--invert.svg"),
-        //         bg: linear-gradient($bg--dark--top, $bg--dark--bottom),
-        //         card-bg: $bg--card--dark,
-        //         text: $text--dark,
-        //         text-secondary: $text--2--dark,
-        //         link: $brand--blue--dark,
-        //         hover: $hover--dark,
-        //         border: $border--dark
-        // ),
 );
 
 
@@ -58,7 +99,7 @@ $themes: (
         &.theme--#{$theme} {
             $theme-map: () !global;
             @each $key, $submap in $map {
-                $value: map-get(map-get($themes, $theme), '#{$key}');
+                $value: map-get(map-get($themes, $theme), "#{$key}");
                 $theme-map: map-merge($theme-map, ($key: $value)) !global;
             }
             @content;

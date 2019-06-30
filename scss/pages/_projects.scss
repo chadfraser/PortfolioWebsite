@@ -1,11 +1,10 @@
-// @import 'config';
-// @import 'menu';
-// @import 'themes';
-
 .projects {
     margin: 0 50px;
 
     .project-title {
+        @include themed() {
+            color: get-color($title);
+        }
         font-size: 3rem;
         margin: 0 10px 15px;
     }
@@ -26,10 +25,10 @@
             width: calc(100% + 50px);
             height: 3px;
             @include themed() {
-                // background-color: get-color($divider);
-                background-color: get-color($text);
+                background-color: get-color($divider);
+                // background-color: get-color($text);
             }
-            // background-color: $text-color;
+            background-color: $text-color;
             border-radius: 5px;
         }
     
@@ -53,25 +52,50 @@
             }
         }
 
-        .link-button, .download-button {
-            @include themed() {
-                // background-color: get-color($button);
-            }
+        .button {
             background-color: darken($primary-color, 5);
             margin: 10px 10px 0;
             padding: 10px 0;
             text-align: center;
             border-radius: 20px;
             display: block;
+        }
+
+        .link-button {
+            @extend .button;
+            @include themed() {
+                background-color: get-color($button-primary);
+                color: get-color($button-primary-text);
+            }
 
             &:hover {
-                opacity: 0.75;
+                @include themed() {
+                    background-color: get-color($button-primary-hover);
+                    color: get-color($button-primary-text-hover);
+                }
+            }
+        }
+
+        .download-button {
+            @extend .button;
+            @include themed() {
+                background-color: get-color($button-secondary);
+                color: get-color($button-secondary-text);
+            }
+
+            &:hover {
+                @include themed() {
+                    background-color: get-color($button-secondary-hover);
+                    color: get-color($button-secondary-text-hover);
+                }
             }
         }
     }
     
     .project-text {
-        background-color: rgba($primary-color, 0.9);
+        @include themed() {
+            background-color: get-color($project-bg);
+        }
         border-radius: 20px;
         padding: 10px;
     }

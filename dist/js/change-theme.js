@@ -1,15 +1,16 @@
 settingsItems.forEach(item => item.addEventListener("click", function() { changeTheme(item); }));
 
+var prev_handler = window.onload;
 window.onload = updateAllElementThemeClasses;
 
 function changeTheme(item) {
     localStorage.setItem("theme", item.id);
-    console.log(localStorage);
+    // console.log(localStorage);
     updateAllElementThemeClasses();
 }
 
 function updateAllElementThemeClasses() {
-    console.log("AAA", localStorage);
+    // console.log("AAA", localStorage);
     var allElements = document.body.getElementsByTagName("*");
     for (var i = 0; i < allElements.length; i++) {
         removePreviousThemeClass(allElements[i]);
@@ -17,8 +18,8 @@ function updateAllElementThemeClasses() {
     }
     removePreviousThemeClass(document.body);
     addCurrentThemeClass(document.body);
-    console.log(localStorage);
-    console.log(allElements);
+    // console.log(localStorage);
+    // console.log(allElements);
 }
 
 function removePreviousThemeClass(elem) {

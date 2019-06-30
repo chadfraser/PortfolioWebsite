@@ -1,7 +1,7 @@
-@import 'config';
-@import 'menus/nav-menu';
-@import 'menus/theme-menu';
-@import 'themes';
+@import "config";
+@import "menus/nav-menu";
+@import "menus/theme-menu";
+@import "themes";
 
 * {
     margin: 0;
@@ -33,6 +33,10 @@ body {
 }
 
 h1 {
+    @include themed() {
+        color: get-color($title);
+    }
+
     font-weight: 400;
 
     &.name-title {
@@ -41,7 +45,6 @@ h1 {
     }
     
     &.page-title {
-        // margin: 20px 0;
         padding: 20px 0;
         padding-top: 8vh;
         font-size: 4rem;
@@ -56,6 +59,9 @@ h2 {
     font-weight: 400;
 
     &.sub-title {
+        @include themed() {
+            color: get-color($subtitle);
+        }
         line-height: 1.25;
         font-size: 2.5rem;
         padding: 0 5rem;
@@ -65,8 +71,7 @@ h2 {
 
 a {
     @include themed() {
-        color: get-color($text);
-        // color: get-color($link);
+        color: get-color($link);
     }
     text-decoration: none;
 }
@@ -75,18 +80,40 @@ main {
     margin-top: 15vh;
 
     .self-image {
+        @include themed() {
+            border: get-color($self-image-border);
+        }
         max-height: 50vh;
         border-radius: 50%;
     }
 
     .link-icons {
+        @include themed() {
+            background: get-color($link-icons-bg);
+        }
+        display: flex;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: center;
+        
+        position: relative;
         margin-top: 1rem;
-        white-space: nowrap;
+
+        .icon-anchor {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        
+            &:not(:last-child) {
+                margin: 0 5vw 0 0;
+            }
+        }
 
         .link-image {
-            margin: 0 5vh;
+            // margin: 0 5vh 0 0;
             max-height: 20vh;
             max-width: 80px;
+            // width: 80px;
         }
     }
 
@@ -118,8 +145,14 @@ main {
 
 // center about title on small screen
 // js to average size of project-visual
+// style pseudo elements in menu and between projects per theme
+// center github link button in tablet projects page undone
+// user-select: none in menus
+// animations on resize
+// gear to x on open
+// double quote imports
 
-@import 'pages/about';
-@import 'pages/projects';
-@import 'pages/contact';
-@import 'mobile';
+@import "pages/about";
+@import "pages/projects";
+@import "pages/contact";
+@import "mobile";

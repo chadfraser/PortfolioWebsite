@@ -7,12 +7,10 @@ const settingsItems = document.querySelectorAll(".settings-item");
 let settingsVisible = false;
 
 document.body.addEventListener("click", function() {
-    console.log("C");
     closeSettings();
 });
 
 settingsTab.addEventListener("click", function(event) {
-    console.log("B");
     toggleSettingsVisible();
     event.stopPropagation();
 });
@@ -36,7 +34,6 @@ function openSettings() {
 }
 
 function closeSettings() {
-    console.log("A");
     settingsTab.classList.remove("close");
     settingsIcon.classList.remove("visible");
     settingsMenu.classList.remove("visible");

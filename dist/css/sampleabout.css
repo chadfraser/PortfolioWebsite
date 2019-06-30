@@ -170,7 +170,7 @@ main {
     .menu-tab ~ .nav-menu {
       background-color: #331521; }
     .menu-tab:hover {
-      background-color: #210e15; }
+      background-color: #210e15 !important; }
       .menu-tab:hover ~ .nav-menu {
         background-color: #331521; }
     .menu-tab.close {

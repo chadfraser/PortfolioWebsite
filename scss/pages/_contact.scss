@@ -16,8 +16,8 @@
     .contact-element {
         @include themed() {
             // border: get-color($border)
-            background-color: get-color($contact-box-hover);
-            color: get-color($contact-text-hover);
+            background-color: get-color($contact-box);
+            // color: get-color($contact-text-hover);
         }
         border: 5px solid black;
         display: flex;
@@ -28,11 +28,17 @@
         align-items: center;
         border-radius: 20px;
 
-        // h6 {
-        //     @include themed() {
-        //         color: get-color($text);
-        //     }
-        // }
+        h6 {
+            white-space: nowrap;
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            font-style: italic;
+            text-align: right;
+            @include themed() {
+                color: get-color($contact-subtext);
+            }
+        }
 
         &:nth-child(3) {
             margin-bottom: 0px;
@@ -41,19 +47,17 @@
         &:hover {
             @include themed() {
                 background-color: get-color($contact-box-hover);
-                color: get-color($contact-text-hover);
+                p {
+                    color: get-color($contact-text-hover);
+                }
+                
+                h6 {
+                    color: get-color($contact-subtext-hover);
+                    // color: black;
+                    // @include easeOut;
+                }
             }
             @include easeOut;
-
-            p, h6 {
-                // TODO:
-                @include themed() {
-                    background-color: get-color($contact-box-hover);
-                    color: get-color($text);
-                }
-                color: white;
-                @include easeOut;
-            }
         }
     
         img {
@@ -74,19 +78,6 @@
             &.contact-secondary {
                 position: relative;
                 float: none;
-            }
-        }
-    
-        h6 {
-            white-space: nowrap;
-            position: absolute;
-            right: 5px;
-            bottom: 5px;
-            font-style: italic;
-            text-align: right;
-            // TODO:
-            @include themed() {
-                color: get-color($text) !important;
             }
         }
     }

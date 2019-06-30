@@ -2,7 +2,14 @@ const initialContactTexts = document.querySelectorAll(".contact-initial");
 const secondaryContactTexts = document.querySelectorAll(".contact-secondary");
 
 window.addEventListener("resize", setTextSpacing);
-window.onload = setTextSpacing;
+
+var prev_handler = window.onload;
+window.onload = function () {
+    if (prev_handler) {
+        prev_handler();
+    }
+    setTextSpacing();
+};
 
 function setTextSpacing() {
     var maxTextWidth = 0;

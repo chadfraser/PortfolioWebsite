@@ -2,44 +2,53 @@ $primary-color: #331521;
 $secondary-color: #78244C;
 $tertiary-color: #895061;
 $text-color: #4ECDC4;
+$alternate-color: #283677;
 
 $bg--bold: linear-gradient($primary-color 0%, $secondary-color 50%, $tertiary-color 80%) no-repeat fixed;
-$menu--bold: rgba($primary-color, 0.75);
+$menu--bold: darken(rgba($primary-color, 0.75), 5);
 $menu-footer--bold: darken($primary-color, 5);
 $menu-hover--bold: $primary-color;
-$menu-link-hover--bold: lighten($primary-color, 5);
+$menu-item-hover--bold: lighten($primary-color, 5);
 $menu-button--bold: $text-color;
+$link--bold: $text-color;
+$settings--bold: darken(rgba($primary-color, 0.75), 5);
+$settings-close--bold: darken($primary-color, 5);
+$settings-item--bold: darken($primary-color, 5);
 
 $title--bold: $text-color;
 $subtitle--bold: $text-color;
 $text-primary--bold: $text-color;
 $text-secondary--bold: $text-color;
-$image-border--bold: $text-color;
-$image-shadow--bold: black;
+$self-image-border--bold: none;
+$link-icons-bg--bold: none;
+
+$text-secondary--bold: $text-color;
+$image-grid--bold: none;
+$image-border--bold: 5px $text-color solid;
+$image-shadow--bold: 5px 5px 5px black;
 $popup--bold: darken(rgba($primary-color, 0.95), 5);
+$popup-text--bold: $text-color;
+
 $popup-secondary--bold: darken(rgba($primary-color, 0.95), 5);  // Is this still a thing?
-$contact-box--bold: none;
-$contact-box-hover--bold: $primary-color;
+
 $divider--bold: $text-color;
 $button-primary--bold: darken($primary-color, 5);
-$button-secondary--bold: darken($primary-color, 5);
-$button-primary-hover--bold: rbga(darken($primary-color, 5), 0.75);
-$button-secondary-hover--bold: rbga(darken($primary-color, 5), 0.75);
-$button-tertiary--bold: darken($primary-color, 10);
-$button-quarternary--bold: darken($primary-color, 10);
-$button-tertiary-hover--bold: darken($primary-color, 10);
-$button-quarternary-hover--bold: darken($primary-color, 10);
+$button-secondary--bold: lighten($primary-color, 5);
+$button-primary-text--bold: $text-color;
+$button-secondary-text--bold: $text-color;
+$button-primary-hover--bold: darken($alternate-color, 0.5);
+$button-secondary-hover--bold: darken($alternate-color, 0.5);
+$button-primary-text-hover--bold: $text-color;
+$button-secondary-text-hover--bold: $text-color;
+$project-bg--bold: rgba($primary-color, 0.9);
+// $button-tertiary--bold: darken($primary-color, 10);
+// $button-quarternary--bold: darken($primary-color, 10);
+// $button-tertiary-hover--bold: darken($primary-color, 10);
+// $button-quarternary-hover--bold: darken($primary-color, 10);
 
-$theme-menu-hover--bold: linear-gradient(to right, $primary-color, $tertiary-color);
-$theme-menu-text--bold: $text-color;
-
-$theme-menu-hover--somber: linear-gradient(to right, #222629, #6B6370);
-$theme-menu-text-bg--somber: linear-gradient(#61892F, #86C232);
-$theme-menu-text-bg--somber: linear-gradient(#61892F, #86C232);
-
-$theme-menu-hover--bold: linear-gradient(to right, $primary-color, $tertiary-color);
-$theme-menu-text--bold: $text-color;
-
-$theme-menu-hover--bold: linear-gradient(to right, $primary-color, $tertiary-color);
-$theme-menu-text--bold: $text-color;
-// contact-text-hover, contact-text, contact-border?
+$contact-box--bold: none;
+$contact-text--bold: $text-color;
+$contact-subtext--bold: $text-color;
+$contact-box-hover--bold: $primary-color;
+$contact-text-hover--bold: #FFF;
+$contact-subtext-hover--bold: #FFF;
