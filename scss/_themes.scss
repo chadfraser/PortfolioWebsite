@@ -7,7 +7,7 @@
 @import "theme-dict";
 
 
-@mixin themed() {
+@mixin themed {
     @each $theme, $map in $themes {
         &.theme--#{$theme} {
             $theme-map: () !global;

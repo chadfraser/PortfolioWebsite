@@ -2,7 +2,7 @@
     margin: 0 50px;
 
     .project-title {
-        @include themed() {
+        @include themed {
             color: get-color($title);
         }
         font-size: 3rem;
@@ -23,7 +23,7 @@
             bottom: 20px;
             width: calc(100% + 50px);
             height: 3px;
-            @include themed() {
+            @include themed {
                 background-color: get-color($divider);
             }
             border-radius: 5px;
@@ -61,13 +61,13 @@
 
         .link-button {
             @extend .button;
-            @include themed() {
+            @include themed {
                 background-color: get-color($button-primary);
                 color: get-color($button-primary-text);
             }
 
             &:hover {
-                @include themed() {
+                @include themed {
                     background-color: get-color($button-primary-hover);
                     color: get-color($button-primary-text-hover);
                 }
@@ -76,13 +76,13 @@
 
         .download-button {
             @extend .button;
-            @include themed() {
+            @include themed {
                 background-color: get-color($button-secondary);
                 color: get-color($button-secondary-text);
             }
 
             &:hover {
-                @include themed() {
+                @include themed {
                     background-color: get-color($button-secondary-hover);
                     color: get-color($button-secondary-text-hover);
                 }
@@ -91,7 +91,7 @@
     }
 
     .project-text {
-        @include themed() {
+        @include themed {
             background-color: get-color($project-bg);
         }
         border-radius: 20px;

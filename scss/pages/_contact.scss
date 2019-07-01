@@ -14,7 +14,7 @@
     }
 
     .contact-element {
-        @include themed() {
+        @include themed {
             background-color: get-color($contact-box);
             border: get-color($contact-box-border);
         }
@@ -33,7 +33,7 @@
             bottom: 5px;
             font-style: italic;
             text-align: right;
-            @include themed() {
+            @include themed {
                 color: get-color($contact-subtext);
             }
         }
@@ -43,7 +43,7 @@
         }
 
         &:hover {
-            @include themed() {
+            @include themed {
                 background-color: get-color($contact-box-hover);
                 p {
                     color: get-color($contact-text-hover);
@@ -66,7 +66,7 @@
 
         p {
             white-space: nowrap;
-            @include themed() {
+            @include themed {
                 color: get-color($contact-text);
             }
             position: relative;

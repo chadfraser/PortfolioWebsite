@@ -80,7 +80,7 @@
 
         &.close {
             @include transform(translateX(30vmin));
-            @include themed() {
+            @include themed {
                 background-color: get-color($settings-close);
                 border-top: get-color($settings-divider);
             }
@@ -99,7 +99,7 @@
 
         .settings-list {
             .settings-item {
-                @include themed() {
+                @include themed {
                     border: get-color($settings-item-border);
                     border-bottom: none;
                 }
@@ -133,11 +133,11 @@
     }
 
     .menu-tab {
-        @include themed() {
+        @include  ) {
             background-color: get-color($menu);
         }
         & ~ .nav-menu {
-            @include themed() {
+            @include  ) {
                 background-color: get-color($menu-hover);
             }
         }
@@ -149,13 +149,13 @@
         border-radius: 0;
 
         &:hover {
-            @include themed() {
+            @include  ) {
                 background-color: get-color($menu-hover);
             }
         }
 
         &.close {
-            @include themed() {
+            @include  ) {
                 background-color: get-color($menu-footer);
             }
             @include transform(none);
@@ -185,7 +185,7 @@
     }
 
     .menu-icons {
-        @include flexbox();
+        @include flexbox;
         z-index: 6;
         justify-content: space-around;
         align-items: center;
@@ -222,11 +222,11 @@
         height: calc(100vh - 15vmin);
         top: 100vh;
         left: 0;
-        @include easeOut();
+        @include easeOut;
 
         &.visible {
             @include transform(translateY(-100vh));
-            @include easeOut();
+            @include easeOut;
         }
 
         .menu-list {
@@ -382,13 +382,13 @@
             }
 
             .link-button {
-                @include themed() {
+                @include  ) {
                     background-color: get-color($button-tertiary);
                     color: get-color($button-tertiary-text);
                 }
 
                 &:hover {
-                    @include themed() {
+                    @include  ) {
                         background-color: get-color($button-tertiary-hover);
                         color: get-color($button-tertiary-text-hover);
                     }
@@ -396,13 +396,13 @@
             }
 
             .download-button {
-                @include themed() {
+                @include  ) {
                     background-color: get-color($button-quarternary);
                     color: get-color($button-quarternary-text);
                 }
 
                 &:hover {
-                    @include themed() {
+                    @include  ) {
                         background-color: get-color($button-quarternary-hover);
                         color: get-color($button-quarternary-text-hover);
                     }

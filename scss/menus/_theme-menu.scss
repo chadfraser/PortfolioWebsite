@@ -3,12 +3,12 @@
 @import "../themes";
 
 .settings-tab {
-    @include themed() {
+    @include themed {
         background-color: get-color($settings);
         color: get-color($settings-text);
     }
     @include transform(translateX(0));
-    @include easeOut();
+    @include easeOut;
     position: fixed;
     z-index: 3;
     height: 60px;
@@ -34,23 +34,23 @@
     }
 
     &.close {
-        @include themed() {
+        @include themed {
             background-color: get-color($settings-close);
             border-bottom: get-color($settings-divider);
         }
         @include transform(translateX(calc(100% - 60px)));
-        @include easeOut();
+        @include easeOut;
         border-radius: 0;
     }
 }
 
 .settings-menu {
-    @include themed() {
+    @include themed {
         background-color: get-color($settings-item);
     }
     @include flexbox;
     @include transform(translateX(0));
-    @include easeOut();
+    @include easeOut;
     flex-flow: column wrap;
     justify-content: center;
     position: fixed;
@@ -60,7 +60,7 @@
 
     &.visible {
         @include transform(translateX(100%));
-        @include easeOut();
+        @include easeOut;
     }
 
     .settings-list {
@@ -70,7 +70,7 @@
         width: 100%;
 
         .settings-item {
-            @include themed() {
+            @include themed {
                 color: get-color($link);
                 border: get-color($settings-item-border);
                 border-top: none;
@@ -85,23 +85,23 @@
             }
 
             &#theme--bright:hover {
-                @include bright_theme_menu_decorate();
+                @include bright_theme_menu_decorate;
             }
 
             &#theme--calm:hover {
-                @include calm_theme_menu_decorate();
+                @include calm_theme_menu_decorate;
             }
 
             &#theme--bold:hover {
-                @include bold_theme_menu_decorate();
+                @include bold_theme_menu_decorate;
             }
 
             &#theme--somber:hover {
-                @include somber_theme_menu_decorate();
+                @include somber_theme_menu_decorate;
             }
 
             &#theme--ambient:hover {
-                @include ambient_theme_menu_decorate();
+                @include ambient_theme_menu_decorate;
             }
 
             &.visible {

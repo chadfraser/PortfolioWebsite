@@ -2,7 +2,7 @@
     margin: 0 50px;
 
     h1 {
-        @include themed() {
+        @include themed {
             color: get-color($title);
         }
         margin-bottom: -3vh;
@@ -16,7 +16,7 @@
     }
 
     .about-me-image-grid {
-        @include themed() {
+        @include themed {
             background: get-color($image-grid);
         }
         @include grid;
@@ -30,7 +30,7 @@
         height: auto;
 
         .identity-image {
-            @include themed() {
+            @include themed {
                 border: get-color($image-border);
                 box-shadow: get-color($image-shadow);
             }
@@ -61,7 +61,7 @@
     }
 
     .about-popup {
-        @include themed() {
+        @include themed {
             background-color: get-color($popup);
             color: get-color($popup-text);
         }

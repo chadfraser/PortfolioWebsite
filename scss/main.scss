@@ -22,7 +22,7 @@ header {
 }
 
 body {
-    @include themed() {
+    @include themed {
         background: get-color($bg);
         color: get-color($text);
     }
@@ -38,7 +38,7 @@ body {
 }
 
 h1 {
-    @include themed() {
+    @include themed {
         color: get-color($title);
     }
 
@@ -64,7 +64,7 @@ h2 {
     font-weight: 400;
 
     &.sub-title {
-        @include themed() {
+        @include themed {
             color: get-color($subtitle);
         }
         line-height: 1.25;
@@ -75,7 +75,7 @@ h2 {
 }
 
 a {
-    @include themed() {
+    @include themed {
         color: get-color($link);
     }
     text-decoration: none;
@@ -85,7 +85,7 @@ main {
     margin-top: 15vh;
 
     .self-image {
-        @include themed() {
+        @include themed {
             border: get-color($self-image-border);
         }
         max-height: 50vh;
@@ -93,7 +93,7 @@ main {
     }
 
     .link-icons {
-        @include themed() {
+        @include themed {
             background: get-color($link-icons-bg);
         }
         @include flexbox;
@@ -147,12 +147,10 @@ main {
 
 
 
-// replace download links
 // image + gif for RAScraping
 // support all browsers (iphone footer scroll)
 // base images for project + about page
 // user-select: none in menus
-// Consider stopping animations on resize between screen modes?
 
 @import "pages/about";
 @import "pages/projects";
