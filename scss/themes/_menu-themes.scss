@@ -1,5 +1,5 @@
 @mixin bright_theme_menu_decorate() {
-    background: linear-gradient(to right, #8E8D8A, #EAE7DC, #8E8D8A);
+    background: linear-gradient(to right, darken(#D8C3A5, 15), #D8C3A5, #EAE7DC, #D8C3A5, darken(#D8C3A5, 15));
     color: #E98074;
     color: #E85A4F;
 }
@@ -20,13 +20,10 @@
     color: linear-gradient(#61892F, #86C232);
     color: darken(#61892F, 10);
     color: #86C232;
-    // background-clip: text;
-    // -webkit-background-clip: text;
-    // color: transparent;
 }
 
-@mixin dark_theme_menu_decorate() {
-    background: rgba(#19181A, 1);
-    text-shadow: 0 0 2px #479761;
-    color: #CEBC81;
+@mixin ambient_theme_menu_decorate() {
+    background: radial-gradient(circle at bottom left, #CEBC81 0%, #19181A 15%, #19181A 30%);
+    // text-shadow: 0 0 2px #479761;
+    color: #A16E83;
 }

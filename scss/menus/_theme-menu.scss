@@ -5,17 +5,15 @@
 .settings-tab {
     @include themed() {
         background-color: get-color($settings);
+        color: get-color($settings-text);
     }
     position: fixed;
     z-index: 3;
-    // width: 60px;
     height: 60px;
     width: 25%;
     left: calc(60px - 25%);
-    // height: 60px;
     border-radius: 0 0 15px 0;
     cursor: pointer;
-    // text-align: center;
     transform: translateX(0);
     @include easeOut();
 
@@ -30,7 +28,6 @@
     img {
         float: right;
         position: fixed;
-        // max-width: 80%;
         max-width: 48px;
         top: 10%;
         right: 8px;
@@ -57,7 +54,6 @@
     position: fixed;
     width: 25%;
     top: 60px;
-    // left: calc(100% + 12px);
     left: -25%;
     transform: translateX(0);
     @include easeOut();
@@ -75,6 +71,7 @@
 
         .settings-item {
             @include themed() {
+                color: get-color($link);
                 border: get-color($settings-item-border);
                 border-top: none;
             }
@@ -103,14 +100,14 @@
                 @include somber_theme_menu_decorate();
             }
 
-            &#theme--dark:hover {
-                @include dark_theme_menu_decorate();
+            &#theme--ambient:hover {
+                @include ambient_theme_menu_decorate();
             }
 
             &.visible {
                 transform: translate3d(0, 0, 0);
                 transition-duration: 0.25s;
-        
+
                 @for $i from 1 through 5 {
                     &:nth-child(#{$i}) {
                         transition-delay: $i * 0.1s + 0.1;

@@ -1,0 +1,61 @@
+$near-black: #19181A;
+$dim-pink: #A16E83;
+$pale-pink: #B19F9E;
+$pale-green: #479761;
+$pale-yellow: #CEBC81;
+
+$bg--ambient: $near-black;
+$menu--ambient: rgba(black, 0.75);
+$menu-footer--ambient: black;
+$menu-hover--ambient: lighten($near-black, 3);
+$menu-item-hover--ambient: lighten($near-black, 10);
+$menu-button--ambient: white;
+$link--ambient: $dim-pink;
+$settings--ambient: rgba(lighten($near-black, 5), 0.75);
+$settings-close--ambient: black;
+$settings-text--ambient: $dim-pink;
+$settings-divider--ambient: 3px $pale-green solid;
+$settings-item--ambient: $near-black;
+$settings-item-border--ambient: 5px $pale-green solid;
+
+$title--ambient: $dim-pink;
+$subtitle--ambient: $pale-yellow;
+$text-primary--ambient: white;
+$text-secondary--ambient: $bright-blue;
+$self-image-border--ambient: none;
+$link-icons-bg--ambient: none;
+
+$image-grid--ambient: none;
+$image-border--ambient: 2px black solid;
+$image-shadow--ambient: 5px 5px 5px white;
+$popup--ambient: lighten(rgba($near-black, 0.95), 5);
+$popup-text--ambient: white;
+
+$popup-secondary--ambient: none; //darken(rgba($deep-purple, 0.95), 5);  // Is this still a thing?
+
+$divider--ambient: $pale-yellow;
+$button-primary--ambient: darken($pale-pink, 5);
+$button-secondary--ambient: darken($pale-yellow, 5);
+$button-tertiary--ambient: darken($near-black, 20);
+$button-quarternary--ambient: darken($near-black, 3);
+$button-primary-text--ambient: black;
+$button-secondary-text--ambient: black;
+$button-tertiary-text--ambient: $dim-pink;
+$button-quarternary-text--ambient: $dim-pink;
+$button-primary-hover--ambient: lighten($near-black, 10);
+$button-secondary-hover--ambient: lighten($near-black, 25);
+$button-tertiary-hover--ambient: darken($pale-pink, 20);
+$button-quarternary-hover--ambient: darken($pale-yellow, 20);
+$button-primary-text-hover--ambient: white;
+$button-secondary-text-hover--ambient: white;
+$button-tertiary-text-hover--ambient: black;
+$button-quarternary-text-hover--ambient: black;
+$project-bg--ambient: lighten($near-black, 5);
+
+$contact-box--ambient: darken($near-black, 5);
+$contact-text--ambient: $dim-pink;
+$contact-box-border--ambient: 2px solid white;
+$contact-subtext--ambient: $pale-pink;
+$contact-box-hover--ambient: lighten($near-black, 5);
+$contact-text-hover--ambient: $pale-yellow;
+$contact-subtext-hover--ambient: $pale-yellow;

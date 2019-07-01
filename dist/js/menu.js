@@ -18,8 +18,8 @@ var menuHtml = `
             <li class="settings-item" id="theme--somber">
                 SOMBER
             </li>
-            <li class="settings-item" id="theme--dark">
-                DARK
+            <li class="settings-item" id="theme--ambient">
+                AMBIENT
             </li>
         </ul>
     </div>
@@ -62,7 +62,7 @@ var menuHtml = `
             </li>
         </ul>
     </nav>
-        
+
     <div class="menu-icons">
         <div class="menu-link-icon">
             <a href="https://github.com/chadfraser/" class="icon-anchor">

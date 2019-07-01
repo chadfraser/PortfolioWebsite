@@ -1,0 +1,61 @@
+$calm-blue: #5AB9EA;
+$pale-blue: #84CEEB;
+$off-grey: #C1C8E4;
+$deep-blue: #5680E9;
+$calm-purple: #8860D0;
+
+$bg--calm: radial-gradient(lighten($pale-blue, 10) 20%, darken($calm-blue, 5));
+$menu--calm: rgba($deep-blue, 0.85);
+$menu-footer--calm: $calm-purple;
+$menu-hover--calm: darken($calm-blue, 5);
+$menu-item-hover--calm: $pale-blue;
+$menu-button--calm: $off-grey;
+$link--calm: darken($calm-purple, 10);
+$settings--calm: rgba(darken($deep-blue, 5), 0.75);
+$settings-close--calm: darken($deep-blue, 5);
+$settings-text--calm: $off-grey;
+$settings-divider--calm: 3px $calm-purple solid;
+$settings-item--calm: $pale-blue;
+$settings-item-border--calm: 2px $calm-purple solid;
+
+$title--calm: darken($deep-blue, 5);
+$subtitle--calm: $calm-purple;
+$text-primary--calm: darken($calm-purple, 5);
+$text-secondary--calm: $calm-blue;
+$self-image-border--calm: none;
+$link-icons-bg--calm: transparent;
+
+$image-grid--calm: transparent;
+$image-border--calm: 3px $deep-blue solid;
+$image-shadow--calm: 5px 5px 5px black;
+$popup--calm: lighten(rgba($off-grey, 0.95), 5);
+$popup-text--calm: darken($calm-purple, 5);
+
+$popup-secondary--calm: none;
+
+$divider--calm: $calm-purple;
+$button-primary--calm: $deep-blue;
+$button-secondary--calm: darken($calm-blue, 5);
+$button-tertiary--calm: $deep-blue;
+$button-quarternary--calm: darken($calm-blue, 5);
+$button-primary-text--calm: darken($calm-purple, 20);
+$button-secondary-text--calm: darken($calm-purple, 10);
+$button-tertiary-text--calm: darken($calm-purple, 20);
+$button-quarternary-text--calm: darken($calm-purple, 20);
+$button-primary-hover--calm: lighten($calm-purple, 10);
+$button-secondary-hover--calm: lighten($calm-purple, 25);
+$button-tertiary-hover--calm: darken($pale-blue, 5);
+$button-quarternary-hover--calm: $pale-blue;
+$button-primary-text-hover--calm: black;
+$button-secondary-text-hover--calm: black;
+$button-tertiary-text-hover--calm: black;
+$button-quarternary-text-hover--calm: black;
+$project-bg--calm: lighten($off-grey, 5);
+
+$contact-box--calm: none;
+$contact-text--calm: $calm-purple;
+$contact-box-border--calm: 2px solid white;
+$contact-subtext--calm: darken($calm-purple, 5);
+$contact-box-hover--calm: darken($deep-blue, 5);
+$contact-text-hover--calm: $off-grey;
+$contact-subtext-hover--calm: $off-grey;

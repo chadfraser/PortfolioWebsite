@@ -50,7 +50,9 @@
 .menu-tab {
     @include themed() {
         background-color: get-color($menu);
-        color: get-color($link);
+        a {
+            color: get-color($link);
+        }
     }
     position: fixed;
     z-index: 3;

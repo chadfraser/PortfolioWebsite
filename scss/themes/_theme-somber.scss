@@ -1,0 +1,61 @@
+$somber-black: #222629;
+$deep-fog: #474B4F;
+$light-fog: #6B6370;
+$somber-green: #61892F;
+$luminous-green: #86C232;
+
+$bg--somber: $somber-black;
+$menu--somber: rgba(darken($light-fog, 10), 0.9);
+$menu-footer--somber: darken($deep-fog, 10);
+$menu-hover--somber: $deep-fog;
+$menu-item-hover--somber: lighten($deep-fog, 10);
+$menu-button--somber: $luminous-green;
+$link--somber: lighten($somber-green, 10);
+$settings--somber: rgba($light-fog, 0.75);
+$settings-close--somber: darken($deep-fog, 5);
+$settings-text--somber: $luminous-green;
+$settings-divider--somber: 2px $luminous-green solid;
+$settings-item--somber: $deep-fog;
+$settings-item-border--somber: 2px $luminous-green solid;
+
+$title--somber: darken($somber-green, 10);
+$subtitle--somber: $light-fog;
+$text-primary--somber: white;
+$text-secondary--somber: none;
+$self-image-border--somber: none;
+$link-icons-bg--somber: rgba($light-fog, 0.5);
+
+$image-grid--somber: none;
+$image-border--somber: 3px black solid;
+$image-shadow--somber: 5px 5px 5px $luminous-green;
+$popup--somber: lighten(rgba($luminous-green, 0.95), 5);
+$popup-text--somber: $somber-black;
+
+$popup-secondary--somber: none;
+
+$divider--somber: $luminous-green;
+$button-primary--somber: $somber-green;
+$button-secondary--somber: $luminous-green;
+$button-tertiary--somber: $deep-fog;
+$button-quarternary--somber: $light-fog;
+$button-primary-text--somber: $somber-black;
+$button-secondary-text--somber: $somber-black;
+$button-tertiary-text--somber: $luminous-green;
+$button-quarternary-text--somber: lighten($luminous-green, 10);
+$button-primary-hover--somber: darken($somber-green, 10);
+$button-secondary-hover--somber: darken($luminous-green, 10);
+$button-tertiary-hover--somber: $somber-black;
+$button-quarternary-hover--somber: lighten($light-fog, 10);
+$button-primary-text-hover--somber: black;
+$button-secondary-text-hover--somber: $somber-black;
+$button-tertiary-text-hover--somber: $luminous-green;
+$button-quarternary-text-hover--somber: lighten($luminous-green, 10);
+$project-bg--somber: darken($luminous-green, 10);
+
+$contact-box--somber: none;
+$contact-text--somber: $light-fog;
+$contact-box-border--somber: 2px solid $luminous-green;
+$contact-subtext--somber: $somber-green;
+$contact-box-hover--somber: rgba($light-fog, 0.75);
+$contact-text-hover--somber: $luminous-green;
+$contact-subtext-hover--somber: $luminous-green;

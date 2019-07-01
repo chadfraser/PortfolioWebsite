@@ -1,6 +1,10 @@
 @import "themes";
 
 @include mediaMediumScreen {
+    body {
+        // padding-bottom: 20vmin;
+    }
+
     header {
         top: calc(100vh - 15vmin);
         height: 15vmin;
@@ -50,8 +54,6 @@
         }
     }
 
-    
-
     .settings-tab {
         position: fixed;
         z-index: -1;
@@ -60,10 +62,6 @@
         top: calc(100vh - 20vmin);
         left: -30vmin;
         border-radius: 0;
-        
-        & ~ .settings-menu {
-            background-color: $primary-color;
-        }
 
         p {
             position: relative;
@@ -71,17 +69,6 @@
             top: 2.5vmin;
             right: -0.5vmin;
             display: none;
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
         }
 
         img {
@@ -97,22 +84,6 @@
                 background-color: get-color($settings-close);
                 border-top: get-color($settings-divider);
             }
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
-            ////////////////////////////////////
 
             p {
                 display: inline;
@@ -125,11 +96,9 @@
         top: auto;
         bottom: 20vmin !important;
         left: -50vmin;
-        // border: 10% black solid;
 
         .settings-list {
             .settings-item {
-                // border: 5x black solid;
                 @include themed() {
                     border: get-color($settings-item-border);
                     border-bottom: none;
@@ -138,10 +107,39 @@
         }
     }
 
+    .menu-icons {
+        position: fixed;
+        top: 50vh;
+        right: 50vw;
+        height: 10vh;
+        left: 0;
+    }
+
+    .menu-link-icon {
+        text-align: center;
+        width: 100%;
+        height: 15vmin;
+    }
+    
+    .icon-anchor {
+        display: block;
+        padding: 0;
+        width: 100%;
+        flex-grow: 1;
+
+        img {
+            margin-top: 1vmin;
+        }
+    }
+
     .menu-tab {
-        background-color: darken($primary-color, 5);
+        @include themed() {
+            background-color: get-color($menu);
+        }
         & ~ .nav-menu {
-            background-color: $primary-color;
+            @include themed() {
+                background-color: get-color($menu-hover);
+            }
         }
         z-index: 6;
         top: calc(100vh - 15vmin);
@@ -151,29 +149,22 @@
         border-radius: 0;
 
         &:hover {
-            background-color: darken($primary-color, 5) !important;
-            & ~ .nav-menu {
-                background-color: $primary-color;
+            @include themed() {
+                background-color: get-color($menu-hover);
             }
         }
         
         &.close {
-            background-color: darken($primary-color, 5);
+            @include themed() {
+                background-color: get-color($menu-footer);
+            }
             width: 100%;
             left: 0;
             transform: none;
     
             .button-line-container, .button-line {
                 animation: none !important;
-            }
-
-            .menu-link-icons {
-                position: fixed;
-                top: 50vh;
-                right: 50vw;
-                height: 10vh;
-                left: 0;
-            }
+            }   
         }
 
         .menu-button {
@@ -199,7 +190,8 @@
         justify-content: space-around;
         align-items: center;
         position: fixed;
-        width: 85vw;
+        width: 80vw;
+        background-color: red;
         height: 15vmin;
         top: 100vh;
         left: 0;
@@ -382,11 +374,40 @@
                 display: block;
             }
     
-            .link-button, .download-button {
-                background-color: darken($primary-color, 10);
+            .button, .download-button {
+                // TODO
+                // background-color: darken($primary-color, 10);
                 float: left;
                 margin: 10px 5px;
                 width: 45%;
+            }
+
+            .link-button {
+                @include themed() {
+                    background-color: get-color($button-tertiary);
+                    color: get-color($button-tertiary-text);
+                }
+
+                &:hover {
+                    @include themed() {
+                        background-color: get-color($button-tertiary-hover);
+                        color: get-color($button-tertiary-text-hover);
+                    }
+                }
+            }
+
+            .download-button {
+                @include themed() {
+                    background-color: get-color($button-quarternary);
+                    color: get-color($button-quarternary-text);
+                }
+
+                &:hover {
+                    @include themed() {
+                        background-color: get-color($button-quarternary-hover);
+                        color: get-color($button-quarternary-text-hover);
+                    }
+                }
             }
 
             .download-button {
@@ -397,6 +418,10 @@
         .project-text {
             margin-bottom: 5vh;
             width: calc(100% - 20px);
+
+            &:last-child {
+                margin-bottom: 20vmin;                
+            }
         }
     }
 }
@@ -414,7 +439,6 @@
     }
 
     .about-me {
-        // margin: 0;
         .about-me-image-grid {
             grid-gap: 5vh;
             grid-template-columns: repeat(1, 1fr);
@@ -430,13 +454,18 @@
             width: 90vw;
             height: auto;
             min-height: auto;
+            
+            .about-popup:last-child {
+                margin-bottom: 20vmin;
+            }
         }
     }
     
     .link-button, .download-button {
         left: 0% !important;
 
-        background-color: darken($primary-color, 10);
+        // TODO
+        // background-color: darken($primary-color, 10);
         float: none;
         margin: 5px 0px !important;
         width: 100% !important;

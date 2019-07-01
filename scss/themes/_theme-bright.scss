@@ -1,0 +1,61 @@
+$dark-cream: #8E8D8A;
+$cream: #D8C3A5;
+$near-white: #EAE7DC;
+$light-red: #E98074;
+$bright-red: #E85A4F;
+
+$bg--bright: linear-gradient($cream 35%, white) fixed no-repeat;
+$menu--bright: rgba($light-red, 0.85);
+$menu-footer--bright: darken($cream, 10);
+$menu-hover--bright: $bright-red;
+$menu-item-hover--bright: $light-red;
+$menu-button--bright: white;
+$link--bright: white;
+$settings--bright: rgba($bright-red, 0.75);
+$settings-close--bright: darken($bright-red, 5);
+$settings-text--bright: darken($cream, 5);
+$settings-divider--bright: 3px $bright-red solid;
+$settings-item--bright: darken($cream, 15);
+$settings-item-border--bright: 2px $near-white solid;
+
+$title--bright: $bright-red;
+$subtitle--bright: $bright-red;
+$text-primary--bright: darken($bright-red, 5);
+$text-secondary--bright: none;
+$self-image-border--bright: 3px $bright-red solid;
+$link-icons-bg--bright: $light-red;
+
+$image-grid--bright: rgba($light-red, 0.5);
+$image-border--bright: 5px $bright-red solid;
+$image-shadow--bright: 5px 5px 5px $near-white;
+$popup--bright: lighten(rgba($cream, 0.95), 5);
+$popup-text--bright: darken($bright-red, 10);
+
+$popup-secondary--bright: none;
+
+$divider--bright: $bright-red;
+$button-primary--bright: darken($cream, 10);
+$button-secondary--bright: $cream;
+$button-tertiary--bright: darken($cream, 10);
+$button-quarternary--bright: $cream;
+$button-primary-text--bright: darken($bright-red, 10);
+$button-secondary-text--bright: darken($bright-red, 10);
+$button-tertiary-text--bright: darken($bright-red, 10);
+$button-quarternary-text--bright: darken($bright-red, 10);
+$button-primary-hover--bright: $bright-red;
+$button-secondary-hover--bright: $light-red;
+$button-tertiary-hover--bright: $bright-red;
+$button-quarternary-hover--bright: $light-red;
+$button-primary-text-hover--bright: black;
+$button-secondary-text-hover--bright: black;
+$button-tertiary-text-hover--bright: black;
+$button-quarternary-text-hover--bright: black;
+$project-bg--bright: $near-white;
+
+$contact-box--bright: darken($cream, 5);
+$contact-text--bright: darken($bright-red, 10);
+$contact-box-border--bright: 2px solid $bright-red;
+$contact-subtext--bright: darken($light-red, 5);
+$contact-box-hover--bright: $near-white;
+$contact-text-hover--bright: darken($bright-red, 10);
+$contact-subtext-hover--bright: darken($bright-red, 10);

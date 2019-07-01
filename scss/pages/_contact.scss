@@ -15,11 +15,9 @@
     
     .contact-element {
         @include themed() {
-            // border: get-color($border)
             background-color: get-color($contact-box);
-            // color: get-color($contact-text-hover);
+            border: get-color($contact-box-border);
         }
-        border: 5px solid black;
         display: flex;
         position: relative;
         margin: 5px;
@@ -53,8 +51,6 @@
                 
                 h6 {
                     color: get-color($contact-subtext-hover);
-                    // color: black;
-                    // @include easeOut;
                 }
             }
             @include easeOut;
@@ -70,7 +66,9 @@
 
         p {
             white-space: nowrap;
-            color: $text-color;
+            @include themed() {
+                color: get-color($contact-text);
+            }
             position: relative;
             font-size: 2rem;
             float: left;

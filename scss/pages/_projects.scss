@@ -26,7 +26,6 @@
             @include themed() {
                 background-color: get-color($divider);
             }
-            background-color: $text-color;
             border-radius: 5px;
         }
     
@@ -53,7 +52,6 @@
         }
 
         .button {
-            background-color: darken($primary-color, 5);
             margin: 10px 10px 0;
             padding: 10px 0;
             text-align: center;
