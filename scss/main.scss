@@ -14,6 +14,7 @@ html {
 }
 
 header {
+    @include user-select(none);
     position: fixed;
     z-index: 2;
     top: 0px;
@@ -26,8 +27,6 @@ body {
         background: get-color($bg);
         color: get-color($text);
     }
-    // top: 0;
-    // position: absolute;
     height: 100%;
     font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
@@ -145,12 +144,9 @@ main {
     display: none;
 }
 
-
-
-// image + gif for RAScraping
 // support all browsers (iphone footer scroll)
+// image + gif for RAScraping
 // base images for project + about page
-// user-select: none in menus
 
 @import "pages/about";
 @import "pages/projects";

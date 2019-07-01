@@ -767,6 +767,10 @@ html {
   width: 100%; }
 
 header {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   position: fixed;
   z-index: 2;
   top: 0px;

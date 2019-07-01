@@ -37,7 +37,7 @@
   transform: #{$str};
 }
 
-@mixin flexbox() {
+@mixin flexbox {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -53,9 +53,16 @@
     flex: $values;
 }
 
-@mixin grid() {
+@mixin grid {
     display: -ms-grid;
     display: grid;
+}
+
+@mixin user-select($value) {
+    -moz-user-select: $value;
+    -webkit-user-select: $value;
+    -ms-user-select: $value;
+    user-select: $value;
 }
 
 @mixin mediaSmallScreen {
