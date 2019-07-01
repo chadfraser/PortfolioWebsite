@@ -12,7 +12,7 @@
     .menu-tab.theme--bright a {
       color: white; }
   .menu-tab.theme--calm {
-    background-color: rgba(86, 128, 233, 0.85); }
+    background-color: rgba(86, 128, 233, 0.9); }
     .menu-tab.theme--calm a {
       color: #6b3ac3; }
   .menu-tab.theme--bold {
@@ -151,7 +151,7 @@
   .nav-menu.theme--bright {
     background-color: rgba(233, 128, 116, 0.85); }
   .nav-menu.theme--calm {
-    background-color: rgba(86, 128, 233, 0.85); }
+    background-color: rgba(86, 128, 233, 0.9); }
   .nav-menu.theme--bold {
     background-color: rgba(33, 14, 21, 0.75); }
   .nav-menu.theme--somber {
@@ -955,7 +955,7 @@ main {
     .menu-tab.theme--bright {
       background-color: rgba(233, 128, 116, 0.85); }
     .menu-tab.theme--calm {
-      background-color: rgba(86, 128, 233, 0.85); }
+      background-color: rgba(86, 128, 233, 0.9); }
     .menu-tab.theme--bold {
       background-color: rgba(33, 14, 21, 0.75); }
     .menu-tab.theme--somber {
