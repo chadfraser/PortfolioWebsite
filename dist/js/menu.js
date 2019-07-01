@@ -41,7 +41,7 @@ var menuHtml = `
     <nav class="nav-menu">
         <ul class="menu-list">
             <li class="menu-item">
-                <a href="./home.html" class="menu-link">
+                <a href="./index.html" class="menu-link">
                     Home
                 </a>
             </li>
