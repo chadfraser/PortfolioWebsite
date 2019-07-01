@@ -7,6 +7,8 @@
         background-color: get-color($settings);
         color: get-color($settings-text);
     }
+    @include transform(translateX(0));
+    @include easeOut();
     position: fixed;
     z-index: 3;
     height: 60px;
@@ -14,8 +16,6 @@
     left: calc(60px - 25%);
     border-radius: 0 0 15px 0;
     cursor: pointer;
-    transform: translateX(0);
-    @include easeOut();
 
     p {
         position: relative;
@@ -34,13 +34,13 @@
     }
 
     &.close {
-        border-radius: 0;
-        transform: translateX(calc(100% - 60px));
         @include themed() {
             background-color: get-color($settings-close);
             border-bottom: get-color($settings-divider);
         }
+        @include transform(translateX(calc(100% - 60px)));
         @include easeOut();
+        border-radius: 0;
     }
 }
 
@@ -48,18 +48,18 @@
     @include themed() {
         background-color: get-color($settings-item);
     }
-    display: flex;
+    @include flexbox;
+    @include transform(translateX(0));
+    @include easeOut();
     flex-flow: column wrap;
     justify-content: center;
     position: fixed;
     width: 25%;
     top: 60px;
     left: -25%;
-    transform: translateX(0);
-    @include easeOut();
 
     &.visible {
-        transform: translateX(100%);
+        @include transform(translateX(100%));
         @include easeOut();
     }
 
@@ -75,7 +75,7 @@
                 border: get-color($settings-item-border);
                 border-top: none;
             }
-            transform: translate3d(-800px, 0, 0);
+            @include transform(translate3d(-800px, 0, 0));
             cursor: pointer;
             padding: 10px 0;
             transition: color 0s 0s !important;
@@ -105,7 +105,7 @@
             }
 
             &.visible {
-                transform: translate3d(0, 0, 0);
+                @include transform(translate3d(0, 0, 0));
                 transition-duration: 0.25s;
 
                 @for $i from 1 through 5 {

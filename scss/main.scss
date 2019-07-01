@@ -33,7 +33,7 @@ body {
 
     &.end-transition * {
         transition: none !important;
-        animation: none 0 0 !important;
+        @include animation('none 0 0 !important;');
     }
 }
 
@@ -48,7 +48,7 @@ h1 {
         font-size: 5rem;
         white-space: nowrap;
     }
-    
+
     &.page-title {
         padding: 20px 0;
         padding-top: 8vh;
@@ -96,19 +96,19 @@ main {
         @include themed() {
             background: get-color($link-icons-bg);
         }
-        display: flex;
+        @include flexbox;
         border-radius: 20px;
         align-items: center;
         justify-content: center;
-        
+
         position: relative;
         margin-top: 1rem;
 
         .icon-anchor {
+            @include flexbox;
             margin: 10px 0;
-            display: flex;
             align-items: center;
-        
+
             &:not(:last-child) {
                 margin: 0 5vw 0 0;
             }
@@ -125,17 +125,17 @@ main {
     &#home-main {
         overflow: hidden;
         .flex-wrap {
-            display: flex;
+            @include flexbox;
             justify-content: center;
             align-content: center;
 
             .left-half {
-                flex: 1;
+                @include flex(1);
                 text-align: center;
             }
-            
+
             .right-half {
-                flex: 1;
+                @include flex(1);
             }
         }
     }
@@ -147,8 +147,9 @@ main {
 
 
 
-// download links + animated gifs
-// add colors for different themes
+// replace download links
+// image + gif for RAScraping
+// support all browsers (iphone footer scroll)
 // base images for project + about page
 // user-select: none in menus
 // Consider stopping animations on resize between screen modes?

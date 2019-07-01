@@ -8,17 +8,17 @@
     }
 
     .contact-links {
-        display: flex;
+        @include flexbox;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .contact-element {
         @include themed() {
             background-color: get-color($contact-box);
             border: get-color($contact-box-border);
         }
-        display: flex;
+        @include flexbox;
         position: relative;
         margin: 5px;
         height: 20vh;
@@ -48,14 +48,14 @@
                 p {
                     color: get-color($contact-text-hover);
                 }
-                
+
                 h6 {
                     color: get-color($contact-subtext-hover);
                 }
             }
             @include easeOut;
         }
-    
+
         img {
             // position: relative;
             max-height: 15vh;

@@ -4,45 +4,46 @@
 @mixin animate_button_line($line-index) {
     $base-delay: 0.25s;
 
-    animation: translateXAndSkew 1s #{$base-delay + 0.1 * $line-index};
+    @include animation('translateXAndSkew 1s #{$base-delay + 0.1 * $line-index}');
+    // animation: translateXAndSkew 1s #{$base-delay + 0.1 * $line-index};
     animation-fill-mode: forwards;
 
     .button-line {
-        animation: translateYForButtonIndex#{$line-index} 1s #{$base-delay + 0.1 * $line-index};
+        @include animation('translateYForButtonIndex#{$line-index} 1s #{$base-delay + 0.1 * $line-index}');
         animation-fill-mode: forwards;
     }
 
-    @keyframes translateYForButtonIndex#{$line-index} {
+    @include keyframes(translateYForButtonIndex#{$line-index}) {
         0% {
             animation-timing-function: ease-out;
-            transform: translateY(0vh) rotate(0deg);
+            @include transform(translateY(0vh) rotate(0deg));
             opacity: 1;
         }
         50% {
             animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
-            transform: translateY(-10vh) rotate(-40deg);
+            @include transform(translateY(-10vh) rotate(-40deg));
             @if ($line-index == 2) {
                 opacity: 0;
             }
         }
         100% {
             @if ($line-index == 1) {
-                transform: translate(5px, 8px) rotate(45deg);
+                @include transform(translate(5px, 8px) rotate(45deg));
             } @else if ($line-index == 2) {
                 opacity: 0;
             } @else {
-                transform: translate(5px, -8px) rotate(-45deg);
+                @include transform(translate(5px, -8px) rotate(-45deg));
             }
         }
     }
-    
-    @keyframes translateXAndSkew {
+
+    @include keyframes(translateXAndSkew) {
         50% {
             animation-timing-function: cubic-bezier(0, 1.33, 1, 1.13);
-            transform: translateX(90vw) skew(15deg);
+            @include transform(translateX(90vw) skew(15deg));
         }
         100% {
-            transform: translateX(0vw) skew(0deg);
+            @include transform(translateX(0vw) skew(0deg));
         }
     }
 }
@@ -64,7 +65,7 @@
     cursor: pointer;
 
     &.close {
-        transform: translateX(-55vw);
+        @include transform(translateX(-55vw));
         @include easeOut();
 
         .button-line-container {
@@ -107,7 +108,9 @@
     @include themed() {
         background-color: get-color($menu);
     }
-    display: flex;
+    @include flexbox;
+    @include transform(translateX(0vw));
+    @include easeOut();
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
@@ -116,11 +119,9 @@
     height: 100vh;
     top: 0;
     left: calc(100% + 12px);
-    transform: translateX(0vw);
-    @include easeOut();
 
     &.visible {
-        transform: translateX(-55vw);
+        @include transform(translateX(-55vw));
         @include easeOut();
     }
 
@@ -132,16 +133,16 @@
 
         .menu-item {
             &:nth-child(odd) {
-                transform: translate3d(0, -800px, 0);
+                @include transform(translate3d(0, -800px, 0));
             }
             &:nth-child(even) {
-                transform: translate3d(0, 800px, 0);
+                @include transform(translate3d(0, 800px, 0));
             }
 
             &.visible {
-                transform: translate3d(0, 0, 0);
+                @include transform(translate3d(0, 0, 0));
                 transition-duration: 0.25s;
-        
+
                 @for $i from 1 through 4 {
                     &:nth-child(#{$i}) {
                         transition-delay: $i * 0.25s + 0.25;
