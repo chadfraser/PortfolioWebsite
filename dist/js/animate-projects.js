@@ -2,7 +2,7 @@ const projectSamples = document.querySelectorAll(".project-sample");
 const projectImages = [];
 const imageSourceList = [];
 
-projectSamples.forEach(function (sample, index) { 
+projectSamples.forEach(function (sample, index) {
     var image = sample.querySelector(".project-image");
     var animation = sample.querySelector(".project-animation");
     imageSourceList.push([image.src, animation.src]);
