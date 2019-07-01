@@ -1,6 +1,7 @@
 .contact-me {
     margin: 0 12vw;
-    height: 100vh;
+    @include vh("height", 100);
+    // height: 100vh;
 
     main > & {
         margin-top: 0;
@@ -19,9 +20,10 @@
             border: get-color($contact-box-border);
         }
         @include flexbox;
+        @include vh("height", 20);
         position: relative;
         margin: 5px;
-        height: 20vh;
+        // height: 20vh;
         width: 80vw;
         align-items: center;
         border-radius: 20px;
@@ -57,9 +59,8 @@
         }
 
         img {
-            // position: relative;
+            @include vh("max-height", 15);
             max-height: 15vh;
-            // float: left;
             border-radius: 20%;
             padding: 0 2vw;
         }

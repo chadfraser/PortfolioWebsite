@@ -65,6 +65,11 @@
     user-select: $value;
 }
 
+@mixin vh($dimension, $value) {
+    #{$dimension}: calc(#{$value} * 1vh);
+    #{$dimension}: calc(var(--vh, 1vh) * #{$value});
+}
+
 @mixin mediaSmallScreen {
     @media screen and (max-width: 500px) {
         @content;

@@ -108,10 +108,12 @@
     }
 
     .menu-icons {
+        @include vh("top", 50);
+        @include vh("height", 10);
         position: fixed;
-        top: 50vh;
+        // top: 50vh;
         right: 50vw;
-        height: 10vh;
+        // height: 10vh;
         left: 0;
     }
 

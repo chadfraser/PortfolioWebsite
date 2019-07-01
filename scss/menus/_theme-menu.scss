@@ -64,9 +64,10 @@
     }
 
     .settings-list {
+        @include vh("font-size", 3);
         list-style: none;
         text-align: center;
-        font-size: 3vh;
+        // font-size: 3vh;
         width: 100%;
 
         .settings-item {
