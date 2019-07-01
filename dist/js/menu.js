@@ -41,22 +41,22 @@ var menuHtml = `
     <nav class="nav-menu">
         <ul class="menu-list">
             <li class="menu-item">
-                <a href="./portfolio-main.html" class="menu-link">
+                <a href="./home.html" class="menu-link">
                     Home
                 </a>
             </li>
             <li class="menu-item">
-                <a href="./portfolio-about.html" class="menu-link">
+                <a href="./about.html" class="menu-link">
                     About Me
                 </a>
             </li>
             <li class="menu-item">
-                <a href="./portfolio-projects.html" class="menu-link">
+                <a href="./projects.html" class="menu-link">
                     My Projects
                 </a>
             </li>
             <li class="menu-item">
-                <a href="./portfolio-contact.html" class="menu-link">
+                <a href="./contact.html" class="menu-link">
                     Contact Me
                 </a>
             </li>
