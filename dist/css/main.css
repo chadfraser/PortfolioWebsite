@@ -778,7 +778,6 @@ header {
   width: 100%; }
 
 body {
-  height: 100%;
   font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
   body.theme--bright {
     background: linear-gradient(#D8C3A5 35%, white) fixed no-repeat;

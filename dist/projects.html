@@ -10,146 +10,147 @@
     </head>
 
     <body>
-        <header id="menu-header"></header>
+        <div class="wrapper">
+            <header id="menu-header"></header>
 
-        <main class="projects">
-            <h1 class="page-title">
-                Completed Work
-            </h1>
+            <main class="projects">
+                <h1 class="page-title">
+                    Completed Work
+                </h1>
 
-            <div class="completed-projects">
-                <div class="project-sample">
+                <div class="completed-projects">
+                    <div class="project-sample">
+                        <div class="project-visual">
+                            <img src="img/clu-static.png" alt="" class="project-image visible" id="project-image-1">
+                            <img src="img/clu-animated.gif" alt="" class="project-animation" id="project-animation-1">
+                            <div class="buttons">
+                                <a href="https://github.com/chadfraser/CluGame" class="link-button">GITHUB</a>
+                                <a href="" class="download-button">DOWNLOAD</a>
+                            </div>
+                        </div>
+                        <div class="project-text">
+                            <h2 class="project-title">
+                                Clu Clu Land Port
+                            </h2>
+                            <p class="project-description">
+                                Clu Clu Land is an arcade-style NES game, somewhat comparable to Pac-Man. Each level is
+                                set up like a geoboard, with evenly spaced pegs sticking up out of the ground, some of which
+                                are connected by rubber bands. On each stage, there is a hidden image made up of invisible
+                                gold bars between the pegs. Your goal is to uncover the hidden image by moving your character
+                                across each invisible gold bar.
+                                <br> <br>
+                                It's not that easy though! Sea urchins and black holes will kill your character with the
+                                slightest contact, and your life count is limited. Additionally, your character constantly
+                                moves forwards automatically, and you can't directly change her direction. All you can do is
+                                stick your character's left or right arm out to the side to make her swing around a peg as
+                                she passes it, and use the momentum of her swing to change her direction.
+                                <br>
+                                It's a lot harder than it sounds!
+                                <br> <br>
+                                This port I've made comes with a demo, remappable controls, new hidden images on each stage,
+                                new items, and up to four-player simultaneous co-op play!
+                            </p>
+                        </div>
+                        <div class="separator"></div>
+                    </div>
+
+                    <div class="project-sample">
+                        <div class="project-visual">
+                            <img src="img/temp-b.png" alt="" class="project-image visible" id="project-image-3">
+                            <img src="img/temp-c.png" alt="" class="project-animation" id="project-animation-3">
+                            <div class="buttons">
+                                <a href="https://github.com/chadfraser/RAScraping" class="link-button">GITHUB</a>
+                                <a href="" class="download-button">DOWNLOAD</a>
+                            </div>
+                        </div>
+                        <div class="project-text">
+                            <h2 class="project-title">
+                                RetroAchievements* Site Scraping
+                            </h2>
+                            <p class="project-description">
+                                It can be tedious checking your favorite websites every morning, especially if you need to
+                                check for any updates across dozens of pages (<em>Especially</em> especially when those
+                                updates may be as small as a single number being changed).
+                                <br> <br>
+                                To run this program, just give it a list of user accounts from the RetroAchievements gaming
+                                website that you want to track, as well as your email. Every time the program starts
+                                tracking a new user (or game or game system), it scrapes the RetroAchievements website for
+                                that user, then saves a JSON file with all of that user's relevant data (as well as a JSON
+                                file for every game that user has saved in their history on the RetroAchievements website).
+                                <br> <br>
+                                Then, every future time the program is run, it compares the data in its stored JSON file
+                                with the data currently on the RetroAchievements website. It compiles all updates from
+                                every file it's tracking and emails you a formatted list of all of these updates.
+                                <br> <br>
+                                I found this very useful to make and use, since it allows me to know every time my friends
+                                have played something new, or my favorite games have new challenges added to them.
+                                <br> <br> <br>
+                                <h5>
+                                    <i>* I have no affiliation with the RetroAchievements gaming website.</i>
+                                </h5>
+                            </p>
+                        </div>
+                        <div class="separator"></div>
+                    </div>
+
+                    <div class="project-sample">
+                        <div class="project-visual">
+                            <img src="img/chess-static.png" alt="" class="project-image visible" id="project-image-3">
+                            <img src="img/chess-animated.gif" alt="" class="project-animation" id="project-animation-3">
+                            <div class="buttons">
+                                <a href="https://github.com/chadfraser/BasicChess" class="link-button">GITHUB</a>
+                                <a href="" class="download-button">DOWNLOAD</a>
+                            </div>
+                        </div>
+                        <div class="project-text">
+                            <h2 class="project-title">
+                                Basic Chess
+                            </h2>
+                            <p class="project-description">
+                                A classic console-based chess engine with no frills. Players type their moves into the
+                                console window.
+                                <br> <br>
+                                The program recognizes when a player can and can't castle. It handles pawn promotion, check,
+                                and checkmate automatically.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="page-title">
+                    Work In-Progress
+                </h1>
+
+                <div class="project-sample in-progress">
                     <div class="project-visual">
-                        <img src="img/clu-static.png" alt="" class="project-image visible" id="project-image-1">
-                        <img src="img/clu-animated.gif" alt="" class="project-animation" id="project-animation-1">
+                        <img src="img/mahjong-static.png" alt="" class="project-image visible" id="project-image-3">
+                        <img src="img/mahjong-animated.gif" alt="" class="project-animation" id="project-animation-3">
                         <div class="buttons">
-                            <a href="https://github.com/chadfraser/CluGame" class="link-button">GITHUB</a>
+                            <a href="https://github.com/chadfraser/MahjongCalculator" class="link-button">GITHUB</a>
                             <a href="" class="download-button">DOWNLOAD</a>
                         </div>
                     </div>
                     <div class="project-text">
                         <h2 class="project-title">
-                            Clu Clu Land Port
+                            Four Player Mahjong
                         </h2>
                         <p class="project-description">
-                            Clu Clu Land is an arcade-style NES game, somewhat comparable to Pac-Man. Each level is
-                            set up like a geoboard, with evenly spaced pegs sticking up out of the ground, some of which
-                            are connected by rubber bands. On each stage, there is a hidden image made up of invisible
-                            gold bars between the pegs. Your goal is to uncover the hidden image by moving your character
-                            across each invisible gold bar.
+                            A program that allows the player to play a game of four-player mahjong. The program so far
+                            can play a full game in a console window against three computer AI opponents, handles scoring,
+                            features rudimentary computer AI, and can recognize winning hands or legal moves according to
+                            the Hong Kong Old Style Mahjong ruleset.
                             <br> <br>
-                            It's not that easy though! Sea urchins and black holes will kill your character with the
-                            slightest contact, and your life count is limited. Additionally, your character constantly
-                            moves forwards automatically, and you can't directly change her direction. All you can do is
-                            stick your character's left or right arm out to the side to make her swing around a peg as
-                            she passes it, and use the momentum of her swing to change her direction.
-                            <br>
-                            It's a lot harder than it sounds!
-                            <br> <br>
-                            This port I've made comes with a demo, remappable controls, new hidden images on each stage,
-                            new items, and up to four-player simultaneous co-op play!
+                            In the future, I plan to give the program a graphical windowed mode, allow for the player to
+                            select rulesets other than Hong Kong Old Style, separate out its scoring and AI system to
+                            create mahjong calculator modes (e.g., showing the player how many points an arbitrary hand is
+                            worth, or how many more turns at minimum a hand needs to win), and a more complex AI that takes
+                            the scoring system into account.
                         </p>
                     </div>
                     <div class="separator"></div>
                 </div>
 
-                <div class="project-sample">
-                    <div class="project-visual">
-                        <img src="img/temp-b.png" alt="" class="project-image visible" id="project-image-3">
-                        <img src="img/temp-c.png" alt="" class="project-animation" id="project-animation-3">
-                        <div class="buttons">
-                            <a href="https://github.com/chadfraser/RAScraping" class="link-button">GITHUB</a>
-                            <a href="" class="download-button">DOWNLOAD</a>
-                        </div>
-                    </div>
-                    <div class="project-text">
-                        <h2 class="project-title">
-                            RetroAchievements* Site Scraping
-                        </h2>
-                        <p class="project-description">
-                            It can be tedious checking your favorite websites every morning, especially if you need to
-                            check for any updates across dozens of pages (<em>Especially</em> especially when those
-                            updates may be as small as a single number being changed).
-                            <br> <br>
-                            To run this program, just give it a list of user accounts from the RetroAchievements gaming
-                            website that you want to track, as well as your email. Every time the program starts
-                            tracking a new user (or game or game system), it scrapes the RetroAchievements website for
-                            that user, then saves a JSON file with all of that user's relevant data (as well as a JSON
-                            file for every game that user has saved in their history on the RetroAchievements website).
-                            <br> <br>
-                            Then, every future time the program is run, it compares the data in its stored JSON file
-                            with the data currently on the RetroAchievements website. It compiles all updates from
-                            every file it's tracking and emails you a formatted list of all of these updates.
-                            <br> <br>
-                            I found this very useful to make and use, since it allows me to know every time my friends
-                            have played something new, or my favorite games have new challenges added to them.
-                            <br> <br> <br>
-                            <h5>
-                                <i>* I have no affiliation with the RetroAchievements gaming website.</i>
-                            </h5>
-                        </p>
-                    </div>
-                    <div class="separator"></div>
-                </div>
-
-                <div class="project-sample">
-                    <div class="project-visual">
-                        <img src="img/chess-static.png" alt="" class="project-image visible" id="project-image-3">
-                        <img src="img/chess-animated.gif" alt="" class="project-animation" id="project-animation-3">
-                        <div class="buttons">
-                            <a href="https://github.com/chadfraser/BasicChess" class="link-button">GITHUB</a>
-                            <a href="" class="download-button">DOWNLOAD</a>
-                        </div>
-                    </div>
-                    <div class="project-text">
-                        <h2 class="project-title">
-                            Basic Chess
-                        </h2>
-                        <p class="project-description">
-                            A classic console-based chess engine with no frills. Players type their moves into the
-                            console window.
-                            <br> <br>
-                            The program recognizes when a player can and can't castle. It handles pawn promotion, check,
-                            and checkmate automatically.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <h1 class="page-title">
-                Work In-Progress
-            </h1>
-
-            <div class="project-sample in-progress">
-                <div class="project-visual">
-                    <img src="img/mahjong-static.png" alt="" class="project-image visible" id="project-image-3">
-                    <img src="img/mahjong-animated.gif" alt="" class="project-animation" id="project-animation-3">
-                    <div class="buttons">
-                        <a href="https://github.com/chadfraser/MahjongCalculator" class="link-button">GITHUB</a>
-                        <a href="" class="download-button">DOWNLOAD</a>
-                    </div>
-                </div>
-                <div class="project-text">
-                    <h2 class="project-title">
-                        Four Player Mahjong
-                    </h2>
-                    <p class="project-description">
-                        A program that allows the player to play a game of four-player mahjong. The program so far
-                        can play a full game in a console window against three computer AI opponents, handles scoring,
-                        features rudimentary computer AI, and can recognize winning hands or legal moves according to
-                        the Hong Kong Old Style Mahjong ruleset.
-                        <br> <br>
-                        In the future, I plan to give the program a graphical windowed mode, allow for the player to
-                        select rulesets other than Hong Kong Old Style, separate out its scoring and AI system to
-                        create mahjong calculator modes (e.g., showing the player how many points an arbitrary hand is
-                        worth, or how many more turns at minimum a hand needs to win), and a more complex AI that takes
-                        the scoring system into account.
-                    </p>
-                </div>
-                <div class="separator"></div>
-            </div>
-
-            <div class="project-sample in-progress">
+                <div class="project-sample in-progress">
                     <div class="project-visual">
                         <img src="img/stitcher-static.png" alt="" class="project-image visible" id="project-image-3">
                         <img src="img/stitcher-animated.gif" alt="" class="project-animation" id="project-animation-3">
@@ -175,7 +176,8 @@
                         </p>
                     </div>
                 </div>
-        </main>
+            </main>
+        </div>
 
         <script src="js/menu.js"></script>
         <script src="js/menu-trigger.js"></script>

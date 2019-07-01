@@ -11,6 +11,7 @@
 html {
     height: 100vh;
     width: 100%;
+    // overflow: hidden;
 }
 
 header {
@@ -27,7 +28,8 @@ body {
         background: get-color($bg);
         color: get-color($text);
     }
-    height: 100%;
+    // height: 10%;
+    // overflow: hidden;
     font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
     &.end-transition * {
@@ -35,6 +37,12 @@ body {
         @include animation('none 0 0 !important;');
     }
 }
+
+// .wrapper {
+//     height: 100%;
+//     overflow-y: scroll;
+//     -webkit-overflow-scrolling: touch;
+// }
 
 h1 {
     @include themed {
@@ -147,6 +155,8 @@ main {
 // support all browsers (iphone footer scroll)
 // image + gif for RAScraping
 // base images for project + about page
+// 20vm margin under all mobile aboutpopups, but with click
+// mobile subtitle main page center
 
 @import "pages/about";
 @import "pages/projects";
