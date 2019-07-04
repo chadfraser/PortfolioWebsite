@@ -5,7 +5,7 @@ const imageSourceList = [];
 projectSamples.forEach(function (sample, index) {
     var image = sample.querySelector(".project-image");
     var animation = sample.querySelector(".project-animation");
-    imageSourceList.push([image.src, animation.src]);
+    imageSourceList.push([image.src, animation.getAttribute("source")]);
     projectImages.push(image);
 
     sample.addEventListener("mouseenter", function() { showAnimation(index) });
