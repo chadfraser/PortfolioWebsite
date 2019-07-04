@@ -6,9 +6,14 @@
     }
 
     header {
-        top: calc(100vh - 15vmin);
-        height: 15vmin;
-        width: 15vmin;
+        height: 0;
+        width: 100%;
+        bottom: 0;
+
+        // pointer-events: none;
+        // top: calc(100vh - 15vmin);
+        // height: 15vmin;
+        // width: 15vmin;
     }
 
     main {
@@ -60,7 +65,8 @@
         z-index: -1;
         height: 20vmin;
         width: 50vmin;
-        top: calc(100vh - 20vmin);
+        bottom: 0;
+        // top: calc(100vh - 20vmin);
         left: -30vmin;
         border-radius: 0;
 
@@ -85,6 +91,8 @@
                 background-color: get-color($settings-close);
                 border-top: get-color($settings-divider);
             }
+            border-bottom: none !important;
+            z-index: -1;
 
             p {
                 display: inline;
@@ -97,6 +105,8 @@
         top: auto;
         bottom: 20vmin !important;
         left: -50vmin;
+        position: fixed;
+        z-index: -20000;
 
         .settings-list {
             .settings-item {
@@ -144,9 +154,13 @@
                 background-color: get-color($menu-hover);
             }
         }
+        position: fixed;
         z-index: 6;
-        top: calc(100vh - 15vmin);
-        left: calc(100% - 15vmin);
+        bottom: 0;
+        top: auto;
+        // top: calc(100vh - 15vmin);
+        left: calc(100%  - 15vmin);
+        // left: 100%;
         height: 15vmin;
         width: 15vmin;
         border-radius: 0;

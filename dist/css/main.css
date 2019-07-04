@@ -769,6 +769,7 @@
 html {
   height: calc(100 * 1vh);
   height: calc(var(--vh, 1vh) * 100);
+  height: 100vh;
   width: 100%; }
 
 header {
@@ -1320,9 +1321,9 @@ main {
 
 @media screen and (max-width: 768px) {
   header {
-    top: calc(100vh - 15vmin);
-    height: 15vmin;
-    width: 15vmin; }
+    height: 0;
+    width: 100%;
+    bottom: 0; }
   main {
     margin: 0;
     align-items: center; }
@@ -1358,7 +1359,7 @@ main {
     z-index: -1;
     height: 20vmin;
     width: 50vmin;
-    top: calc(100vh - 20vmin);
+    bottom: 0;
     left: -30vmin;
     border-radius: 0; }
     .settings-tab p {
@@ -1375,7 +1376,9 @@ main {
     .settings-tab.close {
       -webkit-transform: translateX(30vmin);
       -ms-animation: translateX(30vmin);
-      transform: translateX(30vmin); }
+      transform: translateX(30vmin);
+      border-bottom: none !important;
+      z-index: -1; }
       .settings-tab.close.theme--bright {
         background-color: #e54538;
         border-top: 3px #E85A4F solid; }
@@ -1397,7 +1400,9 @@ main {
     width: 50vmin;
     top: auto;
     bottom: 20vmin !important;
-    left: -50vmin; }
+    left: -50vmin;
+    position: fixed;
+    z-index: -20000; }
     .settings-menu .settings-list .settings-item.theme--bright {
       border: 2px #EAE7DC solid;
       border-bottom: none; }
@@ -1433,9 +1438,11 @@ main {
     .icon-anchor img {
       margin-top: 1vmin; }
   .menu-tab {
+    position: fixed;
     z-index: 6;
-    top: calc(100vh - 15vmin);
-    left: calc(100% - 15vmin);
+    bottom: 0;
+    top: auto;
+    left: calc(100%  - 15vmin);
     height: 15vmin;
     width: 15vmin;
     border-radius: 0; }
