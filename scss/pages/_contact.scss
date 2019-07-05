@@ -27,17 +27,18 @@
         width: 80vw;
         align-items: center;
         border-radius: 20px;
+        text-decoration: none;
 
         h6 {
+            @include themed {
+                color: get-color($contact-subtext);
+            }
             white-space: nowrap;
             position: absolute;
             right: 5px;
             bottom: 5px;
             font-style: italic;
             text-align: right;
-            @include themed {
-                color: get-color($contact-subtext);
-            }
         }
 
         &:nth-child(3) {

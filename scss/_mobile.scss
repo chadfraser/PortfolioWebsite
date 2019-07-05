@@ -63,9 +63,7 @@
         @include vmin("height", 20);
         @include vmin("left", -30);
         position: fixed;
-        // z-index: -1;
-        // background-color: red;
-        // left: 0;
+        z-index: -1;
 
         // height: 20vmin;
         // width: 50vmin;
@@ -98,7 +96,7 @@
 
         &.close {
             @include transform(translateX(30vmin));
-            /////////////////////////////////////
+            @include transform(translateX(calc(30 * var(--vmin, 1vmin))));
             @include themed {
                 background-color: get-color($settings-close);
                 border-top: get-color($settings-divider);
@@ -241,7 +239,7 @@
 
         .menu-link-icon {
             @include transform(translate3d(0, 50vh, 0));
-            ///////////////////
+            @include transform(translate3d(0, calc(50 * var(--vh, 1vh)), 0));
 
             .menu-link-image {
                 @include vmin("max-height", 12);
@@ -251,7 +249,7 @@
 
             &.visible {
                 @include transform(translate3d(0, -15vmin, 0));
-                //////////////////////////////////
+                @include transform(translate3d(0, calc(-15 * var(--vmin, 1vmin)), 0));
 
                 @for $i from 1 through 3 {
                     &:nth-child(#{$i}) {
@@ -274,7 +272,7 @@
 
         &.visible {
             @include transform(translateY(-100vh));
-            /////////////////////////////
+            @include transform(translateY(calc(-100 * var(--vh, 1vh))));
             @include easeOut();
         }
 
@@ -290,7 +288,8 @@
 
                 &.visible {
                     @include transform(translate3d(-5vh, 0, 0) !important);
-                    /////////////////////////////////
+                    @include transform(translate3d(calc(-5 * var(--vh, 1vh)), 0, 0));
+
                 }
             }
         }

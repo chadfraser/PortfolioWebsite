@@ -50,15 +50,18 @@
 @-webkit-keyframes translateYForButtonIndex1 {
   0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
-    transform: translateY(-10vh) rotate(-40deg); }
+    transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg); }
   100% {
     -webkit-transform: translate(5px, 8px) rotate(45deg);
     -ms-animation: translate(5px, 8px) rotate(45deg);
@@ -67,15 +70,18 @@
 @-moz-keyframes translateYForButtonIndex1 {
   0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
-    transform: translateY(-10vh) rotate(-40deg); }
+    transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg); }
   100% {
     -webkit-transform: translate(5px, 8px) rotate(45deg);
     -ms-animation: translate(5px, 8px) rotate(45deg);
@@ -84,15 +90,18 @@
 @-ms-keyframes translateYForButtonIndex1 {
   .menu-tab.close .button-line-container:nth-child(1) 0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   .menu-tab.close .button-line-container:nth-child(1) 50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
-    transform: translateY(-10vh) rotate(-40deg); }
+    transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg); }
   .menu-tab.close .button-line-container:nth-child(1) 100% {
     -webkit-transform: translate(5px, 8px) rotate(45deg);
     -ms-animation: translate(5px, 8px) rotate(45deg);
@@ -101,15 +110,18 @@
 @-o-keyframes translateYForButtonIndex1 {
   0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
-    transform: translateY(-10vh) rotate(-40deg); }
+    transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg); }
   100% {
     -webkit-transform: translate(5px, 8px) rotate(45deg);
     -ms-animation: translate(5px, 8px) rotate(45deg);
@@ -118,15 +130,18 @@
 @keyframes translateYForButtonIndex1 {
   0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
-    transform: translateY(-10vh) rotate(-40deg); }
+    transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg); }
   100% {
     -webkit-transform: translate(5px, 8px) rotate(45deg);
     -ms-animation: translate(5px, 8px) rotate(45deg);
@@ -204,15 +219,18 @@
 @-webkit-keyframes translateYForButtonIndex2 {
   0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
     transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
     opacity: 0; }
   100% {
     opacity: 0; } }
@@ -220,15 +238,18 @@
 @-moz-keyframes translateYForButtonIndex2 {
   0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
     transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
     opacity: 0; }
   100% {
     opacity: 0; } }
@@ -236,15 +257,18 @@
 @-ms-keyframes translateYForButtonIndex2 {
   .menu-tab.close .button-line-container:nth-child(2) 0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   .menu-tab.close .button-line-container:nth-child(2) 50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
     transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
     opacity: 0; }
   .menu-tab.close .button-line-container:nth-child(2) 100% {
     opacity: 0; } }
@@ -252,15 +276,18 @@
 @-o-keyframes translateYForButtonIndex2 {
   0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
     transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
     opacity: 0; }
   100% {
     opacity: 0; } }
@@ -268,15 +295,18 @@
 @keyframes translateYForButtonIndex2 {
   0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
     transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
     opacity: 0; }
   100% {
     opacity: 0; } }
@@ -353,15 +383,18 @@
 @-webkit-keyframes translateYForButtonIndex3 {
   0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
-    transform: translateY(-10vh) rotate(-40deg); }
+    transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg); }
   100% {
     -webkit-transform: translate(5px, -8px) rotate(-45deg);
     -ms-animation: translate(5px, -8px) rotate(-45deg);
@@ -370,15 +403,18 @@
 @-moz-keyframes translateYForButtonIndex3 {
   0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
-    transform: translateY(-10vh) rotate(-40deg); }
+    transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg); }
   100% {
     -webkit-transform: translate(5px, -8px) rotate(-45deg);
     -ms-animation: translate(5px, -8px) rotate(-45deg);
@@ -387,15 +423,18 @@
 @-ms-keyframes translateYForButtonIndex3 {
   .menu-tab.close .button-line-container:nth-child(3) 0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   .menu-tab.close .button-line-container:nth-child(3) 50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
-    transform: translateY(-10vh) rotate(-40deg); }
+    transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg); }
   .menu-tab.close .button-line-container:nth-child(3) 100% {
     -webkit-transform: translate(5px, -8px) rotate(-45deg);
     -ms-animation: translate(5px, -8px) rotate(-45deg);
@@ -404,15 +443,18 @@
 @-o-keyframes translateYForButtonIndex3 {
   0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
-    transform: translateY(-10vh) rotate(-40deg); }
+    transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg); }
   100% {
     -webkit-transform: translate(5px, -8px) rotate(-45deg);
     -ms-animation: translate(5px, -8px) rotate(-45deg);
@@ -421,15 +463,18 @@
 @keyframes translateYForButtonIndex3 {
   0% {
     animation-timing-function: ease-out;
-    -webkit-transform: translateY(0vh) rotate(0deg);
-    -ms-animation: translateY(0vh) rotate(0deg);
-    transform: translateY(0vh) rotate(0deg);
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-animation: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1; }
   50% {
     animation-timing-function: cubic-bezier(1, 0.08, 0.83, 1.38);
     -webkit-transform: translateY(-10vh) rotate(-40deg);
     -ms-animation: translateY(-10vh) rotate(-40deg);
-    transform: translateY(-10vh) rotate(-40deg); }
+    transform: translateY(-10vh) rotate(-40deg);
+    -webkit-transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    -ms-animation: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg);
+    transform: translateY(calc(-10 * var(--vh, 1vh))) rotate(-40deg); }
   100% {
     -webkit-transform: translate(5px, -8px) rotate(-45deg);
     -ms-animation: translate(5px, -8px) rotate(-45deg);
@@ -1226,7 +1271,8 @@ main {
     margin: 5px;
     width: 80vw;
     align-items: center;
-    border-radius: 20px; }
+    border-radius: 20px;
+    text-decoration: none; }
     .contact-me .contact-element.theme--bright {
       background-color: #d0b793;
       border: 2px solid #E85A4F; }
@@ -1366,6 +1412,7 @@ main {
     left: calc(-30 * 1vmin);
     left: calc(var(--vmin, 1vmin) * -30);
     position: fixed;
+    z-index: -1;
     bottom: 0;
     border-radius: 0; }
     .settings-tab p {
@@ -1390,6 +1437,9 @@ main {
       -webkit-transform: translateX(30vmin);
       -ms-animation: translateX(30vmin);
       transform: translateX(30vmin);
+      -webkit-transform: translateX(calc(30 * var(--vmin, 1vmin)));
+      -ms-animation: translateX(calc(30 * var(--vmin, 1vmin)));
+      transform: translateX(calc(30 * var(--vmin, 1vmin)));
       border-bottom: none !important;
       z-index: -1; }
       .settings-tab.close.theme--bright {
@@ -1555,7 +1605,10 @@ main {
     .menu-icons .menu-link-icon {
       -webkit-transform: translate3d(0, 50vh, 0);
       -ms-animation: translate3d(0, 50vh, 0);
-      transform: translate3d(0, 50vh, 0); }
+      transform: translate3d(0, 50vh, 0);
+      -webkit-transform: translate3d(0, calc(50 * var(--vh, 1vh)), 0);
+      -ms-animation: translate3d(0, calc(50 * var(--vh, 1vh)), 0);
+      transform: translate3d(0, calc(50 * var(--vh, 1vh)), 0); }
       .menu-icons .menu-link-icon .menu-link-image {
         max-height: calc(12 * 1vmin);
         max-height: calc(var(--vmin, 1vmin) * 12);
@@ -1563,7 +1616,10 @@ main {
       .menu-icons .menu-link-icon.visible {
         -webkit-transform: translate3d(0, -15vmin, 0);
         -ms-animation: translate3d(0, -15vmin, 0);
-        transform: translate3d(0, -15vmin, 0); }
+        transform: translate3d(0, -15vmin, 0);
+        -webkit-transform: translate3d(0, calc(-15 * var(--vmin, 1vmin)), 0);
+        -ms-animation: translate3d(0, calc(-15 * var(--vmin, 1vmin)), 0);
+        transform: translate3d(0, calc(-15 * var(--vmin, 1vmin)), 0); }
         .menu-icons .menu-link-icon.visible:nth-child(1) {
           transition: all 1s cubic-bezier(0.53, -0.6, 0.36, 1.7) 0.5s; }
         .menu-icons .menu-link-icon.visible:nth-child(2) {
@@ -1585,6 +1641,9 @@ main {
       -webkit-transform: translateY(-100vh);
       -ms-animation: translateY(-100vh);
       transform: translateY(-100vh);
+      -webkit-transform: translateY(calc(-100 * var(--vh, 1vh)));
+      -ms-animation: translateY(calc(-100 * var(--vh, 1vh)));
+      transform: translateY(calc(-100 * var(--vh, 1vh)));
       transition: all 0.25s ease-out; }
     .nav-menu .menu-list {
       font-size: calc(8 * 1vmin);
@@ -1599,7 +1658,10 @@ main {
         .nav-menu .menu-list .menu-item.visible {
           -webkit-transform: translate3d(-5vh, 0, 0) !important;
           -ms-animation: translate3d(-5vh, 0, 0) !important;
-          transform: translate3d(-5vh, 0, 0) !important; }
+          transform: translate3d(-5vh, 0, 0) !important;
+          -webkit-transform: translate3d(calc(-5 * var(--vh, 1vh)), 0, 0);
+          -ms-animation: translate3d(calc(-5 * var(--vh, 1vh)), 0, 0);
+          transform: translate3d(calc(-5 * var(--vh, 1vh)), 0, 0); }
   .page-title {
     font-size: calc(10 * 1vh);
     font-size: calc(var(--vh, 1vh) * 10);
