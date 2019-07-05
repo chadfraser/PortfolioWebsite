@@ -121,10 +121,12 @@
     // height: 100vh;
     top: 0;
     left: calc(100% + 12px);
+    visibility: hidden;
 
     &.visible {
         @include transform(translateX(-55vw));
         @include easeOut;
+        visibility: visible;
     }
 
     .menu-list {

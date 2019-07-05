@@ -145,7 +145,13 @@
         @include vmin("height", 15);
         text-align: center;
         width: 100%;
+        // display: none;
+        visibility: hidden;
         // height: 15vmin;
+
+        &.visible {
+            visibility: visible;
+        }
     }
 
     .icon-anchor {

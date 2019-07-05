@@ -585,7 +585,8 @@
   height: calc(100 * 1vh);
   height: calc(var(--vh, 1vh) * 100);
   top: 0;
-  left: calc(100% + 12px); }
+  left: calc(100% + 12px);
+  visibility: hidden; }
   .nav-menu.theme--bright {
     background-color: rgba(233, 128, 116, 0.85); }
   .nav-menu.theme--calm {
@@ -600,7 +601,8 @@
     -webkit-transform: translateX(-55vw);
     -ms-animation: translateX(-55vw);
     transform: translateX(-55vw);
-    transition: all 0.25s ease-out; }
+    transition: all 0.25s ease-out;
+    visibility: visible; }
   .nav-menu .menu-list {
     font-size: calc(8 * 1vh);
     font-size: calc(var(--vh, 1vh) * 8);
@@ -1496,7 +1498,10 @@ main {
     height: calc(15 * 1vmin);
     height: calc(var(--vmin, 1vmin) * 15);
     text-align: center;
-    width: 100%; }
+    width: 100%;
+    visibility: hidden; }
+    .menu-link-icon.visible {
+      visibility: visible; }
   .icon-anchor {
     display: block;
     padding: 0;
