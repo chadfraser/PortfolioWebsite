@@ -4,12 +4,12 @@
 @mixin animate_button_line($line-index) {
     $base-delay: 0.25s;
 
-    @include animation('translateXAndSkew 1s #{$base-delay + 0.1 * $line-index}');
+    @include animation("translateXAndSkew 1s #{$base-delay + 0.1 * $line-index}");
     // animation: translateXAndSkew 1s #{$base-delay + 0.1 * $line-index};
     animation-fill-mode: forwards;
 
     .button-line {
-        @include animation('translateYForButtonIndex#{$line-index} 1s #{$base-delay + 0.1 * $line-index}');
+        @include animation("translateYForButtonIndex#{$line-index} 1s #{$base-delay + 0.1 * $line-index}");
         animation-fill-mode: forwards;
     }
 

@@ -34,7 +34,7 @@ body {
 
     &.end-transition * {
         transition: none !important;
-        @include animation('none 0 0 !important;');
+        @include animation("none 0 0 !important;");
     }
 }
 
