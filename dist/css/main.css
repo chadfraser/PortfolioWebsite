@@ -1276,8 +1276,7 @@ main {
     margin: 5px;
     width: 80vw;
     align-items: center;
-    border-radius: 20px;
-    text-decoration: none; }
+    border-radius: 20px; }
     .contact-me .contact-element.theme--bright {
       background-color: #d0b793;
       border: 2px solid #E85A4F; }
