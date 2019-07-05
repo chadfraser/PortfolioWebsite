@@ -5,6 +5,7 @@
         height: 0;
         width: 100%;
         bottom: 0;
+        overflow: hidden;
     }
 
     main {
@@ -233,19 +234,21 @@
     .menu-icons {
         @include flexbox();
         @include vmin("height", 15);
-        @include vh("top", 100);
+        @include vmin("bottom", -15);
         z-index: 6;
         justify-content: space-around;
         align-items: center;
-        position: fixed;
         width: 80vw;
-        // height: 15vmin;
-        // top: 100vh;
+        top: auto;
         left: 0;
 
         .menu-link-icon {
             @include transform(translate3d(0, 50vh, 0));
             @include transform(translate3d(0, calc(50 * var(--vh, 1vh)), 0));
+            position: relative;
+            bottom: 0;
+            // bottom: calc(-100vh + 15vmin);
+            // bottom: calc(-100 * var(--vh, 1vh) + 15 * var(--vmin, 1vmin));
 
             .menu-link-image {
                 @include vmin("max-height", 12);
@@ -268,11 +271,13 @@
 
     .nav-menu {
         @include transform(translateY(0));
-        @include vh("top", 100);
         width: 100%;
         height: calc(100vh - 15vmin);
         height: calc(100 * var(--vh, 1vh) - 15 * var(--vmin, 1vmin));
-        // top: 100vh;
+        // height: calc(100vh - 15vmin);
+        top: auto;
+        bottom: calc(-100vh + 15vmin);
+        bottom: calc(-100 * var(--vh, 1vh) + 15 * var(--vmin, 1vmin));
         left: 0;
         @include easeOut();
 
@@ -284,6 +289,7 @@
 
         .menu-list {
             @include vmin("font-size", 8);
+            position: fixed;
             list-style: none;
             // font-size: 8vmin;
             left: 0;
@@ -295,7 +301,6 @@
                 &.visible {
                     @include transform(translate3d(-5vh, 0, 0) !important);
                     @include transform(translate3d(calc(-5 * var(--vh, 1vh)), 0, 0));
-
                 }
             }
         }

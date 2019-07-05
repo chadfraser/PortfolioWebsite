@@ -168,19 +168,12 @@ main {
     display: none;
 }
 
-// support all browsers (iphone footer scroll) (Fixed?)
-    // 2 nav-menu vh transform, 3 mobile vh transform, 2 mobile vmin transform, 5 mobile calc (1 vmin, 4 both)
 // 20vm margin under all mobile aboutpopups, but with click
-// speed up GH Pages (mostly ABOUT) load
+// speed up GH Pages (mostly ABOUT) load -- lazy image loader?
 // add alt + hover text to images
 // change querySelector?
 // two about images, RA gif
-// phone text spilling out + contact number color on bright/somber (Fixed?)
 // realigning nav menu icons + top on mobile
-// index height on mobile wrt header (Fixed?)
-// lazy image loader?
-// IE reject improve
-// font size on contact
 
 @import "pages/about";
 @import "pages/projects";
