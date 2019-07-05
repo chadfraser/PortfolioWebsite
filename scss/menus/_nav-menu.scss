@@ -135,6 +135,11 @@
         text-align: center;
         // font-size: 8vh;
         width: 100%;
+        visibility: hidden;
+
+        &.visible {
+            visibility: visible;
+        }
 
         .menu-item {
             &:nth-child(odd) {

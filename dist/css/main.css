@@ -608,7 +608,10 @@
     font-size: calc(var(--vh, 1vh) * 8);
     list-style: none;
     text-align: center;
-    width: 100%; }
+    width: 100%;
+    visibility: hidden; }
+    .nav-menu .menu-list.visible {
+      visibility: visible; }
     .nav-menu .menu-list .menu-item:nth-child(odd) {
       -webkit-transform: translate3d(0, -800px, 0);
       -ms-animation: translate3d(0, -800px, 0);
