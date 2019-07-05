@@ -9,8 +9,8 @@ if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
 function setVhEquivalent() {
     let vhEquivalent = window.innerHeight * 0.01;
     let vminEquivalent = Math.min(window.innerHeight * 0.01, window.innerWidth * 0.01);
-    document.documentElement.style.setProperty('--vh', `${vhEquivalent}px`);
-    document.documentElement.style.setProperty('--vw', `${vminEquivalent}px`);
+    document.documentElement.style.setProperty("--vh", `${vhEquivalent}px`);
+    document.documentElement.style.setProperty("--vw", `${vminEquivalent}px`);
 }
 
 function debounceFunction(subFunction, waitingTime, runImmediately) {
