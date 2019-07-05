@@ -65,10 +65,25 @@
     user-select: $value;
 }
 
-@mixin vh($dimension, $value) {
-    #{$dimension}: calc(#{$value} * 1vh);
-    #{$dimension}: calc(var(--vh, 1vh) * #{$value});
+@mixin vh($dimension, $value, $calculation: null) {
+    @if ($calculation) {
+        #{$dimension}: calc(#{$value} * 1vh);
+        #{$dimension}: calc(var(--vh, 1vh) * #{$value});
+    } @else {
+        #{$dimension}: calc(#{$value} * 1vh);
+        #{$dimension}: calc(var(--vh, 1vh) * #{$value});
+    }
 }
+
+@mixin vmin($dimension, $value) {
+    #{$dimension}: calc(#{$value} * 1vmin);
+    #{$dimension}: calc(var(--vmin, 1vmin) * #{$value});
+}
+
+// @mixin calcVmin($dimension, $calculation) {
+//     #{$dimension}: calc(#{$value} * 1vmin);
+//     #{$dimension}: calc(var(--vmin, 1vmin) * #{$value});
+// }
 
 @mixin mediaSmallScreen {
     @media screen and (max-width: 500px) {

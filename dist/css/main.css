@@ -769,7 +769,6 @@
 html {
   height: calc(100 * 1vh);
   height: calc(var(--vh, 1vh) * 100);
-  height: 100vh;
   width: 100%; }
 
 header {
@@ -1297,7 +1296,6 @@ main {
     .contact-me .contact-element img {
       max-height: calc(15 * 1vh);
       max-height: calc(var(--vh, 1vh) * 15);
-      max-height: 15vh;
       border-radius: 20%;
       padding: 0 2vw; }
     .contact-me .contact-element p {
@@ -1335,44 +1333,59 @@ main {
       margin-right: auto; }
     main .left-half {
       z-index: -1;
-      top: calc(15vmin + (100vh - 100vmin) / 2); }
+      top: calc(15vmin + (100vh - 100vmin) / 2);
+      top: calc(15 * var(--vmin, 1vmin) + (100 * var(--vh, 1vh) - 100 * var(--vmin, 1vmin)) / 2); }
       main .left-half .self-image {
-        max-height: 40vmin; }
+        max-height: calc(40 * 1vmin);
+        max-height: calc(var(--vmin, 1vmin) * 40); }
       main .left-half .link-icons {
         opacity: 1;
         display: none; }
     main .name-title {
+      font-size: calc(15 * 1vmin);
+      font-size: calc(var(--vmin, 1vmin) * 15);
       order: -1;
       top: calc((100vh - 100vmin) / 2);
+      top: calc((100 * var(--vh, 1vh) - 100 * var(--vmin, 1vmin)) / 2);
       text-align: center;
-      font-size: 15vmin;
       white-space: nowrap; }
     main .sub-title {
+      font-size: calc(8 * 1vmin);
+      font-size: calc(var(--vmin, 1vmin) * 8);
       text-align: center;
       line-height: 1.2;
-      font-size: 8vmin;
       top: calc(52vmin + (100vh - 100vmin) / 2);
+      top: calc(52 * var(--vmin, 1vmin) + (100 * var(--vh, 1vh) - 100 * var(--vmin, 1vmin)) / 2);
       padding: 0;
       white-space: nowrap; }
   .settings-tab {
+    width: calc(50 * 1vmin);
+    width: calc(var(--vmin, 1vmin) * 50);
+    height: calc(20 * 1vmin);
+    height: calc(var(--vmin, 1vmin) * 20);
+    left: calc(-30 * 1vmin);
+    left: calc(var(--vmin, 1vmin) * -30);
     position: fixed;
-    z-index: -1;
-    height: 20vmin;
-    width: 50vmin;
     bottom: 0;
-    left: -30vmin;
     border-radius: 0; }
     .settings-tab p {
+      font-size: calc(9.5 * 1vmin);
+      font-size: calc(var(--vmin, 1vmin) * 9.5);
+      top: calc(2.5 * 1vmin);
+      top: calc(var(--vmin, 1vmin) * 2.5);
+      right: calc(-0.5 * 1vmin);
+      right: calc(var(--vmin, 1vmin) * -0.5);
       position: relative;
-      font-size: 9.5vmin;
-      top: 2.5vmin;
-      right: -0.5vmin;
       display: none; }
     .settings-tab img {
-      max-height: 15vmin;
-      max-width: 15vmin;
-      top: 2.5vmin;
-      right: 2.5vmin; }
+      max-width: calc(15 * 1vmin);
+      max-width: calc(var(--vmin, 1vmin) * 15);
+      max-height: calc(15 * 1vmin);
+      max-height: calc(var(--vmin, 1vmin) * 15);
+      top: calc(2.5 * 1vmin);
+      top: calc(var(--vmin, 1vmin) * 2.5);
+      right: calc(2.5 * 1vmin);
+      right: calc(var(--vmin, 1vmin) * 2.5); }
     .settings-tab.close {
       -webkit-transform: translateX(30vmin);
       -ms-animation: translateX(30vmin);
@@ -1397,10 +1410,13 @@ main {
       .settings-tab.close p {
         display: inline; }
   .settings-menu {
-    width: 50vmin;
+    width: calc(50 * 1vmin);
+    width: calc(var(--vmin, 1vmin) * 50);
+    bottom: calc(20 * 1vmin);
+    bottom: calc(var(--vmin, 1vmin) * 20);
+    left: calc(-50 * 1vmin);
+    left: calc(var(--vmin, 1vmin) * -50);
     top: auto;
-    bottom: 20vmin !important;
-    left: -50vmin;
     position: fixed;
     z-index: -20000; }
     .settings-menu .settings-list .settings-item.theme--bright {
@@ -1427,24 +1443,29 @@ main {
     right: 50vw;
     left: 0; }
   .menu-link-icon {
+    height: calc(15 * 1vmin);
+    height: calc(var(--vmin, 1vmin) * 15);
     text-align: center;
-    width: 100%;
-    height: 15vmin; }
+    width: 100%; }
   .icon-anchor {
     display: block;
     padding: 0;
     width: 100%;
     flex-grow: 1; }
     .icon-anchor img {
-      margin-top: 1vmin; }
+      margin-top: calc(1 * 1vmin);
+      margin-top: calc(var(--vmin, 1vmin) * 1); }
   .menu-tab {
+    width: calc(15 * 1vmin);
+    width: calc(var(--vmin, 1vmin) * 15);
+    height: calc(15 * 1vmin);
+    height: calc(var(--vmin, 1vmin) * 15);
     position: fixed;
     z-index: 6;
     bottom: 0;
     top: auto;
     left: calc(100%  - 15vmin);
-    height: 15vmin;
-    width: 15vmin;
+    left: calc(100%  - 15 * var(--vmin, 1vmin));
     border-radius: 0; }
     .menu-tab.theme--bright {
       background-color: rgba(233, 128, 116, 0.85); }
@@ -1499,38 +1520,45 @@ main {
         -o-animation: none !important;;
         animation: none !important;; }
     .menu-tab .menu-button {
+      height: calc(15 * 1vmin);
+      height: calc(var(--vmin, 1vmin) * 15);
+      width: calc(15 * 1vmin);
+      width: calc(var(--vmin, 1vmin) * 15);
       right: 0;
-      top: 0;
-      height: 15vmin;
-      width: 15vmin; }
+      top: 0; }
       .menu-tab .menu-button .button-line {
+        height: calc(1 * 1vmin);
+        height: calc(var(--vmin, 1vmin) * 1);
+        margin-bottom: calc(1.5 * 1vmin);
+        margin-bottom: calc(var(--vmin, 1vmin) * 1.5);
+        top: calc(4 * 1vmin);
+        top: calc(var(--vmin, 1vmin) * 4);
         position: relative;
         width: 75%;
-        top: 4vmin;
-        left: 12.5%;
-        height: 1vmin;
-        margin: 0 0 1.5vmin 0; }
+        left: 12.5%; }
   .menu-icons {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    height: calc(15 * 1vmin);
+    height: calc(var(--vmin, 1vmin) * 15);
+    top: calc(100 * 1vh);
+    top: calc(var(--vh, 1vh) * 100);
     z-index: 6;
     justify-content: space-around;
     align-items: center;
     position: fixed;
     width: 80vw;
-    background-color: red;
-    height: 15vmin;
-    top: 100vh;
     left: 0; }
     .menu-icons .menu-link-icon {
       -webkit-transform: translate3d(0, 50vh, 0);
       -ms-animation: translate3d(0, 50vh, 0);
       transform: translate3d(0, 50vh, 0); }
       .menu-icons .menu-link-icon .menu-link-image {
-        max-height: 12vmin;
+        max-height: calc(12 * 1vmin);
+        max-height: calc(var(--vmin, 1vmin) * 12);
         max-width: 15vw; }
       .menu-icons .menu-link-icon.visible {
         -webkit-transform: translate3d(0, -15vmin, 0);
@@ -1546,9 +1574,11 @@ main {
     -webkit-transform: translateY(0);
     -ms-animation: translateY(0);
     transform: translateY(0);
+    top: calc(100 * 1vh);
+    top: calc(var(--vh, 1vh) * 100);
     width: 100%;
     height: calc(100vh - 15vmin);
-    top: 100vh;
+    height: calc(100 * var(--vh, 1vh) - 15 * var(--vmin, 1vmin));
     left: 0;
     transition: all 0.25s ease-out; }
     .nav-menu.visible {
@@ -1557,8 +1587,9 @@ main {
       transform: translateY(-100vh);
       transition: all 0.25s ease-out; }
     .nav-menu .menu-list {
+      font-size: calc(8 * 1vmin);
+      font-size: calc(var(--vmin, 1vmin) * 8);
       list-style: none;
-      font-size: 8vmin;
       left: 0; }
       .nav-menu .menu-list .menu-item {
         -webkit-transform: translate3d(800px, 0, 0) !important;
@@ -1570,7 +1601,8 @@ main {
           -ms-animation: translate3d(-5vh, 0, 0) !important;
           transform: translate3d(-5vh, 0, 0) !important; }
   .page-title {
-    font-size: 10vh;
+    font-size: calc(10 * 1vh);
+    font-size: calc(var(--vh, 1vh) * 10);
     white-space: normal;
     margin-left: 5vw; }
   .about-intro-text {
@@ -1580,8 +1612,12 @@ main {
     .about-me .page-title {
       margin: 0; }
     .about-me .about-me-image-grid {
-      margin: 5vh 5vw;
-      margin-bottom: 10vh;
+      margin-bottom: calc(10 * 1vh);
+      margin-bottom: calc(var(--vh, 1vh) * 10);
+      margin-top: calc(5 * 1vh);
+      margin-top: calc(var(--vh, 1vh) * 5);
+      margin-left: 5vw;
+      margin-right: 5vw;
       grid-template-columns: repeat(2, 1fr);
       justify-items: center; }
       .about-me .about-me-image-grid .identity-image {
@@ -1601,21 +1637,26 @@ main {
     .about-me .about-popup p {
       margin-top: 0; }
   #copy-image {
-    max-width: 50vmin;
+    max-width: calc(50 * 1vmin);
+    max-width: calc(var(--vmin, 1vmin) * 50);
     float: none;
     padding: 1rem 0 1.5rem 0; }
     #copy-image.visible {
       display: inline; }
   .contact-me h1 {
-    font-size: 8vmin;
+    font-size: calc(8 * 1vmin);
+    font-size: calc(var(--vmin, 1vmin) * 8);
     text-align: center;
     margin: 0; }
   .contact-me img {
-    max-width: 15vmin !important; }
+    max-width: calc(15 * 1vmin);
+    max-width: calc(var(--vmin, 1vmin) * 15); }
   .contact-me p {
-    font-size: 4vmin !important; }
+    font-size: calc(4 * 1vmin);
+    font-size: calc(var(--vmin, 1vmin) * 4); }
   .contact-me h6 {
-    font-size: 2vmin !important;
+    font-size: calc(2 * 1vmin);
+    font-size: calc(var(--vmin, 1vmin) * 2);
     white-space: nowrap; }
   .projects {
     margin: 0 2vw; }
@@ -1637,9 +1678,10 @@ main {
       align-items: center;
       width: 100%; }
       .projects .project-visual img {
+        max-height: calc(50 * 1vh);
+        max-height: calc(var(--vh, 1vh) * 50);
         display: none;
         margin: 5px auto;
-        max-height: 50vh;
         max-width: 50vw;
         display: block; }
       .projects .project-visual .button, .projects .project-visual .link-button, .projects .project-visual .download-button, .projects .project-visual .download-button {
@@ -1709,20 +1751,24 @@ main {
       .projects .project-visual .download-button {
         float: right; }
     .projects .project-text {
-      margin-bottom: 5vh;
+      margin-bottom: calc(5 * 1vh);
+      margin-bottom: calc(var(--vh, 1vh) * 5);
       width: calc(100% - 20px); }
       .projects .project-text:last-child {
-        margin-bottom: 20vmin; } }
+        margin-bottom: calc(20 * 1vmin);
+        margin-bottom: calc(var(--vmin, 1vmin) * 20); } }
 
 @media screen and (max-width: 500px) {
   .page-title {
+    margin-bottom: calc(5 * 1vh);
+    margin-bottom: calc(var(--vh, 1vh) * 5);
     line-height: 1;
-    margin-bottom: 5vh;
     text-align: center; }
   .about-intro-text {
     text-align: center; }
   .about-me .about-me-image-grid {
-    grid-gap: 5vh;
+    grid-gap: calc(5 * 1vh);
+    grid-gap: calc(var(--vh, 1vh) * 5);
     grid-template-columns: repeat(1, 1fr);
     justify-items: center; }
     .about-me .about-me-image-grid .identity-image {
@@ -1733,7 +1779,8 @@ main {
     height: auto;
     min-height: auto; }
     .about-me .popup-absolute-container .about-popup:last-child {
-      margin-bottom: 20vmin; }
+      margin-bottom: calc(20 * 1vmin);
+      margin-bottom: calc(var(--vmin, 1vmin) * 20); }
   .link-button, .download-button {
     left: 0% !important;
     float: none;

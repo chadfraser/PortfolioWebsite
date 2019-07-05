@@ -10,7 +10,7 @@
 
 html {
     @include vh("height", 100);
-    height: 100vh;
+    // height: 100vh;
     width: 100%;
 }
 
@@ -171,8 +171,13 @@ main {
 // support all browsers (iphone footer scroll)
     // 2 nav-menu transform, several mobile calc, vmin
 // 20vm margin under all mobile aboutpopups, but with click
-// speed up GH Pages (mostly Projects) load
+// speed up GH Pages (mostly ABOUT) load
+// add alt + hover text to images
+// change querySelector?
 // two about images, RA gif
+// phone text spilling out + contact number color on bright/somber
+// realing nav menu icons + top on mobile
+// index height on mobile wrt header
 // lazy image loader?
 
 @import "pages/about";
