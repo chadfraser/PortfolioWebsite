@@ -1467,8 +1467,8 @@ main {
   .settings-menu {
     width: calc(50 * 1vmin);
     width: calc(var(--vmin, 1vmin) * 50);
-    bottom: calc(20 * 1vmin);
-    bottom: calc(var(--vmin, 1vmin) * 20);
+    bottom: calc(20 * 1vmin) !important;
+    bottom: calc(var(--vmin, 1vmin) * 20) !important;
     left: calc(-50 * 1vmin);
     left: calc(var(--vmin, 1vmin) * -50);
     top: auto;
@@ -1719,14 +1719,14 @@ main {
     text-align: center;
     margin: 0; }
   .contact-me img {
-    max-width: calc(15 * 1vmin);
-    max-width: calc(var(--vmin, 1vmin) * 15); }
+    max-width: calc(15 * 1vmin) !important;
+    max-width: calc(var(--vmin, 1vmin) * 15) !important; }
   .contact-me p {
-    font-size: calc(4 * 1vmin);
-    font-size: calc(var(--vmin, 1vmin) * 4); }
+    font-size: calc(4 * 1vmin) !important;
+    font-size: calc(var(--vmin, 1vmin) * 4) !important; }
   .contact-me h6 {
-    font-size: calc(2 * 1vmin);
-    font-size: calc(var(--vmin, 1vmin) * 2);
+    font-size: calc(2 * 1vmin) !important;
+    font-size: calc(var(--vmin, 1vmin) * 2) !important;
     white-space: nowrap; }
   .projects {
     margin: 0 2vw; }

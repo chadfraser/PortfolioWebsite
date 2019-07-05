@@ -75,9 +75,14 @@
     }
 }
 
-@mixin vmin($dimension, $value) {
-    #{$dimension}: calc(#{$value} * 1vmin);
-    #{$dimension}: calc(var(--vmin, 1vmin) * #{$value});
+@mixin vmin($dimension, $value, $important: false) {
+    @if ($important) {
+        #{$dimension}: calc(#{$value} * 1vmin) !important;
+        #{$dimension}: calc(var(--vmin, 1vmin) * #{$value}) !important;
+    } @else {
+        #{$dimension}: calc(#{$value} * 1vmin);
+        #{$dimension}: calc(var(--vmin, 1vmin) * #{$value});
+    }
 }
 
 // @mixin calcVmin($dimension, $calculation) {

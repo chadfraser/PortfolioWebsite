@@ -112,7 +112,7 @@
 
     .settings-menu {
         @include vmin("width", 50);
-        @include vmin("bottom", 20);
+        @include vmin("bottom", 20, true);
         @include vmin("left", -50);
         // width: 50vmin;
         top: auto;
@@ -382,17 +382,17 @@
         }
 
         img {
-            @include vmin("max-width", 15);
+            @include vmin("max-width", 15, true);
             // max-width: 15vmin !important;
         }
 
         p {
-            @include vmin("font-size", 4);
+            @include vmin("font-size", 4, true);
             // font-size: 4vmin !important;
         }
 
         h6 {
-            @include vmin("font-size", 2);
+            @include vmin("font-size", 2, true);
             // font-size: 2vmin !important;
             white-space: nowrap;
         }
